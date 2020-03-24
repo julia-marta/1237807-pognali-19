@@ -1,7 +1,7 @@
 # Личный проект «Погнали» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Юля Марта](https://up.htmlacademy.ru/adaptive/19/user/1237807).
-* Наставник: `Неизвестно`.
+* Наставник: [Мария Чернова](https://htmlacademy.ru/profile/id49571).
 
 ---
 
