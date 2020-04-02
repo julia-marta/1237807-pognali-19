@@ -56,10 +56,139 @@
 
     <h1 class="inner-page__title ">Попутчики</h1>
 
-    <section class="filter">
-      <h2 class="filter__title">Фильтрация по странам</h2>
-      <!-- Фильтр -->
+    <section class="countries-filter">
+      <div class="countries-filter__header">
+        <h2 class="countries-filter__title">Фильтрация по странам</h2>
+        <button class="countries-filter__toggle" type="button">Показать всё</button>
+      </div>
+      <div class="countries-filter__expanded filter">
+      <ul class="filter__regions-list regions">
+        <li class="regions__item regions__item--current"><a href="#">Европа</a></li>
+        <li class="regions__item"><a href="#">Азия</a></li>
+        <li class="regions__item"><a href="#">Америка</a></li>
+        <li class="regions__item"><a href="#">Острова</a></li>
+      </ul>
+      <table class="filter__letter-selector letters">
+          <tr>
+            <td class="letters__item letters__item--current"><a href="#">А</a></td>
+            <td class="letters__item"><a href="#">Б</a></td>
+            <td class="letters__item"><a href="#">В</a></td>
+            <td class="letters__item"><a href="#">Г</a></td>
+            <td class="letters__item"><a href="#">Д</a></td>
+          </tr>
+          <tr>
+            <td class="letters__item"><a href="#">Е</a></td>
+            <td class="letters__item"><a href="#">З</a></td>
+            <td class="letters__item"><a href="#">И</a></td>
+            <td class="letters__item"><a href="#">К</a></td>
+            <td class="letters__item"><a href="#">Л</a></td>
+          </tr>
+           <tr>
+            <td class="letters__item"><a href="#">М</a></td>
+            <td class="letters__item"><a href="#">Н</a></td>
+            <td class="letters__item"><a href="#">О</a></td>
+            <td class="letters__item"><a href="#">П</a></td>
+            <td class="letters__item"><a href="#">Р</a></td>
+          </tr>
+          <tr>
+            <td class="letters__item"><a href="#">С</a></td>
+            <td class="letters__item"><a href="#">Т</a></td>
+            <td class="letters__item"><a href="#">У</a></td>
+            <td class="letters__item"><a href="#">Ф</a></td>
+            <td class="letters__item"><a href="#">Х</a></td>
+          </tr>
+           <tr>
+            <td class="letters__item"><a href="#">Ч</a></td>
+            <td class="letters__item"><a href="#">Ш</a></td>
+            <td class="letters__item"><a href="#">Э</a></td>
+            <td class="letters__item"><a href="#">Ю</a></td>
+            <td class="letters__item"><a href="#">Я</a></td>
+          </tr>
+        </table>
+        <ul class="filter__countries-list country-selector">
+            <li class="country-selector__item"><a href="#">Австралия</a></li>
+            <li class="country-selector__item"><a href="#">Австрия</a></li>
+            <li class="country-selector__item"><a href="#">Азербайджан</a></li>
+            <li class="country-selector__item"><a href="#">Албания</a></li>
+            <li class="country-selector__item"><a href="#">Алжир</a></li>
+            <li class="country-selector__item"><a href="#">Ангола</a></li>
+            <li class="country-selector__item"><a href="#">Андорра</a></li>
+            <li class="country-selector__item"><a href="#">Антигуа и Барбуда</a></li>
+            <li class="country-selector__item"><a href="#">Аргентина</a></li>
+            <li class="country-selector__item"><a href="#">Армения</a></li>
+            <li class="country-selector__item"><a href="#">Афганистан</a></li>
+          </ul>
+          <button class="filter__collapse round-button round-button--darkblue" type="button">Cвернуть</button>
+      </div>
     </section>
+
+    <form class="travelmates-filter">
+      <h2 class="travelmates-filter__title">Подберите идеального попутчика</h2>
+      <fieldset class="travelmates-filter__section">
+        <legend class="travelmates-filter__section-title">Хобби</legend>
+        <button class="travelmates-filter__button travelmates-filter__button--expand" type="button">Развернуть</button>
+        <div class="travelmates-filter__expanded travelmates-filter__expanded--closed hobby-filter">
+        </div>
+      </fieldset>
+      <fieldset class="travelmates-filter__section">
+        <legend class="travelmates-filter__section-title">Музыка</legend>
+        <button class="travelmates-filter__button travelmates-filter__button--collapse" type="button">Cвернуть</button>
+        <div class="travelmates-filter__expanded music-filter">
+          <ul class="music-filter__list music">
+            <li class="music__item">
+              <input class="music__checkbox" type="checkbox" name="rock" id="hardrock" checked>
+              <label class="music__label" for="hardrock">Тяжелый рок</label>
+            </li>
+            <li class="music__item">
+              <input class="music__checkbox" type="checkbox" name="rap" id="russianrap">
+              <label class="music__label" for="russianrap">Русский рэп</label>
+            </li>
+            <li class="music__item">
+              <input class="music__checkbox" type="checkbox" name="dance" id="eurodance">
+              <label class="music__label" for="eurodance">Евроденс</label>
+            </li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset class="travelmates-filter__section">
+        <legend class="travelmates-filter__section-title">Еда</legend>
+        <button class="travelmates-filter__button travelmates-filter__button--expand" type="button">Развернуть</button>
+        <div class="travelmates-filter__expanded travelmates-filter__expanded--closed food-filter">
+        </div>
+      </fieldset>
+      <fieldset class="travelmates-filter__section">
+        <legend class="travelmates-filter__section-title">Транспорт</legend>
+        <button class="travelmates-filter__button travelmates-filter__button--collapse" type="button">Cвернуть</button>
+        <div class="travelmates-filter__expanded transport-filter">
+          <ul class="transport-filter__list vehicles">
+            <li class="vehicles__item vehicles__item--white vehicles__item--plane vehicles__item--active">Авиаперелет</li>
+            <li class="vehicles__item vehicles__item--white vehicles__item--bus vehicles__item--active">Автотранспорт</li>
+            <li class="vehicles__item vehicles__item--white vehicles__item--bicycle">Велосипед</li>
+            <li class="vehicles__item vehicles__item--white vehicles__item--hiking vehicles__item--active">Пешком</li>
+          </ul>
+        </div>
+      </fieldset>
+      <fieldset class="travelmates-filter__section">
+        <legend class="travelmates-filter__section-title">Левел</legend>
+        <button class="travelmates-filter__button travelmates-filter__button--collapse" type="button">Cвернуть</button>
+        <div class="travelmates-filter__expanded level-filter">
+          <div class="level-filter__value">
+            <label class="visually-hidden" for="min-value">Минимальный левел</label>
+            <input name="min-level" id="min-value" type="number" value="30">
+            <label class="visually-hidden" for="max-value">Максимальный левел</label>
+            <input name="max-level" id="max-value" type="number" value="100">
+          </div>
+          <div class="level-filter__range-controls">
+            <div class="level-filter__range-scale">
+              <div class="level-filter__range-bar"></div>
+            </div>
+            <div class="level-filter__range-toggle level-filter__range-toggle--min"></div>
+            <div class="level-filter__range-toggle level-filter__range-toggle--max"></div>
+          </div>
+        </div>
+      </fieldset>
+      <button class="travelmates-filter__submit round-button round-button--white" type="submit">Показать</button>
+    </form>
 
     <section class="profiles">
       <h2 class="visually-hidden">Профили попутчиков</h2>
@@ -101,7 +230,7 @@
             <p class="profile__legend">левел:</p>
             <p class="profile__level">99</p>
           </div>
-          <a class="profile__button round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
         </li>
         <li class="travelers-profiles__item profile">
           <div class="profile__header">
@@ -138,7 +267,7 @@
             <p class="profile__legend">левел:</p>
             <p class="profile__level">80</p>
           </div>
-          <a class="profile__button round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
         </li>
         <li class="travelers-profiles__item profile">
           <div class="profile__header">
@@ -176,7 +305,7 @@
             <p class="profile__legend">левел:</p>
             <p class="profile__level">25</p>
           </div>
-          <a class="profile__button round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
         </li>
         <li class="travelers-profiles__item profile">
           <div class="profile__header">
@@ -212,7 +341,7 @@
             <p class="profile__legend">левел:</p>
             <p class="profile__level">50</p>
           </div>
-          <a class="profile__button round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
         </li>
       </ul>
       <a class="profiles__to-all" href="#">Показать еще</a>
