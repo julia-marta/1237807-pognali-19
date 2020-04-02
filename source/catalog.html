@@ -83,7 +83,7 @@
             <td class="letters__item"><a href="#">К</a></td>
             <td class="letters__item"><a href="#">Л</a></td>
           </tr>
-           <tr>
+          <tr>
             <td class="letters__item"><a href="#">М</a></td>
             <td class="letters__item"><a href="#">Н</a></td>
             <td class="letters__item"><a href="#">О</a></td>
@@ -97,7 +97,7 @@
             <td class="letters__item"><a href="#">Ф</a></td>
             <td class="letters__item"><a href="#">Х</a></td>
           </tr>
-           <tr>
+          <tr>
             <td class="letters__item"><a href="#">Ч</a></td>
             <td class="letters__item"><a href="#">Ш</a></td>
             <td class="letters__item"><a href="#">Э</a></td>
@@ -124,16 +124,14 @@
 
     <form class="travelmates-filter">
       <h2 class="travelmates-filter__title">Подберите идеального попутчика</h2>
-      <fieldset class="travelmates-filter__section">
-        <legend class="travelmates-filter__section-title">Хобби</legend>
-        <button class="travelmates-filter__button travelmates-filter__button--expand" type="button">Развернуть</button>
-        <div class="travelmates-filter__expanded travelmates-filter__expanded--closed hobby-filter">
+      <fieldset class="travelmates-filter__item filter-section filter-section__drop-toggle">
+        <legend class="filter-section__title">Хобби</legend>
+        <div class="filter-section__expanded filter-section__expanded--closed hobby-filter">
         </div>
       </fieldset>
-      <fieldset class="travelmates-filter__section">
-        <legend class="travelmates-filter__section-title">Музыка</legend>
-        <button class="travelmates-filter__button travelmates-filter__button--collapse" type="button">Cвернуть</button>
-        <div class="travelmates-filter__expanded music-filter">
+      <fieldset class="travelmates-filter__item filter-section filter-section__drop-toggle">
+        <legend class="filter-section__title">Музыка</legend>
+        <div class="filter-section__expanded music-filter">
           <ul class="music-filter__list music">
             <li class="music__item">
               <input class="music__checkbox" type="checkbox" name="rock" id="hardrock" checked>
@@ -150,16 +148,14 @@
           </ul>
         </div>
       </fieldset>
-      <fieldset class="travelmates-filter__section">
-        <legend class="travelmates-filter__section-title">Еда</legend>
-        <button class="travelmates-filter__button travelmates-filter__button--expand" type="button">Развернуть</button>
-        <div class="travelmates-filter__expanded travelmates-filter__expanded--closed food-filter">
+      <fieldset class="travelmates-filter__item filter-section filter-section__drop-toggle">
+        <legend class="filter-section__title">Еда</legend>
+        <div class="filter-section__expanded filter-section__expanded--closed food-filter">
         </div>
       </fieldset>
-      <fieldset class="travelmates-filter__section">
-        <legend class="travelmates-filter__section-title">Транспорт</legend>
-        <button class="travelmates-filter__button travelmates-filter__button--collapse" type="button">Cвернуть</button>
-        <div class="travelmates-filter__expanded transport-filter">
+      <fieldset class="travelmates-filter__item filter-section filter-section__drop-toggle">
+        <legend class="filter-section__title">Транспорт</legend>
+        <div class="filter-section__expanded transport-filter">
           <ul class="transport-filter__list vehicles">
             <li class="vehicles__item vehicles__item--white vehicles__item--plane vehicles__item--active">Авиаперелет</li>
             <li class="vehicles__item vehicles__item--white vehicles__item--bus vehicles__item--active">Автотранспорт</li>
@@ -168,10 +164,9 @@
           </ul>
         </div>
       </fieldset>
-      <fieldset class="travelmates-filter__section">
-        <legend class="travelmates-filter__section-title">Левел</legend>
-        <button class="travelmates-filter__button travelmates-filter__button--collapse" type="button">Cвернуть</button>
-        <div class="travelmates-filter__expanded level-filter">
+      <fieldset class="travelmates-filter__item filter-section filter-section__drop-toggle">
+        <legend class="filter-section__title">Левел</legend>
+        <div class="filter-section__expanded level-filter">
           <div class="level-filter__value">
             <label class="visually-hidden" for="min-value">Минимальный левел</label>
             <input name="min-level" id="min-value" type="number" value="30">
