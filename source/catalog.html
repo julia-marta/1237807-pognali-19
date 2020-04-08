@@ -3,60 +3,62 @@
   <head>
     <meta charset="utf-8">
     <title>Сервис для поиска попутчиков для путешествий «Погнали»</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-  <header class="site-header site-header--inner">
-    <a class="site-header__logo" href="index.html">
-      <img class="site-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса «Погнали»">
-    </a>
+  <header class="site-header container">
+    <div class="site-header__top">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
+      </a>
+      <button class="site-header__toggle" type="button" aria-label="Открыть меню"></button>
+    </div>
     <nav class="site-navigation">
-      <button class="site-navigation__toggle" type="button">Открыть меню</button>
-        <div class="site-navigation__wrapper">
-          <ul class="site-navigation__list main-menu">
-            <li class="main-menu__item">
-              <a href="#">О сервисе</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="form.html">Направления</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="site-navigation__list user-menu">
-            <li class="user-menu__item">
-              <a class="user-menu__login round-button" href="login.html">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="site-navigation__list contacts">
-            <li class="contacts__item">
-              <a class="contacts__phone contacts__phone--dark" href="tel:+78005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__mail contacts__mail--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="site-navigation__list social">
-            <li class="social__item">
-              <a class="social__link social__link--light social__link--facebook" href="#">Фейсбук</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--light social__link--vkontakte" href="#">Вконтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--light social__link--instagram" href="#">Инстаграм</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <ul class="site-navigation__list main-menu">
+        <li class="main-menu__item">
+          <a href="#">О сервисе</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="form.html">Направления</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="catalog.html">Попутчики</a>
+        </li>
+      </ul>
+      <ul class="site-navigation__list user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__login round-button round-button--big" href="login.html">Авторизация</a>
+        </li>
+      </ul>
+      <ul class="site-navigation__contacts-list contacts">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--phone contacts__link--dark" href="tel:+78005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--mail contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <ul class="site-navigation__social-list social">
+        <li class="social__item">
+          <a class="social__link social__link--light social__link--facebook" href="#" aria-label="Фейсбук"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--light social__link--vkontakte" href="#" aria-label="Вконтакте"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--light social__link--instagram" href="#" aria-label="Инстаграм"></a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main class="site-main inner-page">
+    <div class="inner-page__header container">
+      <h1 class="inner-page__title">Попутчики</h1>
+    </div>
 
-    <h1 class="inner-page__title ">Попутчики</h1>
-
-    <section class="countries-filter">
+    <section class="countries-filter container">
       <div class="countries-filter__header">
         <h2 class="countries-filter__title">Фильтрация по странам</h2>
         <button class="countries-filter__toggle" type="button">Показать всё</button>
@@ -106,23 +108,23 @@
           </tr>
         </table>
         <ul class="filter__countries-list country-selector">
-            <li class="country-selector__item"><a href="#">Австралия</a></li>
-            <li class="country-selector__item"><a href="#">Австрия</a></li>
-            <li class="country-selector__item"><a href="#">Азербайджан</a></li>
-            <li class="country-selector__item"><a href="#">Албания</a></li>
-            <li class="country-selector__item"><a href="#">Алжир</a></li>
-            <li class="country-selector__item"><a href="#">Ангола</a></li>
-            <li class="country-selector__item"><a href="#">Андорра</a></li>
-            <li class="country-selector__item"><a href="#">Антигуа и Барбуда</a></li>
-            <li class="country-selector__item"><a href="#">Аргентина</a></li>
-            <li class="country-selector__item"><a href="#">Армения</a></li>
-            <li class="country-selector__item"><a href="#">Афганистан</a></li>
-          </ul>
-          <button class="filter__collapse round-button round-button--darkblue" type="button">Cвернуть</button>
+          <li class="country-selector__item"><a href="#">Австралия</a></li>
+          <li class="country-selector__item"><a href="#">Австрия</a></li>
+          <li class="country-selector__item"><a href="#">Азербайджан</a></li>
+          <li class="country-selector__item"><a href="#">Албания</a></li>
+          <li class="country-selector__item"><a href="#">Алжир</a></li>
+          <li class="country-selector__item"><a href="#">Ангола</a></li>
+          <li class="country-selector__item"><a href="#">Андорра</a></li>
+          <li class="country-selector__item"><a href="#">Антигуа и Барбуда</a></li>
+          <li class="country-selector__item"><a href="#">Аргентина</a></li>
+          <li class="country-selector__item"><a href="#">Армения</a></li>
+          <li class="country-selector__item"><a href="#">Афганистан</a></li>
+        </ul>
+        <button class="filter__collapse round-button round-button--darkblue" type="button">Cвернуть</button>
       </div>
     </section>
 
-    <form class="travelmates-filter">
+    <form class="travelmates-filter container">
       <h2 class="travelmates-filter__title">Подберите идеального попутчика</h2>
       <fieldset class="travelmates-filter__item filter-section filter-section__drop-toggle">
         <legend class="filter-section__title">Хобби</legend>
@@ -185,63 +187,65 @@
       <button class="travelmates-filter__submit round-button round-button--white" type="submit">Показать</button>
     </form>
 
-    <section class="profiles">
+    <section class="profiles container">
       <h2 class="visually-hidden">Профили попутчиков</h2>
       <ul class="profiles__list travelers-profiles">
         <li class="travelers-profiles__item profile">
           <div class="profile__header">
             <div class="profile__avatar">
-              <a href="#"><img class="profile__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Таня Фирсова"></a>
+              <a href="#"><img class="profile__photo" src="img/firsova-mobile@1x.jpg" width="70" height="70" alt="Таня Фирсова"></a>
               <button class="profile__like-button profile__like-button--active" type="button"><span class="profile__like-counter">1,5 m</span></button>
             </div>
-            <h3 class="profile__name profile__status status"><a href="#">Таня Фирсова</a></h3>
-            <ul class="profile__hashtags-list hashtags hashtags--small">
-              <li>#ЗОЖ</li>
-              <li>#ПП</li>
-              <li>#Фитнес</li>
-              <li>#пляж</li>
-              <li>#авокадо</li>
-              <li>#смузи</li>
-            </ul>
+            <h3 class="profile__name profile__status status status--big"><a href="#">Таня Фирсова</a></h3>
           </div>
+            <ul class="profile__hashtags-list hashtags hashtags--small">
+              <li class="hashtags__item"><a>#ЗОЖ</a></li>
+              <li class="hashtags__item"><a>#ПП</a></li>
+              <li class="hashtags__item"><a>#Фитнес</a></li>
+              <li class="hashtags__item"><a>#пляж</a></li>
+              <li class="hashtags__item"><a>#авокадо</a></li>
+              <li class="hashtags__item"><a>#смузи</a></li>
+            </ul>
           <div class="profile__directions">
             <p class="profile__legend">хочет посетить:</p>
             <ul class="profile__countries countries-list">
               <li class="countries-list__item flag flag--srilanka flag--small">Шри-ланка</li>
-              <li class="countries-list__item flag--thailand flag--small">Таиланд</li>
-              <li class="countries-list__item flag flag--thailand flag--small">Сейшелы</li>
+              <li class="countries-list__item flag flag--thailand flag--small">Таиланд</li>
+              <li class="countries-list__item flag flag--seychelles flag--small">Сейшелы</li>
             </ul>
           </div>
-          <div class="profile__transport">
-            <p class="profile__legend">транспорт:</p>
-            <ul class="profile__vehicles-list vehicles">
-              <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active">Авиаперелет</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bus">Автотранспорт</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle">Велосипед</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--hiking">Пешком</li>
-            </ul>
+          <div class="profile__wrapper">
+            <div class="profile__transport">
+              <p class="profile__legend">транспорт:</p>
+              <ul class="profile__vehicles-list vehicles">
+                <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bus"><span class="tooltip">Автотранспорт</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle"><span class="tooltip">Велосипед</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--hiking"><span class="tooltip">Пешком</span></li>
+              </ul>
+            </div>
+            <div class="profile__rating">
+              <p class="profile__legend">левел:</p>
+              <p class="profile__level">99</p>
+            </div>
           </div>
-          <div class="profile__rating">
-            <p class="profile__legend">левел:</p>
-            <p class="profile__level">99</p>
-          </div>
-          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button round-button--medium" href="respond.html">Позвать!</a>
         </li>
         <li class="travelers-profiles__item profile">
           <div class="profile__header">
             <div class="profile__avatar">
-              <a href="#"><img class="profile__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Петя Демин"></a>
+              <a href="#"><img class="profile__photo" src="img/demin-mobile@1x.jpg" width="70" height="70" alt="Петя Демин"></a>
               <button class="profile__like-button" type="button"><span class="profile__like-counter">1500</span></button>
             </div>
-            <h3 class="profile__name profile__status status"><a href="#">Петя Демин</a></h3>
-            <ul class="profile__hashtags-list hashtags hashtags--small">
-              <li>#бургер</li>
-              <li>#бар</li>
-              <li>#футбол</li>
-              <li>#концерт</li>
-              <li>#крафт</li>
-            </ul>
+            <h3 class="profile__name profile__status status status--big"><a href="#">Петя Демин</a></h3>
           </div>
+            <ul class="profile__hashtags-list hashtags hashtags--small">
+              <li class="hashtags__item"><a>#бургер</a></li>
+              <li class="hashtags__item"><a>#бар</a></li>
+              <li class="hashtags__item"><a>#футбол</a></li>
+              <li class="hashtags__item"><a>#концерт</a></li>
+              <li class="hashtags__item"><a>#крафт</a></li>
+            </ul>
           <div class="profile__directions">
             <p class="profile__legend">хочет посетить:</p>
             <ul class="profile__countries countries-list">
@@ -249,36 +253,38 @@
               <li class="countries-list__item flag--czech flag--small">Чехия</li>
             </ul>
           </div>
-          <div class="profile__transport">
-            <p class="profile__legend">транспорт:</p>
-            <ul class="profile__vehicles-list vehicles">
-              <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active">Авиаперелет</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bus vehicles__item--active">Автотранспорт</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle">Велосипед</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--hiking vehicles__item--active">Пешком</li>
-            </ul>
+          <div class="profile__wrapper">
+            <div class="profile__transport">
+              <p class="profile__legend">транспорт:</p>
+              <ul class="profile__vehicles-list vehicles">
+                <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bus vehicles__item--active"><span class="tooltip">Автотранспорт</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle"><span class="tooltip">Велосипед</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--hiking vehicles__item--active"><span class="tooltip">Пешком</span></li>
+              </ul>
+            </div>
+            <div class="profile__rating">
+              <p class="profile__legend">левел:</p>
+              <p class="profile__level">80</p>
+            </div>
           </div>
-          <div class="profile__rating">
-            <p class="profile__legend">левел:</p>
-            <p class="profile__level">80</p>
-          </div>
-          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button round-button--medium" href="respond.html">Позвать!</a>
         </li>
         <li class="travelers-profiles__item profile">
           <div class="profile__header">
             <div class="profile__avatar">
-              <a href="#"><img class="profile__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Марк Смолов"></a>
+              <a href="#"><img class="profile__photo" src="img/smolov-mobile@1x.jpg" width="70" height="70" alt="Марк Смолов"></a>
               <button class="profile__like-button" type="button"><span class="profile__like-counter">170</span></button>
             </div>
-            <h3 class="profile__name profile__status status"><a href="#">Марк Смолов</a></h3>
-            <ul class="profile__hashtags-list hashtags hashtags--small">
-              <li>#рэп</li>
-              <li>#тату</li>
-              <li>#хайпбист</li>
-              <li>#кроссовки</li>
-              <li>#суприм</li>
-            </ul>
+            <h3 class="profile__name profile__status status status--big"><a href="#">Марк Смолов</a></h3>
           </div>
+            <ul class="profile__hashtags-list hashtags hashtags--small">
+              <li class="hashtags__item"><a>#рэп</a></li>
+              <li class="hashtags__item"><a>#тату</a></li>
+              <li class="hashtags__item"><a>#хайпбист</a></li>
+              <li class="hashtags__item"><a>#кроссовки</a></li>
+              <li class="hashtags__item"><a>#суприм</a></li>
+            </ul>
           <div class="profile__directions">
             <p class="profile__legend">хочет посетить:</p>
             <ul class="profile__countries countries-list">
@@ -287,35 +293,37 @@
               <li class="countries-list__item flag--dominica flag--small">Доминика</li>
             </ul>
           </div>
-          <div class="profile__transport">
-            <p class="profile__legend">транспорт:</p>
-            <ul class="profile__vehicles-list vehicles">
-              <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active">Авиаперелет</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bus">Автотранспорт</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle vehicles__item--active">Велосипед</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--hiking">Пешком</li>
-            </ul>
+          <div class="profile__wrapper">
+            <div class="profile__transport">
+              <p class="profile__legend">транспорт:</p>
+              <ul class="profile__vehicles-list vehicles">
+                <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bus"><span class="tooltip">Автотранспорт</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle vehicles__item--active"><span class="tooltip">Велосипед</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--hiking"><span class="tooltip">Пешком</span></li>
+              </ul>
+            </div>
+            <div class="profile__rating">
+              <p class="profile__legend">левел:</p>
+              <p class="profile__level">25</p>
+            </div>
           </div>
-          <div class="profile__rating">
-            <p class="profile__legend">левел:</p>
-            <p class="profile__level">25</p>
-          </div>
-          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button round-button--medium" href="respond.html">Позвать!</a>
         </li>
         <li class="travelers-profiles__item profile">
           <div class="profile__header">
             <div class="profile__avatar">
-              <a href="#"><img class="profile__photo" src="https://via.placeholder.com/70x70" width="70" height="70" alt="Лариса Роговая"></a>
+              <a href="#"><img class="profile__photo" src="img/rogovaya-mobile@1x.jpg" width="70" height="70" alt="Лариса Роговая"></a>
               <button class="profile__like-button" type="button"><span class="profile__like-counter">23</span></button>
             </div>
-            <h3 class="profile__name profile__status status status--online"><a href="#">Лариса Роговая</a></h3>
-            <ul class="profile__hashtags-list hashtags hashtags--small">
-              <li>#образование</li>
-              <li>#карьера</li>
-              <li>#учеба</li>
-              <li>#линкедин</li>
-            </ul>
+            <h3 class="profile__name profile__status status status--big status--online"><a href="#">Лариса Роговая</a></h3>
           </div>
+            <ul class="profile__hashtags-list hashtags hashtags--small">
+              <li class="hashtags__item"><a>#образование</a></li>
+              <li class="hashtags__item"><a>#карьера</a></li>
+              <li class="hashtags__item"><a>#учеба</a></li>
+              <li class="hashtags__item"><a>#линкедин</a></li>
+            </ul>
           <div class="profile__directions">
             <p class="profile__legend">хочет посетить:</p>
             <ul class="profile__countries countries-list">
@@ -323,54 +331,56 @@
               <li class="countries-list__item flag--germany flag--small">Германия</li>
             </ul>
           </div>
-          <div class="profile__transport">
-            <p class="profile__legend">транспорт:</p>
-            <ul class="profile__vehicles-list vehicles">
-              <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active">Авиаперелет</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bus vehicles__item--active">Автотранспорт</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle">Велосипед</li>
-              <li class="vehicles__item vehicles__item--blue vehicles__item--hiking">Пешком</li>
-            </ul>
+          <div class="profile__wrapper">
+            <div class="profile__transport">
+              <p class="profile__legend">транспорт:</p>
+              <ul class="profile__vehicles-list vehicles">
+                <li class="vehicles__item vehicles__item--blue vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bus vehicles__item--active"><span class="tooltip">Автотранспорт</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--bicycle"><span class="tooltip">Велосипед</span></li>
+                <li class="vehicles__item vehicles__item--blue vehicles__item--hiking"><span class="tooltip">Пешком</span></li>
+              </ul>
+            </div>
+            <div class="profile__rating">
+              <p class="profile__legend">левел:</p>
+              <p class="profile__level">50</p>
+            </div>
           </div>
-          <div class="profile__rating">
-            <p class="profile__legend">левел:</p>
-            <p class="profile__level">50</p>
-          </div>
-          <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+          <a class="profile__to-call round-button round-button--medium" href="respond.html">Позвать!</a>
         </li>
       </ul>
       <a class="profiles__to-all" href="#">Показать еще</a>
       <ul class="profiles__pagination paginator">
         <li class="paginator__item">
-          <a class="paginator__button paginator__button--back" href="#">Показать предыдущую страницу</a>
+          <a class="paginator__button paginator__button--back" href="#" aria-label="Показать предыдущую страницу"></a>
         </li>
         <li class="paginator__item">
-          <a class="paginator__button paginator__button--forward" href="#">Показать следующую страницу</a>
+          <a class="paginator__button paginator__button--forward" href="#" aria-label="Показать следующую страницу"></a>
         </li>
       </ul>
     </section>
 
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer container">
     <a class="site-footer__logo">
-      <img class="site-footer__logo-image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса «Погнали»">
+      <img class="site-footer__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
     </a>
     <ul class="site-footer__social-list social">
       <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+        <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+        <a class="social__link social__link--vkontakte" href="#" aria-label="Вконтакте"></a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+        <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
       </li>
     </ul>
     <div class="site-footer__copyright copyright">
       <p class="copyright__text">Разработано</p>
       <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__picture" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+        <img class="copyright__picture" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </div>
   </footer>

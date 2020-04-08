@@ -3,62 +3,64 @@
   <head>
     <meta charset="utf-8">
     <title>Сервис для поиска попутчиков для путешествий «Погнали»</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-  <header class="site-header site-header--inner">
-    <a class="site-header__logo" href="index.html">
-      <img class="site-header__logo-image" src="https://via.placeholder.com/100x19" width="100" height="19" alt="Логотип сервиса «Погнали»">
-    </a>
+  <header class="site-header container">
+    <div class="site-header__top">
+      <a class="site-header__logo" href="index.html">
+        <img class="site-header__logo-image" src="img/logo-mobile-white@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
+      </a>
+      <button class="site-header__toggle" type="button" aria-label="Открыть меню"></button>
+    </div>
     <nav class="site-navigation">
-      <button class="site-navigation__toggle" type="button">Открыть меню</button>
-        <div class="site-navigation__wrapper">
-          <ul class="site-navigation__list main-menu">
-            <li class="main-menu__item">
-              <a href="#">О сервисе</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="form.html">Направления</a>
-            </li>
-            <li class="main-menu__item">
-              <a href="catalog.html">Попутчики</a>
-            </li>
-          </ul>
-          <ul class="site-navigation__list user-menu">
-            <li class="user-menu__item">
-              <a class="user-menu__login round-button" href="login.html">Авторизация</a>
-            </li>
-          </ul>
-          <ul class="site-navigation__list contacts">
-            <li class="contacts__item">
-              <a class="contacts__phone contacts__phone--dark" href="tel:+78005558628">8 800 555-86-28</a>
-            </li>
-            <li class="contacts__item">
-              <a class="contacts__mail contacts__mail--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-          <ul class="site-navigation__list social">
-            <li class="social__item">
-              <a class="social__link social__link--light social__link--facebook" href="#">Фейсбук</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--light social__link--vkontakte" href="#">Вконтакте</a>
-            </li>
-            <li class="social__item">
-              <a class="social__link social__link--light social__link--instagram" href="#">Инстаграм</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
+      <ul class="site-navigation__list main-menu">
+        <li class="main-menu__item">
+          <a href="#">О сервисе</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="form.html">Направления</a>
+        </li>
+        <li class="main-menu__item">
+          <a href="catalog.html">Попутчики</a>
+        </li>
+      </ul>
+      <ul class="site-navigation__list user-menu">
+        <li class="user-menu__item">
+          <a class="user-menu__login round-button round-button--big" href="login.html">Авторизация</a>
+        </li>
+      </ul>
+      <ul class="site-navigation__contacts-list contacts">
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--phone contacts__link--dark" href="tel:+78005558628">8 800 555-86-28</a>
+        </li>
+        <li class="contacts__item">
+          <a class="contacts__link contacts__link--mail contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+        </li>
+      </ul>
+      <ul class="site-navigation__social-list social">
+        <li class="social__item">
+          <a class="social__link social__link--light social__link--facebook" href="#" aria-label="Фейсбук"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--light social__link--vkontakte" href="#" aria-label="Вконтакте"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--light social__link--instagram" href="#" aria-label="Инстаграм"></a>
+        </li>
+      </ul>
+    </nav>
   </header>
 
   <main class="site-main inner-page">
-
-    <h1 class="inner-page__title ">Направления</h1>
+    <div class="inner-page__header container">
+      <h1 class="inner-page__title ">Направления</h1>
+    </div>
 
     <form class="user-form" action="https://echo.htmlacademy.ru" method="get">
 
-      <section class="user-form__wrapper user-info">
+      <section class="user-form__wrapper user-info container">
         <h2 class="visually-hidden">Информация обо мне</h2>
         <fieldset class="user-info__field user-avatar">
           <p class="user-avatar__level">80 <span>level</span></p>
@@ -81,7 +83,7 @@
         </fieldset>
       </section>
 
-      <section class="user-form__wrapper user-plans">
+      <section class="user-form__wrapper user-plans container">
         <h2 class="user-form__section-title">Мои планы:</h2>
         <ol class="user-plans__list plans">
           <li class="plans__item plan">
@@ -99,7 +101,7 @@
         </ol>
       </section>
 
-      <section class="user-form__wrapper plan-add">
+      <section class="user-form__wrapper plan-add container">
         <div class="plan-add__title-wrapper">
           <h2 class="user-form__section-title">Добавить план:</h2>
           <ul class="plan-add__markers-list step-markers">
@@ -305,25 +307,25 @@
 
   </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer container">
     <a class="site-footer__logo">
-      <img class="site-footer__logo-image" src="https://via.placeholder.com/96x15" width="96" height="15" alt="Логотип сервиса «Погнали»">
+      <img class="site-footer__logo-image" src="img/logo-mobile-blue@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
     </a>
     <ul class="site-footer__social-list social">
       <li class="social__item">
-        <a class="social__link social__link--facebook" href="#">Фейсбук</a>
+        <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="#">Вконтакте</a>
+        <a class="social__link social__link--vkontakte" href="#" aria-label="Вконтакте"></a>
       </li>
       <li class="social__item">
-        <a class="social__link social__link--instagram" href="#">Инстаграм</a>
+        <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
       </li>
     </ul>
     <div class="site-footer__copyright copyright">
       <p class="copyright__text">Разработано</p>
       <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__picture" src="https://via.placeholder.com/27x34" width="27" height="34" alt="Логотип HTML Academy">
+        <img class="copyright__picture" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
       </a>
     </div>
   </footer>

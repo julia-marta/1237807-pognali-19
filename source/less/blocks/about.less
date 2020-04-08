@@ -1,0 +1,27 @@
+.about {
+  position: relative;
+  padding-top: 33px;
+  padding-bottom: 80px;
+  background-color: @darkblue;
+  background-image: url("../../img/about-mobile@1x.png");
+  background-position: 18px top;
+  background-repeat: no-repeat;
+  z-index: 7;
+  .section-radius();
+}
+
+.about__title {
+  padding-left: 25px;
+  margin-bottom: 20px;
+}
+
+.about__message {
+  .indents-none();
+  width: 210px;
+  padding-left: 25px;
+
+  &--strong {
+    margin-top: 18px;
+    font-weight: @bold;
+  }
+}

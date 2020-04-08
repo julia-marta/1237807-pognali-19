@@ -1,0 +1,123 @@
+body {
+  min-width: 320px;
+  .indents-none();
+  font-family: "BloggerSans", "Arial", sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: @light;
+  color: @white;
+  background-color: @bg-darkblue;
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 0 auto;
+  padding-left: 25px;
+  padding-right: 25px;
+  // outline: 2px solid blue;
+}
+
+.button {
+  .inline-block();
+  width: 246px;
+  padding-top: 23px;
+  padding-left: 24px;
+  padding-bottom: 21px;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: @bold;
+  color: @btn-darkblue;
+  background-color: @yellow;
+  border: none;
+  border-radius: 10px;
+}
+
+.round-button {
+  .inline-block();
+  width: 189px;
+  padding-top: 7px;
+  padding-bottom: 3px;
+  font-size: 17px;
+  line-height: 30px;
+  font-weight: @bold;
+  text-transform: uppercase;
+  text-align: center;
+  color: @bg-darkblue;
+  background-color: @yellow;
+  border: none;
+  border-radius: 20px;
+
+  &--medium {
+    width: 230px;
+  }
+
+  &--big {
+    width: 270px;
+    padding-top: 11px;
+    padding-bottom: 9px;
+    border-radius: 25px;
+  }
+}
+
+.section-title {
+  .indents-none();
+  font-size: 24px;
+  line-height: 24px;
+  font-weight: @bold;
+  color: @darkorange;
+}
+
+.tooltip {
+  .inline-block();
+  display: none;
+  padding-top: 17px;
+  padding-left: 20px;
+  padding-bottom: 16px;
+  padding-right: 20px;
+  font-size: 20px;
+  line-height: 24px;
+  font-weight: @normal;
+  text-align: center;
+  background-color: @tooltip-darkblue;
+  border-radius: 4px;
+}
+
+.status {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: @redlight;
+    border-radius: 50%;
+  }
+
+  &--online::before {
+    background-color: @greenlight;
+  }
+
+  &--big::before {
+    width: 6px;
+    height: 6px;
+  }
+}
