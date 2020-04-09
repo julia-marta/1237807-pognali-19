@@ -1,0 +1,19 @@
+.status {
+  &::before {
+    content: "";
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    background-color: @redlight;
+    border-radius: 50%;
+  }
+
+  &--online::before {
+    background-color: @greenlight;
+  }
+
+  &--big::before {
+    width: 6px;
+    height: 6px;
+  }
+}
