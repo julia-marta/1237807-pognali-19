@@ -1,8 +1,9 @@
 .round-button {
   .inline-block();
-  width: 189px;
+  box-sizing: border-box;
   padding-top: 7px;
   padding-bottom: 3px;
+  font: inherit;
   font-size: 17px;
   line-height: 30px;
   font-weight: @bold;
@@ -13,14 +14,24 @@
   border: none;
   border-radius: 20px;
 
-  &--medium {
-    width: 230px;
-  }
-
   &--big {
-    width: 270px;
     padding-top: 11px;
     padding-bottom: 9px;
     border-radius: 25px;
+  }
+
+  &--darkblue {
+    padding-left: 28px;
+    font-size: 16.5px;
+    line-height: 29.5px;
+    background-color: @btn-blue;
+  }
+
+  &--blue {
+    background-color: @btn-lightblue;
+  }
+
+  &--white {
+    background-color: @white;
   }
 }

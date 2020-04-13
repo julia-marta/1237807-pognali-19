@@ -1,0 +1,48 @@
+.level-filter {
+  padding-top: 1px;
+}
+
+.level-filter__value {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+
+.level-filter__input {
+  box-sizing: border-box;
+  width: 110px;
+  min-height: 35px;
+  padding-top: 5px;
+  appearance: textfield;
+  font: inherit;
+  font-size: 15px;
+  line-height: 13.5px;
+  font-weight: @medium;
+  text-align: center;
+  letter-spacing: 1.5px;
+  color: @btn-darkblue;
+  border: 1px solid @border-grey;
+  border-radius: 3px;
+
+  &--min {
+    border-right: none;
+  }
+}
+
+.level-filter__range-scale {
+  position: relative;
+  width: 220px;
+  height: 2px;
+  background-color: fade(@btn-darkblue, 20%);
+  border-radius: 0.5px;
+}
+
+.level-filter__range-bar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 144px;
+  height: 2px;
+  background-color: @btn-darkblue;
+  border-radius: 1px;
+}

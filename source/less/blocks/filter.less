@@ -1,0 +1,45 @@
+.filter {
+  padding-top: 30px;
+}
+
+.filter__regions-list {
+  .indents-none();
+  margin-bottom: 20px;
+  padding-left: 25px;
+}
+
+.filter__letter-selector {
+  margin-left: 25px;
+  margin-bottom: 12px;
+}
+
+.filter__countries-list {
+  .indents-none();
+  padding-left: 26px;
+  margin-bottom: 28px;
+}
+
+.filter__collapse {
+  position: relative;
+  width: 270px;
+  margin-bottom: 15px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 19px;
+    left: 83px;
+    width: 16px;
+    height: 2px;
+    background-color: @darkblue;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+}

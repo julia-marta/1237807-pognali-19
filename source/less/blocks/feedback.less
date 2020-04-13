@@ -1,8 +1,35 @@
 .feedback {
   position: relative;
   margin-top: -30px;
-  padding-top: 80px;
+  padding-top: 102px;
+  padding-bottom: 28px;
+  text-align: center;
   background-color: @darkblue;
   z-index: 3;
   .section-radius();
+}
+
+.feedback__title {
+  margin-bottom: 19px;
+}
+
+.feedback__message {
+  .indents-none();
+  .inline-block();
+  width: 212px;
+}
+
+.feedback__login-link {
+  color: @yellow;
+  text-decoration: underline;
+}
+
+.feedback__form {
+  margin-top: 30px;
+  margin-bottom: 28px;
+}
+
+.feedback__contacts {
+  .indents-none();
+  margin-top: 18px;
 }

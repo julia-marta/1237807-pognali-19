@@ -26,11 +26,7 @@
           <a href="catalog.html">Попутчики</a>
         </li>
       </ul>
-      <ul class="site-navigation__list user-menu">
-        <li class="user-menu__item">
-          <a class="user-menu__login round-button round-button--big" href="login.html">Авторизация</a>
-        </li>
-      </ul>
+      <a class="site-navigation__login round-button round-button--big" href="login.html">Авторизация</a>
       <ul class="site-navigation__contacts-list contacts">
         <li class="contacts__item">
           <a class="contacts__link contacts__link--phone contacts__link--dark" href="tel:+78005558628">8 800 555-86-28</a>
@@ -225,14 +221,14 @@
 
     <section class="feedback container">
       <h2 class="feedback__title section-title">Заинтересовались?</h2>
-      <p class="feedback__message">Зарегистрируйтесь, это быстро и бесплатно!
-        Уже зарегистрированы? Тогда скорее <a class="feedback__login-link" href="login.html">авторизуйтесь</a>.</p>
+      <p class="feedback__message">Зарегистрируйтесь, <span class="feedback__message">это быстро и бесплатно!</span></p>
+      <p class="feedback__message">Уже зарегистрированы? Тогда скорее <a class="feedback__login-link" href="login.html">авторизуйтесь</a>.</p>
       <form class="feedback__form registration" action="https://echo.htmlacademy.ru" method="post">
         <label class="visually-hidden" for="registration-email">E-mail</label>
-        <input id="registration-email" type="email" name="email" placeholder="E-mail">
-        <button class="registration__button" type="submit">Регистрация</button>
+        <input class="registration__input" id="registration-email" type="email" name="email" placeholder="E-mail">
+        <button class="registration__button button" type="submit"><span class="registration__button-title">Регистрация</span></button>
       </form>
-      <p class="feedback__message">Остались вопросы? Мы с радостью на них ответим!</p>
+      <p class="feedback__message">Остались вопросы? <span class="feedback__message">Мы с радостью на них ответим!</span></p>
       <ul class="feedback__contacts contacts">
         <li class="contacts__item">
           <a class="contacts__link contacts__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
@@ -246,7 +242,7 @@
     <section class="route container">
       <h2 class="visually-hidden">Адрес и маршрут проезда</h2>
       <p class="route__address">ул. Большая Конюшенная, 19/8</p>
-      <a class="route__to-go button" href="https://goo.gl/maps/6PmeDfW8GCa7gmRCA">Проложить маршрут</a>
+      <a class="route__to-go button button--bordered" href="https://goo.gl/maps/6PmeDfW8GCa7gmRCA">Проложить маршрут</a>
     </section>
 
     <section class="map">

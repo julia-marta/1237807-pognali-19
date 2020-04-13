@@ -1,0 +1,21 @@
+.step-markers {
+  .list-reset();
+  display: flex;
+  margin-right: 17px;
+}
+
+.step-markers__item {
+  width: 5px;
+  height: 5px;
+  margin-left: 16px;
+  background-color: fade(@marker-grey, 30%);
+  border-radius: 50%;
+
+  &--active {
+    background-color: @btn-darkblue;
+  }
+}
+
+.step-markers__title {
+  display: none;
+}

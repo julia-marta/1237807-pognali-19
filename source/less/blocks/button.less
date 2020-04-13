@@ -1,9 +1,10 @@
 .button {
   .inline-block();
-  width: 246px;
+  box-sizing: border-box;
   padding-top: 23px;
   padding-left: 24px;
   padding-bottom: 21px;
+  padding-right: 24px;
   font-size: 18px;
   line-height: 18px;
   font-weight: @bold;
@@ -11,4 +12,11 @@
   background-color: @yellow;
   border: none;
   border-radius: 10px;
+
+  &--bordered {
+    padding-top: 21px;
+    padding-left: 21px;
+    padding-bottom: 17px;
+    border: 3px solid @darkblue;
+  }
 }

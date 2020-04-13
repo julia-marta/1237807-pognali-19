@@ -1,0 +1,32 @@
+.letters {
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.letters__item {
+  box-sizing: border-box;
+  width: 44px;
+  background-color: @white;
+  border: 1px solid @border-grey;
+
+  &--current {
+    background-color: @btn-darkblue;
+    border-color: @btn-darkblue;
+  }
+
+  &--current-light {
+    background-color: @lightgrey;
+  }
+}
+
+.letters__link {
+  font-size: 14px;
+  line-height: 38px;
+  font-weight: @medium;
+  text-transform: uppercase;
+  color: @btn-darkblue;
+
+  &--current {
+    color: @white;
+  }
+}
