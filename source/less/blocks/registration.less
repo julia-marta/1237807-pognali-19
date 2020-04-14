@@ -1,0 +1,36 @@
+.registration {
+  position: relative;
+}
+
+.registration__input {
+  .indents-none();
+  box-sizing: border-box;
+  width: 270px;
+  padding-top: 23px;
+  padding-left: 24px;
+  padding-bottom: 21px;
+  font: inherit;
+  font-size: 18px;
+  line-height: 18px;
+  font-weight: @bold;
+  color: @white;
+  background-color: @white;
+  border: none;
+  border-radius: 10px;
+
+  &::placeholder {
+    color: fade(@darkgrey, 30%);
+  }
+}
+
+.registration__button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 60px;
+  min-height: 62px;
+}
+
+.registration__button-title {
+  display: none;
+}

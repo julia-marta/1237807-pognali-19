@@ -1,0 +1,90 @@
+.country-select {
+  position: relative;
+
+  &--chosen {
+    display: flex;
+  }
+}
+
+.country-select__field {
+  box-sizing: border-box;
+  width: 168px;
+  height: 42px;
+  padding-top: 13px;
+  padding-left: 10px;
+  background-color: @white;
+  border: 1px solid @border-grey;
+  border-radius: 4px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 17px;
+    right: 49px;
+    box-sizing: border-box;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+  }
+
+  &--flag {
+    width: 53px;
+    margin-left: -1px;
+  }
+
+  &--flag::before {
+    background-color: @btn-darkblue;
+  }
+
+  &--empty {
+    width: 100%;
+  }
+
+  &--empty::before {
+    background-color: @white;
+    border: 1px solid @border-grey;
+  }
+
+  &--add {
+    padding-left: 12px;
+    background-color: @lightgrey;
+    border: none;
+  }
+
+  &--add::before {
+    background-color: @lightgrey;
+  }
+}
+
+.country-select__value {
+  .indents-none();
+  font-size: 14px;
+  line-height: 18px;
+  font-weight: @medium;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: @btn-darkblue;
+}
+
+.country-select__delete {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 21px;
+  height: 21px;
+  background-color: @lightgrey;
+  border: none;
+  border-radius: 50%;
+}
+
+.country-select__add {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 14px;
+  height: 14px;
+  background: none;
+  border: none;
+}

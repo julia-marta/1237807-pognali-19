@@ -1,0 +1,21 @@
+.regions {
+  .list-reset();
+}
+
+.regions__item {
+  margin-bottom: 5px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.regions__link {
+  font-weight: @bold;
+  text-transform: uppercase;
+  color: fade(@darkblue, 30%);
+
+  &--current {
+    color: @darkblue;
+  }
+}

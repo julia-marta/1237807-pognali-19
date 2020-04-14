@@ -1,0 +1,113 @@
+.add-dates__message {
+  .indents-none();
+  margin-bottom: 13px;
+}
+
+.add-dates__field {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: relative;
+  margin-bottom: 13px;
+}
+
+.add-dates__label {
+  .indents-none();
+  line-height: 32px;
+  font-weight: @medium;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: @btn-darkblue;
+
+  &--unit {
+    color: fade(@btn-darkblue, 30%);
+  }
+}
+
+.add-dates__input-number {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  font: inherit;
+  font-size: 15px;
+  line-height: 13.5px;
+  letter-spacing: 1.5px;
+  font-weight: @medium;
+  text-align: center;
+  appearance: textfield;
+  color: @btn-darkblue;
+  border: 1px solid @border-grey;
+  border-radius: 4px;
+}
+
+.add-dates__button {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &--minus {
+    bottom: 13px;
+    left: 14px;
+  }
+
+  &--plus {
+    bottom: 13px;
+    right: 14px;
+  }
+
+  &::before,
+  &--plus::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    width: 14px;
+    height: 2px;
+    background-color: @ctr-lightgrey;
+  }
+
+  &--minus::before {
+    left: 0;
+  }
+
+  &--plus::before,
+  &--plus::after {
+    right: 0;
+  }
+
+  &--plus::after {
+    transform: rotate(90deg);
+  }
+}
+
+.add-dates__checkbox {
+  position: relative;
+  margin-top: 24px;
+  margin-bottom: 22px;
+  padding-left: 39px;
+}
+
+.add-dates__input-checkbox + label::before {
+  content: "";
+  position: absolute;
+  top: -3px;
+  left: 0;
+  box-sizing: border-box;
+  width: 26px;
+  height: 26px;
+  background-color: @white;
+  border: 1px solid @border-grey;
+  border-radius: 4px;
+}
+
+.add-dates__label-checkbox {
+  font-size: 15px;
+  line-height: 15px;
+}
+
+.add-dates__calendar {
+  margin-bottom: 22px;
+}

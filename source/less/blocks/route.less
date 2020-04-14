@@ -1,8 +1,36 @@
 .route {
   position: relative;
   margin-top: -30px;
-  padding-top: 80px;
+  padding-top: 61px;
+  padding-bottom: 35px;
   background-color: @yellow;
   z-index: 2;
   .section-radius();
+}
+
+.route__address {
+  .indents-none();
+  position: relative;
+  width: 145px;
+  margin-bottom: 30px;
+  padding-top: 3px;
+  padding-left: 61px;
+  font-weight: @bold;
+  text-transform: uppercase;
+  color: @darkblue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 1px;
+    left: 0;
+    width: 45px;
+    height: 45px;
+    background-color: @icon-darkblue;
+    border-radius: 50%;
+  }
+}
+
+.route__to-go {
+  width: 270px;
 }
