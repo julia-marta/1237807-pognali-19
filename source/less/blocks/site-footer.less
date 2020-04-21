@@ -18,3 +18,38 @@
   margin-top: 37px;
   margin-bottom: 37px;
 }
+
+@media (min-width: @tablet-width) {
+  .site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: -60px;
+    padding-top: 48px;
+    padding-bottom: 45px;
+    .section-radius-top(60px);
+  }
+
+  .site-footer__logo-image {
+    width: 166px;
+    height: 42px;
+    margin-top: 8px;
+  }
+
+  .site-footer__social-list {
+    .indents-none();
+    margin-left: -10px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-footer__logo-image {
+    width: 198px;
+    height: 52px;
+    margin-top: 3px;
+  }
+
+  .site-footer__social-list {
+    margin-left: -45px;
+  }
+}

@@ -5,3 +5,26 @@
 .travelers__item {
   margin-bottom: 10px;
 }
+
+@media (min-width: @tablet-width) {
+  .travelers {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .travelers__item {
+    margin-bottom: 0;
+    margin-right: 48px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travelers__item {
+    margin-right: 60px;
+  }
+}

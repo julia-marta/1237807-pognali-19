@@ -1,5 +1,6 @@
 .registration {
-  position: relative;
+  display: flex;
+  justify-content: center;
 }
 
 .registration__input {
@@ -24,13 +25,45 @@
 }
 
 .registration__button {
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin-left: -60px;
   width: 60px;
   min-height: 62px;
 }
 
 .registration__button-title {
   display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .registration__input {
+    width: 536px;
+    padding-top: 30px;
+    padding-left: 34px;
+    padding-bottom: 27px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .registration__button {
+    margin-left: 0;
+    width: 82px;
+    min-height: 81px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .registration__input {
+    width: 850px;
+  }
+
+  .registration__button {
+    width: 324px;
+  }
+
+  .registration__button-title {
+    .inline-block();
+  }
 }

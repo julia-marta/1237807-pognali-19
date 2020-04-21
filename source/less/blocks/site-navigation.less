@@ -1,29 +1,124 @@
 .site-navigation {
-  display: none;
-  padding-top: 45px;
-  padding-bottom: 10px;
   text-align: center;
-
-  &--opened {
-    display: block;
-    background-color: @white;
-  }
+  background-color: @white;
 }
 
 .site-navigation__list {
   .indents-none();
-  margin-bottom: 48px;
+
+  &--main {
+    margin-top: 45px;
+    margin-bottom: 49px;
+  }
+
+  &--user {
+    margin-bottom: 52px;
+  }
 }
 
-.site-navigation__login {
+.site-navigation__list .user-menu__link {
+  display: none;
+}
+
+.site-navigation__list .user-menu__login {
   width: 270px;
-  margin-bottom: 52px;
 }
 
-.site-navigation__contacts-list {
-  .indents-none();
+
+@media (min-width: @tablet-width) {
+  .site-navigation {
+    padding-left: 57px;
+    text-align: left;
+  }
+
+  .site-navigation__list {
+    &--main {
+      margin-top: 50px;
+      margin-bottom: 133px;
+    }
+
+    &--user {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      margin-bottom: 0;
+    }
+  }
+
+  .site-navigation__list .user-menu__login {
+    width: 188px;
+  }
 }
 
-.site-navigation__social-list {
-  .indents-none();
+@media (max-width: @mobile-tablet-width-only) {
+  .site-navigation {
+    &--opened {
+      padding-left: 25px;
+      padding-right: 25px;
+      position: absolute;
+      top: 73px;
+      left: 0;
+      z-index: 10;
+    }
+  }
+
+  .site-navigation--closed .site-navigation__list {
+    display: none;
+  }
+
+  @media (min-width: @tablet-width) {
+    .site-navigation {
+      &--opened {
+        padding-left: 97px;
+        padding-right: 0;
+        width: 671px;
+        top: 132px;
+      }
+    }
+
+    .site-navigation--closed .site-navigation__list {
+      &--user {
+        display: flex;
+      }
+    }
+
+    .site-navigation--opened .site-navigation__list {
+      &--user {
+        top: -92px;
+      }
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .site-navigation {
+    .indents-none();
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-grow: 1;
+    background-color: transparent;
+  }
+
+  .site-navigation__list {
+    &--main {
+      .indents-none();
+      margin-top: 4px;
+      padding-left: 45px;
+    }
+
+    &--user {
+      position: static;
+      margin-top: 2px;
+    }
+
+    &--contacts,
+    &--social {
+      display: none;
+    }
+  }
+
+  .site-navigation__list .user-menu__link {
+    display: block;
+  }
 }

@@ -27,3 +27,43 @@
     color: @darkblue;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .contacts__link {
+    padding-left: 91px;
+    font-size: 28px;
+    line-height: 67px;
+
+    &::before {
+      top: -4px;
+      width: 67px;
+      height: 67px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .contacts {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contacts__item {
+    margin-right: 110px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .contacts__link {
+    padding-left: 122px;
+    line-height: 90px;
+
+    &::before {
+      top: -3px;
+      width: 90px;
+      height: 90px;
+    }
+  }
+}

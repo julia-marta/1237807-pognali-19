@@ -4,8 +4,7 @@
 
 .traveler-card__photo {
   display: block;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  .section-radius-top(10px);
 }
 
 .traveler-card__level {
@@ -42,8 +41,7 @@
   padding-bottom: 20px;
   text-align: center;
   background-color: @white;
-  border-bottom-left-radius: 10px;
-  border-bottom-right-radius: 10px;
+  .section-radius(10px);
 }
 
 .traveler-card__countries {
@@ -76,4 +74,53 @@
 
 .traveler-card__vehicles-list {
   .indents-none();
+}
+
+@media (min-width: @tablet-width) {
+  .traveler-card__photo {
+    width: 285px;
+    height: 285px;
+    .section-radius-top(20px);
+  }
+
+  .traveler-card__level {
+    top: 20px;
+    left: 20px;
+  }
+
+  .traveler-card__info {
+    width: 285px;
+    padding-top: 30px;
+    .section-radius(20px);
+  }
+
+  .traveler-card__name {
+    margin-bottom: 22px;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  .traveler-card__status::before {
+    top: 9px;
+    left: -22px;
+  }
+
+  .traveler-card__hashtags-list {
+    width: 229px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .traveler-card__level {
+    top: 23px;
+    left: 23px;
+  }
+
+  .traveler-card__info {
+    padding-top: 33px;
+  }
+
+  .traveler-card__name {
+    margin-bottom: 18px;
+  }
 }

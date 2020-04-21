@@ -4,10 +4,6 @@
   padding-top: 81px;
   padding-bottom: 35px;
   background-color: @lightgrey;
-  background-image: url("../img/rates@1x.png");
-  background-position: 195px 68px;
-  background-repeat: no-repeat;
-  background-size: 99px;
   z-index: 4;
   .section-radius();
 }
@@ -19,9 +15,23 @@
 }
 
 .rates__list {
+  position: relative;
   .indents-none();
   padding-left: 25px;
   margin-bottom: 27px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -131px;
+    right: -45px;
+    width: 99px;
+    height: 99px;
+    background-image: url("../img/rates@1x.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 99px;
+  }
 }
 
 .rates__to-business {
@@ -29,4 +39,83 @@
   line-height: 16px;
   font-weight: @bold;
   color: @darkblue;
+}
+
+@media (min-width: @tablet-width) {
+  .rates {
+    margin-top: -60px;
+    padding-top: 134px;
+    padding-bottom: 82px;
+    .section-radius(60px);
+  }
+
+  .rates__title {
+    width: 100%;
+    padding-left: 0;
+    margin-bottom: 72px;
+    text-align: center;
+  }
+
+  .rates__list {
+    padding-left: 90px;
+    margin-bottom: 47px;
+
+    &::before {
+      top: 218px;
+      right: 10px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -42px;
+      right: -35px;
+      width: 198px;
+      height: 285px;
+      background-color: @bg-lightgrey;
+      border-radius: 20px;
+      z-index: -1;
+    }
+  }
+
+  .rates__to-business {
+    padding-left: 89px;
+    font-size: 20px;
+    line-height: 20px;
+    color: @lightblue;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .rates {
+    padding-top: 167px;
+    padding-bottom: 183px;
+  }
+
+  .rates__title {
+    margin-bottom: 133px;
+  }
+
+  .rates__list {
+    padding-left: 160px;
+
+    &::before {
+      top: 1px;
+      right: -273px;
+      width: 198px;
+      height: 198px;
+      background-size: 198px;
+    }
+
+    &::after {
+      top: -51px;
+      right: -161px;
+      width: 444px;
+      height: 300px;
+    }
+  }
+
+  .rates__to-business {
+    margin-left: 71px;
+  }
 }
