@@ -1,9 +1,13 @@
 .vehicles {
   .list-reset();
   display: flex;
+  flex-wrap: wrap;
 }
 
 .vehicles__item {
+  width: 33px;
+  height: 33px;
+  background-color: @white;
   border-radius: 50%;
 
   &--blue {
@@ -11,10 +15,12 @@
     height: 32px;
     background-color: @lightgrey;
   }
+}
 
-  &--white {
-    width: 33px;
-    height: 33px;
-    background-color: @white;
+@media (min-width: @tablet-width) {
+  .vehicles__item {
+    &--blue {
+      background-color: transparent;
+    }
   }
 }

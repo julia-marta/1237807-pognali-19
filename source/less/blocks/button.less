@@ -5,6 +5,7 @@
   padding-left: 24px;
   padding-bottom: 21px;
   padding-right: 24px;
+  font: inherit;
   font-size: 18px;
   line-height: 18px;
   font-weight: @bold;
@@ -18,5 +19,36 @@
     padding-left: 21px;
     padding-bottom: 17px;
     border: 3px solid @darkblue;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    padding-top: 30px;
+    padding-left: 33px;
+    padding-bottom: 27px;
+    padding-right: 33px;
+    font-size: 24px;
+    line-height: 24px;
+    border-radius: 20px;
+
+    &--bordered {
+      padding-top: 27px;
+      padding-bottom: 24px;
+    }
+
+    &--half {
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    &--half {
+      padding-left: 35px;
+      text-align: left;
+    }
   }
 }

@@ -2,10 +2,38 @@
   .list-reset();
 }
 
-.main-menu__item a {
+.main-menu__link {
   font-size: 30px;
   line-height: 36px;
   font-weight: @medium;
   text-transform: uppercase;
   color: @darkblue;
+}
+
+@media (min-width: @tablet-width) {
+  .main-menu__link {
+    font-size: 60px;
+    line-height: 71px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .main-menu {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .main-menu__item {
+    margin-right: 34px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .main-menu__link {
+    font-size: 20px;
+    line-height: 30px;
+    color: @white;
+  }
 }

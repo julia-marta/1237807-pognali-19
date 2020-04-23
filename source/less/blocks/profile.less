@@ -1,7 +1,7 @@
 .profile {
+  position: relative;
   box-sizing: border-box;
   width: 270px;
-  margin-bottom: 10px;
   padding-top: 15px;
   padding-bottom: 22px;
   padding-left: 18px;
@@ -12,34 +12,28 @@
   color: @darkgrey;
   background-color: @white;
   border-radius: 20px;
-
-  &:last-child {
-    margin-bottom: 0;
-  }
-}
-
-.profile__header {
-  display: flex;
-  justify-content: flex-start;
-  position: relative;
-  margin-bottom: 15px;
 }
 
 .profile__avatar {
-  position: relative;
+  position: absolute;
+  top: 15px;
+  left: 18px;
 }
 
 .profile__photo {
   display: block;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
 }
 
 .profile__like-button {
   position: absolute;
-  top: 39px;
-  right: -10px;
+  top: 54px;
+  left: 67px;
   width: 31px;
   height: 31px;
+  font: inherit;
   text-align: left;
   background-color: @lightgrey;
   border: none;
@@ -62,10 +56,19 @@
   color: @bg-darkblue;
 }
 
+.profile__wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
 .profile__name {
   .indents-none();
-  margin-left: 16px;
+  position: relative;
+  margin-left: 86px;
+  margin-bottom: 14px;
   width: 78px;
+  min-height: 70px;
   font-size: 20px;
   line-height: 20px;
   font-weight: @bold;
@@ -78,7 +81,7 @@
 
 .profile__status::before {
   top: 8px;
-  right: 5px;
+  right: -66px;
 }
 
 .profile__hashtags-list {
@@ -90,7 +93,14 @@
 
 .profile__directions {
   padding-left: 8px;
-  margin-bottom: 11px;
+
+  &--three {
+    margin-bottom: 11px;
+  }
+
+  &--two {
+    margin-bottom: 17px;
+  }
 }
 
 .profile__legend {
@@ -102,11 +112,6 @@
   margin-top: 17px;
 }
 
-.profile__wrapper {
-  display: flex;
-  justify-content: space-between;
-}
-
 .profile__transport {
   padding-left: 8px;
 }
@@ -116,13 +121,17 @@
   margin-top: 15px;
 }
 
+.profile__rating {
+  text-align: center;
+  margin-right: 3px;
+}
+
 .profile__level {
   .indents-none();
   box-sizing: border-box;
   width: 45px;
   height: 45px;
   margin-top: 7px;
-  margin-right: 2px;
   font-size: 24px;
   line-height: 45px;
   font-weight: @bold;
@@ -132,8 +141,248 @@
   border-radius: 50%;
 }
 
+.profile__level-legend {
+  display: none;
+}
+
 .profile__to-call {
   width: 230px;
-  margin-top: 14px;
+  margin-top: 15px;
   margin-left: 2px;
+}
+
+@media (min-width: @tablet-width) {
+  .profile {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    width: 688px;
+    padding-top: 33px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+    padding-right: 25px;
+  }
+
+  .profile__avatar {
+    top: 35px;
+    left: 35px;
+  }
+
+  .profile__photo {
+    width: 190px;
+    height: 190px;
+    border-radius: 17px;
+  }
+
+  .profile__wrapper {
+    &--name {
+      order: 1;
+      align-items: flex-start;
+      width: 237px;
+      margin-bottom: 46px;
+      margin-left: 223px;
+    }
+
+    &--transport {
+      order: 2;
+      flex-direction: column;
+      align-items: center;
+      margin-left: auto;
+      margin-bottom: -55px;
+    }
+  }
+
+  .profile__name {
+    margin-left: 0;
+    margin-bottom: 17px;
+    width: auto;
+    min-height: auto;
+    font-size: 30px;
+    line-height: 30px;
+  }
+
+  .profile__status::before {
+    top: 10px;
+    right: -30px;
+  }
+
+  .profile__hashtags-list {
+    width: auto;
+    padding-left: 3px;
+    margin-bottom: 0;
+  }
+
+  .profile__to-call {
+    order: 2;
+    width: 148px;
+    margin-top: 0;
+    margin-left: 220px;
+  }
+
+  .profile__like-button {
+    order: 3;
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50px;
+    height: 50px;
+  }
+
+  .profile__like-counter {
+    top: 11px;
+    left: 57px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+
+  .profile__legend {
+    margin-left: 43px;
+
+    &--transport {
+      display: none;
+    }
+  }
+
+  .profile__transport {
+    padding-left: 0;
+  }
+
+  .profile__vehicles-list {
+    margin-top: 0;
+  }
+
+  .profile__transport .vehicles {
+    flex-direction: column;
+  }
+
+  .profile__rating {
+    margin-right: 0;
+  }
+
+  .profile__level {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    line-height: 45px;
+    border: 3px solid @darkorange;
+  }
+
+  .profile__level-legend {
+    position: absolute;
+    top: 36px;
+    left: 15px;
+    display: block;
+    font-size: 14px;
+    line-height: 14px;
+    font-weight: @normal;
+    color: fade(@darkgrey, 40%);
+  }
+
+  .profile__directions {
+    order: 5;
+    width: 100%;
+    margin-top: 22px;
+    margin-bottom: 0;
+    padding-left: 5px;
+  }
+
+  .profile__countries {
+    margin-top: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .profile {
+    width: 950px;
+    min-height: 285px;
+    padding-top: 47px;
+    padding-bottom: 42px;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 49px;
+      right: 319px;
+      width: 1px;
+      height: 187px;
+      background-image: linear-gradient(@transparent-white, @transparent-black 25%, @transparent-black 75%, @transparent-white);
+    }
+  }
+
+  .profile__avatar {
+    top: 0;
+    left: 0;
+  }
+
+  .profile__photo {
+    width: 285px;
+    height: 285px;
+    border-radius: 20px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
+
+  .profile__wrapper {
+    &--name {
+      order: 1;
+      margin-bottom: 45px;
+      margin-left: 309px;
+    }
+
+    &--transport {
+      order: 5;
+      flex-direction: row;
+      margin-top: -5px;
+      margin-left: 130px;
+    }
+  }
+
+  .profile__name {
+    margin-bottom: 18px;
+  }
+
+
+  .profile__status::before {
+    top: 11px;
+    left: -25px;
+  }
+
+  .profile__legend {
+    display: none;
+  }
+
+  .profile__directions {
+    order: 2;
+    width: auto;
+    .indents-none();
+    margin-left: 92px;
+  }
+
+  .profile__countries {
+    margin-top: 2px;
+  }
+
+  .profile__to-call {
+    order: 3;
+    margin-left: 306px;
+  }
+
+  .profile__like-button {
+    order: 4;
+  }
+
+  .profile__transport .vehicles {
+    flex-direction: row;
+  }
+
+  .profile__vehicles-list {
+    margin-top: 0;
+    margin-right: 50px;
+  }
+
+  .profile__level {
+    margin-top: 0;
+  }
 }

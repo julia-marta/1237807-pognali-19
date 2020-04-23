@@ -1,18 +1,22 @@
 .profiles {
   padding-top: 14px;
-  padding-bottom: 75px;
+  padding-bottom: 76px;
+  z-index: 1;
 }
 
 .profiles__list {
   .indents-none();
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .profiles__to-all {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  padding-left: 29px;
+  display: block;
+  box-sizing: border-box;
+  width: 148px;
+  position: relative;
+  margin: 0 auto;
+  margin-bottom: 19px;
+  padding-left: 32px;
   font-size: 17px;
   line-height: 30px;
   font-weight: @bold;
@@ -20,6 +24,39 @@
   color: @btn-darkblue;
 }
 
-.profiles__pagination {
-  .indents-none();
+
+@media (min-width: @tablet-width) {
+  .profiles {
+    padding-top: 20px;
+    padding-bottom: 122px;
+  }
+
+  .profiles__list {
+    margin-bottom: 46px;
+  }
+
+  .profiles__to-all {
+    width: 186px;
+    margin-bottom: 47px;
+    padding-left: 47px;
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .profiles {
+    order: 1;
+    padding-top: 77px;
+    padding-bottom: 137px;
+  }
+
+  .profiles__list {
+    margin-bottom: 66px;
+  }
+
+  .profiles__to-all {
+    margin-left: 350px;
+    margin-bottom: 66px;
+  }
 }

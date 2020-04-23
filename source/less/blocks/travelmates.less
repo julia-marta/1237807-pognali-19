@@ -37,16 +37,100 @@
 
   &--strong {
     margin-top: 20px;
+    margin-bottom: 58px;
     font-weight: @bold;
   }
 }
 
 .travelmates__list {
   .indents-none();
-  margin-top: 58px;
   margin-bottom: 20px;
 }
 
 .travelmates__to-all {
   width: 270px;
+}
+
+@media (min-width: @tablet-width) {
+  .travelmates {
+    margin-top: -60px;
+    padding-top: 200px;
+    padding-bottom: 88px;
+    background-image: url("../img/smolov-back-desktop@1x.png"),
+      url("../img/rogovaya-back-desktop@1x.png");
+    background-position: 40px 486px, 408px 140px;
+    .section-radius(60px);
+
+    &::before {
+      top: 140px;
+      left: 40px;
+      width: 213px;
+      height: 213px;
+    }
+  }
+
+  .travelmates__title {
+    padding-left: 33px;
+    margin-bottom: 57px;
+  }
+
+  .travelmates__message {
+    width: 425px;
+    padding-left: 35px;
+
+    &--strong {
+      margin-top: 40px;
+      font-size: 21px;
+      line-height: 25px;
+    }
+  }
+
+  .travelmates__list {
+    margin-bottom: 80px;
+  }
+
+  .travelmates__to-all {
+    width: 618px;
+    margin-left: 35px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .travelmates {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-top: 189px;
+    padding-bottom: 134px;
+    background-position: 547px 193px, 191px 445px;
+
+    &::before {
+      top: 128px;
+      left: 60px;
+    }
+  }
+
+  .travelmates__title {
+    padding-left: 68px;
+  }
+
+  .travelmates__message {
+    padding-left: 70px;
+
+    &--strong {
+      margin-bottom: 0;
+    }
+  }
+
+  .travelmates__list {
+    .indents-none();
+    padding-top: 4px;
+  }
+
+  .travelmates__to-all {
+    width: 280px;
+    margin-top: -41px;
+    margin-left: 71px;
+  }
 }
