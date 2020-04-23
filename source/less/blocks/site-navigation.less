@@ -3,6 +3,10 @@
   background-color: @white;
 }
 
+.site-navigation__wrapper {
+  position: relative;
+}
+
 .site-navigation__list {
   .indents-none();
 
@@ -27,6 +31,7 @@
 
 @media (min-width: @tablet-width) {
   .site-navigation {
+    position: relative;
     padding-left: 57px;
     text-align: left;
   }
@@ -39,7 +44,7 @@
 
     &--user {
       position: absolute;
-      top: 40px;
+      top: -92px;
       right: 40px;
       margin-bottom: 0;
     }
@@ -56,8 +61,8 @@
       padding-left: 25px;
       padding-right: 25px;
       position: absolute;
-      top: 73px;
-      left: 0;
+      top: 0;
+      left: -25px;
       z-index: 10;
     }
   }
@@ -72,19 +77,13 @@
         padding-left: 97px;
         padding-right: 0;
         width: 671px;
-        top: 132px;
+        left: -40px;
       }
     }
 
     .site-navigation--closed .site-navigation__list {
       &--user {
         display: flex;
-      }
-    }
-
-    .site-navigation--opened .site-navigation__list {
-      &--user {
-        top: -92px;
       }
     }
   }
