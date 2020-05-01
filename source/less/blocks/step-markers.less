@@ -1,21 +1,74 @@
 .step-markers {
   .list-reset();
   display: flex;
-  margin-right: 17px;
+  align-items: flex-start;
+  margin-right: 23px;
 }
 
 .step-markers__item {
-  width: 5px;
-  height: 5px;
-  margin-left: 16px;
-  background-color: fade(@marker-grey, 30%);
-  border-radius: 50%;
+  position: relative;
+  margin-left: 21px;
+  min-height: 5px;
 
-  &--active {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    background-color: fade(@marker-grey, 30%);
+    border-radius: 50%;
+  }
+
+  &--active::before {
     background-color: @btn-darkblue;
   }
 }
 
 .step-markers__title {
   display: none;
+}
+
+@media (min-width: @tablet-width) {
+  .step-markers {
+    margin-top: -3px;
+    margin-right: 4px;
+  }
+
+  .step-markers__item {
+    margin-left: 34px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .step-markers {
+    .indents-none();
+    flex-direction: column;
+  }
+
+  .step-markers__item {
+    min-height: 18px;
+    margin-left: 0;
+    margin-bottom: 26px;
+    padding-left: 42px;
+
+    &::before {
+      top: 5px;
+    }
+  }
+
+  .step-markers__title {
+    display: block;
+    font-size: 20px;
+    line-height: 18px;
+    font-weight: @normal;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: fade(@black, 60%);
+  }
+
+  .step-markers__item--active .step-markers__title {
+    color: @black;
+  }
 }

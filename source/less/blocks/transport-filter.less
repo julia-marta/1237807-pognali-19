@@ -6,3 +6,28 @@
 .transport-filter__list {
   .indents-none();
 }
+
+
+@media (max-width: @mobile-tablet-width-only) {
+  @media (min-width: @tablet-width) {
+    .transport-filter {
+      padding-top: 2px;
+      padding-bottom: 3px;
+    }
+
+    .transport-filter__list {
+      margin-left: 121px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .transport-filter {
+    padding-top: 8px;
+    padding-bottom: 25px;
+  }
+
+  .transport-filter__list {
+    margin-left: -2px;
+  }
+}

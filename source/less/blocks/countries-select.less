@@ -5,3 +5,44 @@
 .countries-select__item {
   margin-bottom: 22px;
 }
+
+@media (min-width: @tablet-width) {
+  .countries-select {
+    position: relative;
+    padding-top: 40px;
+    padding-bottom: 9px;
+    border-top: 1px solid @border-lightgrey;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 136px;
+      width: 1px;
+      height: 400px;
+      background-color: @border-lightgrey;
+    }
+  }
+
+  .countries-select__item {
+    margin-bottom: 15px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .countries-select {
+    padding-top: 62px;
+    padding-bottom: 16px;
+
+    &::before {
+      right: 225px;
+      height: 442px;
+    }
+  }
+
+  .countries-select__item {
+    &:last-child {
+      margin-top: -1px;
+    }
+  }
+}

@@ -1,10 +1,13 @@
 .site-footer {
   position: relative;
   margin-top: -30px;
-  padding-top: 38px;
   background-color: @white;
   z-index: 2;
   .section-radius-top();
+}
+
+.site-footer__wrapper {
+  padding-top: 38px;
 }
 
 .site-footer__logo-image {
@@ -21,13 +24,16 @@
 
 @media (min-width: @tablet-width) {
   .site-footer {
+    margin-top: -60px;
+    .section-radius-top(60px);
+  }
+
+  .site-footer__wrapper {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    margin-top: -60px;
     padding-top: 48px;
     padding-bottom: 45px;
-    .section-radius-top(60px);
   }
 
   .site-footer__logo-image {

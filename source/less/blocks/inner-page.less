@@ -4,11 +4,14 @@
 
 .inner-page__header {
   position: relative;
-  padding-top: 20px;
-  padding-bottom: 10px;
   background-color: @bg-darkblue;
   .section-radius(20px);
   z-index: 3;
+}
+
+.inner-page__header-wrapper {
+  padding-top: 20px;
+  padding-bottom: 10px;
 }
 
 .inner-page__title {
@@ -37,14 +40,17 @@
 
 @media (min-width: @tablet-width) {
   .inner-page__header {
+    .section-radius(60px);
+  }
+
+  .inner-page__header-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding-top: 86px;
     padding-left: 74px;
     padding-right: 74px;
-    padding-bottom: 64px;
-    .section-radius(60px);
+    padding-bottom: 63px;
   }
 
   .inner-page__title {
@@ -53,6 +59,7 @@
 
     &::after {
       top: 129px;
+      left: 2px;
       height: 8px;
       border-radius: 4px;
     }
@@ -62,19 +69,16 @@
     .inline-block();
     padding-right: 62px;
     padding-top: 5px;
-    font: inherit;
     font-size: 20px;
     line-height: 24px;
     font-weight: @bold;
     text-transform: uppercase;
     color: @white;
-    background: none;
-    border: none;
   }
 }
 
 @media (min-width: @desktop-width) {
-  .inner-page__header {
+  .inner-page__header-wrapper {
     padding-top: 119px;
     padding-left: 126px;
     padding-right: 122px;

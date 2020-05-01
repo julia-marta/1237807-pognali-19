@@ -19,3 +19,22 @@
     color: @darkblue;
   }
 }
+
+@media (min-width: @tablet-width) {
+  .regions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 365px;
+  }
+
+  .regions__item {
+    margin-bottom: 0;
+  }
+
+  .regions__link {
+    font-size: 20px;
+    line-height: 24px;
+  }
+}

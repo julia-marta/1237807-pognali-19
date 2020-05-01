@@ -1,8 +1,17 @@
 .country-selector {
   .list-reset();
+  text-align: left;
 }
 
 .country-selector__link {
+  display: block;
   font-weight: @normal;
   color: @darkgrey;
+}
+
+@media (min-width: @tablet-width) {
+  .country-selector__link {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

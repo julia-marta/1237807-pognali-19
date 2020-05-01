@@ -1,16 +1,19 @@
 .destinations {
   position: relative;
   margin-top: -30px;
-  padding-top: 102px;
-  padding-bottom: 30px;
   background-color: @lightgrey;
   z-index: 6;
   .section-radius();
 }
 
+.destinations__wrapper {
+  padding-top: 102px;
+  padding-bottom: 30px;
+}
+
 .destinations__title {
   padding-left: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .destinations__message {
@@ -23,7 +26,7 @@
 
 .destinations__list {
   .indents-none();
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .destinations__to-all {
@@ -33,12 +36,15 @@
 @media (min-width: @tablet-width) {
   .destinations {
     margin-top: -60px;
+    .section-radius(60px);
+  }
+
+  .destinations__wrapper {
     padding-top: 133px;
     padding-bottom: 80px;
     background-image: url("../img/flags-back@1x.png");
-    background-position: 439px 140px;
+    background-position: right 40px top 140px;
     background-repeat: no-repeat;
-    .section-radius(60px);
   }
 
   .destinations__title {
@@ -75,7 +81,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .destinations {
+  .destinations__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-end;
@@ -85,7 +91,7 @@
     background-position: right 60px top 148px;
   }
 
-  .destinations__wrapper {
+  .destinations-text__wrapper {
     order: 2;
     padding-top: 5px;
   }

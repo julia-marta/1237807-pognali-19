@@ -8,7 +8,7 @@
   <body>
 
   <header class="site-header site-header--tablet-index">
-    <div class="container">
+    <div class="site-header__wrapper container">
       <div class="site-header__top">
         <a class="site-header__logo">
           <img class="site-header__logo-image" src="img/logo-desktop-white@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
@@ -60,211 +60,225 @@
             </ul>
         </nav>
       </div>
-
     </div>
-
   </header>
 
   <main class="site-main">
 
     <h1 class="visually-hidden">Сервис для поиска попутчиков для путешествий «Погнали»</h1>
 
-    <section class="intro container">
-      <h2 class="visually-hidden">Краткое описание сервиса</h2>
-      <p class="intro__slogan">В путешествие с крутыми попутчиками!</p>
-      <ul class="intro__user user-menu">
-        <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--phone" href="tel:+78005558628" aria-label="Позвонить"></a>
-        </li>
-        <li class="user-menu__item">
-          <a class="user-menu__link user-menu__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="Написать"></a>
-        </li>
-        <li class="user-menu__item">
-          <a class="user-menu__login round-button" href="login.html">Авторизация</a>
-        </li>
-      </ul>
-      <blockquote class="intro__review review">
-        «Лучшее приложение, что я видел в жизни!»
-        <cite class="review__author">
-          Мурат Эльтазин
-          <span class="review__author-post">главный редактор газеты «гаджетлайф»</span>
-        </cite>
-      </blockquote>
-    </section>
-
-    <section class="features container">
-      <h2 class="visually-hidden">Возможности сервиса</h2>
-      <ul class="features__list actions">
-        <li class="actions__item actions__item--dark">
-          Выберите направление
-        </li>
-        <li class="actions__item actions__item--middle">
-          Изучите идеи путешественников
-        </li>
-        <li class="actions__item actions__item--normal">
-          Находите тех, кто похож на вас
-        </li>
-        <li class="actions__item actions__item--light">
-          Путешествуйте вместе!
-        </li>
-      </ul>
-    </section>
-
-    <section class="about container">
-      <h2 class="about__title section-title">О сервисе</h2>
-      <p class="about__message">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
-      <p class="about__message about__message--strong">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-      <a class="about__to-all button" href="#">Подробнее</a>
-    </section>
-
-    <section class="destinations container">
-      <div class="destinations__wrapper">
-        <h2 class="destinations__title section-title">Направления</h2>
-        <p class="destinations__message">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+    <section class="intro">
+      <div class="intro__wrapper container">
+        <h2 class="visually-hidden">Краткое описание сервиса</h2>
+        <p class="intro__slogan">В путешествие с крутыми попутчиками!</p>
+        <ul class="intro__user user-menu">
+          <li class="user-menu__item">
+            <a class="user-menu__link user-menu__link--phone" href="tel:+78005558628" aria-label="Позвонить"></a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__link user-menu__link--mail" href="mailto:mail@htmlacademy.ru" aria-label="Написать"></a>
+          </li>
+          <li class="user-menu__item">
+            <a class="user-menu__login round-button" href="login.html">Авторизация</a>
+          </li>
+        </ul>
+        <blockquote class="intro__review review">
+          «Лучшее приложение, что я видел в жизни!»
+          <cite class="review__author">
+            Мурат Эльтазин
+            <span class="review__author-post">главный редактор газеты «гаджетлайф»</span>
+          </cite>
+        </blockquote>
       </div>
-      <ul class="destinations__list countries">
-        <li class="countries__item country-card">
-          <img class="country-card__picture" src="img/thailand-desktop@1x.jpg" width="270" height="110" alt="Тайланд">
-          <div class="country-card__info country-card__flag flag flag--thailand">
-            <div class="country-card__title-wrapper">
-              <h3 class="country-card__title">Таиланд</h3>
-              <p class="country-card__description">Джунгли зовут!</p>
-            </div>
-            <p class="country-card__counter">18321</p>
-          </div>
-        </li>
-        <li class="countries__item country-card">
-          <img class="country-card__picture" src="img/france-desktop@1x.jpg" width="270" height="110" alt="Франция">
-          <div class="country-card__info country-card__flag flag flag--france">
-            <div class="country-card__title-wrapper">
-              <h3 class="country-card__title">Франция</h3>
-              <p class="country-card__description">Трэ бьен, манифик!</p>
-            </div>
-            <p class="country-card__counter">12518</p>
-          </div>
-        </li>
-        <li class="countries__item country-card">
-          <img class="country-card__picture" src="img/czech-desktop@1x.jpg" width="270" height="110" alt="Чехия">
-          <div class="country-card__info country-card__flag flag flag--czech">
-            <div class="country-card__title-wrapper">
-              <h3 class="country-card__title">Чехия</h3>
-              <p class="country-card__description">Закоулки старой Европы</p>
-            </div>
-            <p class="country-card__counter">5326</p>
-          </div>
-        </li>
-      </ul>
-      <a class="destinations__to-all button" href="form.html">Показать все</a>
     </section>
 
-    <section class="travelmates container">
-      <div class="travelmates__wrapper">
-        <h2 class="travelmates__title section-title">Попутчики</h2>
-        <p class="travelmates__message">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
-        <p class="travelmates__message travelmates__message--strong">Теперь можно легко найти единомышленников!</p>
+    <section class="features">
+      <div class="features__wrapper container">
+        <h2 class="visually-hidden">Возможности сервиса</h2>
+        <ul class="features__list actions">
+          <li class="actions__item actions__item--dark">
+            Выберите направление
+          </li>
+          <li class="actions__item actions__item--middle">
+            Изучите идеи путешественников
+          </li>
+          <li class="actions__item actions__item--normal">
+            Находите тех, кто похож на вас
+          </li>
+          <li class="actions__item actions__item--light">
+            Путешествуйте вместе!
+          </li>
+        </ul>
       </div>
-      <ul class="travelmates__list travelers">
-        <li class="travelers__item traveler-card">
-          <div class="traveler-card__picture">
-            <img class="traveler-card__photo" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Таня Фирсова">
-            <p class="traveler-card__level">99 <span class="traveler-card__level-legend">level</span></p>
-          </div>
-          <div class="traveler-card__info">
-            <ul class="traveler-card__countries flags">
-              <li class="flags__item flag flag--srilanka"><span class="tooltip">Шри-Ланка</span></li>
-              <li class="flags__item flag flag--thailand"><span class="tooltip">Тайланд</span></li>
-              <li class="flags__item flag flag--seychelles"><span class="tooltip">Сейшелы</span></li>
-            </ul>
-            <h3 class="traveler-card__name traveler-card__status status">Таня Фирсова</h3>
-            <ul class="traveler-card__hashtags-list hashtags">
-              <li class="hashtags__item"><a>#ЗОЖ</a></li>
-              <li class="hashtags__item"><a>#ПП</a></li>
-              <li class="hashtags__item"><a>#Фитнес</a></li>
-              <li class="hashtags__item"><a>#пляж</a></li>
-              <li class="hashtags__item"><a>#авокадо</a></li>
-              <li class="hashtags__item"><a>#смузи</a></li>
-            </ul>
-            <ul class="traveler-card__vehicles-list vehicles">
-              <li class="vehicles__item vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
-              <li class="vehicles__item vehicles__item--bus"><span class="tooltip">Автотранспорт</span></li>
-              <li class="vehicles__item vehicles__item--bicycle"><span class="tooltip">Велосипед</span></li>
-              <li class="vehicles__item vehicles__item--hiking"><span class="tooltip">Пешком</span></li>
-            </ul>
-          </div>
-        </li>
-        <li class="travelers__item traveler-card">
-          <div class="traveler-card__picture">
-            <img class="traveler-card__photo" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин">
-            <p class="traveler-card__level">80 <span class="traveler-card__level-legend">level</span></p>
-          </div>
-          <div class="traveler-card__info">
-            <ul class="traveler-card__countries flags">
-              <li class="flags__item flag flag--belgium"><span class="tooltip">Бельгия</span></li>
-              <li class="flags__item flag flag--czech"><span class="tooltip">Чехия</span></li>
-            </ul>
-            <h3 class="traveler-card__name traveler-card__status status status--online">Петя Демин</h3>
-            <ul class="traveler-card__hashtags-list hashtags">
-              <li class="hashtags__item"><a>#бургер</a></li>
-              <li class="hashtags__item"><a>#бар</a></li>
-              <li class="hashtags__item"><a>#футбол</a></li>
-              <li class="hashtags__item"><a>#концерт</a></li>
-              <li class="hashtags__item"><a>#крафт</a></li>
-            </ul>
-            <ul class="traveler-card__vehicles-list vehicles">
-              <li class="vehicles__item vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
-              <li class="vehicles__item vehicles__item--bus vehicles__item--active"><span class="tooltip">Автотранспорт</span></li>
-              <li class="vehicles__item vehicles__item--bicycle"><span class="tooltip">Велосипед</span ></li>
-              <li class="vehicles__item vehicles__item--hiking vehicles-list__item--active"><span class="tooltip">Пешком</span></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-      <a class="travelmates__to-all button" href="catalog.html">Показать всех</a>
     </section>
 
-    <section class="rates container">
-      <h2 class="rates__title section-title">Добавьте свой профиль</h2>
-      <ul class="rates__list price-list">
-        <li class="price-list__item price-list__item--dark-number">
-          <p class="price-list__title">Базовое размещение</p>
-          <p class="price-list__cost">Бесплатно</p>
-        </li>
-        <li class="price-list__item price-list__item--normal-number">
-          <p class="price-list__title">Вывод на первых позициях</p>
-          <p class="price-list__cost">99 руб./мес</p>
-        </li>
-        <li class="price-list__item price-list__item--light-number">
-          <p class="price-list__title">Кастомный цвет карточки</p>
-          <p class="price-list__cost">59 руб./мес</p>
-        </li>
-      </ul>
-      <a class="rates__to-business" href="business-rates.html">Показать тарифы для бизнеса</a>
+    <section class="about">
+      <div class="about__wrapper container">
+        <h2 class="about__title section-title">О сервисе</h2>
+        <p class="about__message">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими идеями путешествий и черпайте вдохновение в чужих. </p>
+        <p class="about__message about__message--strong">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+        <a class="about__to-all button" href="#">Подробнее</a>
+      </div>
     </section>
 
-    <section class="feedback container">
-      <h2 class="feedback__title section-title">Заинтересовались?</h2>
-      <p class="feedback__message">Зарегистрируйтесь, <span class="feedback__message feedback__message--wrap">это быстро и бесплатно!</span></p>
-      <p class="feedback__message">Уже зарегистрированы? Тогда скорее <a class="feedback__login-link" href="login.html">авторизуйтесь</a>.</p>
-      <form class="feedback__form registration" action="https://echo.htmlacademy.ru" method="post">
-        <label class="visually-hidden" for="registration-email">E-mail</label>
-        <input class="registration__input" id="registration-email" type="email" name="email" placeholder="E-mail">
-        <button class="registration__button button button--half" type="submit"><span class="registration__button-title">Регистрация</span></button>
-      </form>
-      <p class="feedback__message">Остались вопросы? <span class="feedback__message feedback__message--wrap feedback__message--head">Мы с радостью на них ответим!</span></p>
-      <ul class="feedback__contacts contacts">
-        <li class="contacts__item">
-          <a class="contacts__link contacts__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
-        </li>
-        <li class="contacts__item">
-          <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-        </li>
-      </ul>
+    <section class="destinations">
+      <div class="destinations__wrapper container">
+        <div class="destinations-text__wrapper">
+          <h2 class="destinations__title section-title">Направления</h2>
+          <p class="destinations__message">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах, куда хотели бы отправиться и чем можно там заняться.</p>
+        </div>
+        <ul class="destinations__list countries">
+          <li class="countries__item country-card">
+            <img class="country-card__picture" src="img/thailand-desktop@1x.jpg" width="270" height="110" alt="Тайланд">
+            <div class="country-card__info country-card__flag flag flag--thailand">
+              <div class="country-card__title-wrapper">
+                <h3 class="country-card__title">Таиланд</h3>
+                <p class="country-card__description">Джунгли зовут!</p>
+              </div>
+              <p class="country-card__counter">18321</p>
+            </div>
+          </li>
+          <li class="countries__item country-card">
+            <img class="country-card__picture" src="img/france-desktop@1x.jpg" width="270" height="110" alt="Франция">
+            <div class="country-card__info country-card__flag flag flag--france">
+              <div class="country-card__title-wrapper">
+                <h3 class="country-card__title">Франция</h3>
+                <p class="country-card__description">Трэ бьен, манифик!</p>
+              </div>
+              <p class="country-card__counter">12518</p>
+            </div>
+          </li>
+          <li class="countries__item country-card">
+            <img class="country-card__picture" src="img/czech-desktop@1x.jpg" width="270" height="110" alt="Чехия">
+            <div class="country-card__info country-card__flag flag flag--czech">
+              <div class="country-card__title-wrapper">
+                <h3 class="country-card__title">Чехия</h3>
+                <p class="country-card__description">Закоулки старой Европы</p>
+              </div>
+              <p class="country-card__counter">5326</p>
+            </div>
+          </li>
+        </ul>
+        <a class="destinations__to-all button" href="form.html">Показать все</a>
+      </div>
     </section>
 
-    <section class="route container">
-      <h2 class="visually-hidden">Адрес и маршрут проезда</h2>
-      <p class="route__address">ул. Большая Конюшенная, 19/8</p>
-      <a class="route__to-go button button--bordered" href="https://goo.gl/maps/6PmeDfW8GCa7gmRCA">Проложить маршрут</a>
+    <section class="travelmates">
+      <div class="travelmates__wrapper container">
+        <div class="travelmates-text__wrapper">
+          <h2 class="travelmates__title section-title">Попутчики</h2>
+          <p class="travelmates__message">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен пляж и коктейль, а другому маршрут для хайкинга.</p>
+          <p class="travelmates__message travelmates__message--strong">Теперь можно легко найти единомышленников!</p>
+        </div>
+        <ul class="travelmates__list travelers">
+          <li class="travelers__item traveler-card">
+            <div class="traveler-card__picture">
+              <img class="traveler-card__photo" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Таня Фирсова">
+              <p class="traveler-card__level">99 <span class="traveler-card__level-legend">level</span></p>
+            </div>
+            <div class="traveler-card__info">
+              <ul class="traveler-card__countries flags">
+                <li class="flags__item flag flag--srilanka"><span class="tooltip">Шри-Ланка</span></li>
+                <li class="flags__item flag flag--thailand"><span class="tooltip">Тайланд</span></li>
+                <li class="flags__item flag flag--seychelles"><span class="tooltip">Сейшелы</span></li>
+              </ul>
+              <h3 class="traveler-card__name traveler-card__status status">Таня Фирсова</h3>
+              <ul class="traveler-card__hashtags-list hashtags">
+                <li class="hashtags__item"><a>#ЗОЖ</a></li>
+                <li class="hashtags__item"><a>#ПП</a></li>
+                <li class="hashtags__item"><a>#Фитнес</a></li>
+                <li class="hashtags__item"><a>#пляж</a></li>
+                <li class="hashtags__item"><a>#авокадо</a></li>
+                <li class="hashtags__item"><a>#смузи</a></li>
+              </ul>
+              <ul class="traveler-card__vehicles-list vehicles">
+                <li class="vehicles__item vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
+                <li class="vehicles__item vehicles__item--bus"><span class="tooltip">Автотранспорт</span></li>
+                <li class="vehicles__item vehicles__item--bicycle"><span class="tooltip">Велосипед</span></li>
+                <li class="vehicles__item vehicles__item--hiking"><span class="tooltip">Пешком</span></li>
+              </ul>
+            </div>
+          </li>
+          <li class="travelers__item traveler-card">
+            <div class="traveler-card__picture">
+              <img class="traveler-card__photo" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин">
+              <p class="traveler-card__level">80 <span class="traveler-card__level-legend">level</span></p>
+            </div>
+            <div class="traveler-card__info">
+              <ul class="traveler-card__countries flags">
+                <li class="flags__item flag flag--belgium"><span class="tooltip">Бельгия</span></li>
+                <li class="flags__item flag flag--czech"><span class="tooltip">Чехия</span></li>
+              </ul>
+              <h3 class="traveler-card__name traveler-card__status status status--online">Петя Демин</h3>
+              <ul class="traveler-card__hashtags-list hashtags">
+                <li class="hashtags__item"><a>#бургер</a></li>
+                <li class="hashtags__item"><a>#бар</a></li>
+                <li class="hashtags__item"><a>#футбол</a></li>
+                <li class="hashtags__item"><a>#концерт</a></li>
+                <li class="hashtags__item"><a>#крафт</a></li>
+              </ul>
+              <ul class="traveler-card__vehicles-list vehicles">
+                <li class="vehicles__item vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
+                <li class="vehicles__item vehicles__item--bus vehicles__item--active"><span class="tooltip">Автотранспорт</span></li>
+                <li class="vehicles__item vehicles__item--bicycle"><span class="tooltip">Велосипед</span ></li>
+                <li class="vehicles__item vehicles__item--hiking vehicles-list__item--active"><span class="tooltip">Пешком</span></li>
+              </ul>
+            </div>
+          </li>
+        </ul>
+        <a class="travelmates__to-all button" href="catalog.html">Показать всех</a>
+      </div>
+    </section>
+
+    <section class="rates">
+      <div class="rates__wrapper container">
+        <h2 class="rates__title section-title">Добавьте свой профиль</h2>
+        <ul class="rates__list price-list">
+          <li class="price-list__item price-list__item--dark-number">
+            <p class="price-list__title">Базовое размещение</p>
+            <p class="price-list__cost">Бесплатно</p>
+          </li>
+          <li class="price-list__item price-list__item--normal-number">
+            <p class="price-list__title">Вывод на первых позициях</p>
+            <p class="price-list__cost">99 руб./мес</p>
+          </li>
+          <li class="price-list__item price-list__item--light-number">
+            <p class="price-list__title">Кастомный цвет карточки</p>
+            <p class="price-list__cost">59 руб./мес</p>
+          </li>
+        </ul>
+        <a class="rates__to-business" href="business-rates.html">Показать тарифы для бизнеса</a>
+      </div>
+    </section>
+
+    <section class="feedback">
+      <div class="feedback__wrapper container">
+        <h2 class="feedback__title section-title">Заинтересовались?</h2>
+        <p class="feedback__message">Зарегистрируйтесь, <span class="feedback__message feedback__message--wrap">это быстро и бесплатно!</span></p>
+        <p class="feedback__message">Уже зарегистрированы? Тогда скорее <a class="feedback__login-link" href="login.html">авторизуйтесь</a>.</p>
+        <form class="feedback__form registration" action="https://echo.htmlacademy.ru" method="post">
+          <label class="visually-hidden" for="registration-email">E-mail</label>
+          <input class="registration__input" id="registration-email" type="email" name="email" placeholder="E-mail">
+          <button class="registration__button button button--half" type="submit"><span class="registration__button-title">Регистрация</span></button>
+        </form>
+        <p class="feedback__message">Остались вопросы? <span class="feedback__message feedback__message--wrap feedback__message--head">Мы с радостью на них ответим!</span></p>
+        <ul class="feedback__contacts contacts">
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--phone" href="tel:+78005558628">8 800 555-86-28</a>
+          </li>
+          <li class="contacts__item">
+            <a class="contacts__link contacts__link--mail" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="route">
+      <div class="route__wrapper container">
+        <h2 class="visually-hidden">Адрес и маршрут проезда</h2>
+        <p class="route__address">ул. Большая Конюшенная, 19/8</p>
+        <a class="route__to-go button button--bordered" href="https://goo.gl/maps/6PmeDfW8GCa7gmRCA">Проложить маршрут</a>
+      </div>
     </section>
 
     <section class="map">
@@ -274,26 +288,28 @@
 
   </main>
 
-  <footer class="site-footer container">
-    <a class="site-footer__logo">
-      <img class="site-footer__logo-image" src="img/logo-desktop-blue@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
-    </a>
-    <ul class="site-footer__social-list social">
-      <li class="social__item">
-        <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--vkontakte" href="#" aria-label="Вконтакте"></a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
-      </li>
-    </ul>
-    <div class="site-footer__copyright copyright">
-      <p class="copyright__text">Разработано</p>
-      <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-        <img class="copyright__picture" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+  <footer class="site-footer">
+    <div class="site-footer__wrapper container">
+      <a class="site-footer__logo">
+        <img class="site-footer__logo-image" src="img/logo-desktop-blue@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
       </a>
+      <ul class="site-footer__social-list social">
+        <li class="social__item">
+          <a class="social__link social__link--facebook" href="#" aria-label="Фейсбук"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--vkontakte" href="#" aria-label="Вконтакте"></a>
+        </li>
+        <li class="social__item">
+          <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
+        </li>
+      </ul>
+      <div class="site-footer__copyright copyright">
+        <p class="copyright__text">Разработано</p>
+        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
+          <img class="copyright__picture" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+        </a>
+      </div>
     </div>
   </footer>
 
