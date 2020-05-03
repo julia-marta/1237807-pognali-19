@@ -1,20 +1,31 @@
 .plan-add {
   .section-radius-top();
   margin-top: -30px;
-  padding-top: 30px;
-  padding-bottom: 63px;
   background-color: @bg-blue;
 }
 
-.plan-add__title-wrapper {
+.plan-add__wrapper {
+  position: relative;
+  padding-top: 30px;
+  padding-bottom: 64px;
+}
+
+.plan-add__field-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 28px;
+  align-items: flex-start;
 }
 
 .plan-add__markers-list {
   .indents-none();
+  display: none;
+
+  &--current {
+    display: flex;
+    position: absolute;
+    top: 39px;
+    right: 48px;
+  }
 }
 
 .plan-add__field {
@@ -60,4 +71,123 @@
   font-weight: @bold;
   text-transform: uppercase;
   color: @bg-darkblue;
+}
+
+@media (min-width: @tablet-width) {
+  .plan-add .user-form__section-title {
+    margin-bottom: 50px;
+  }
+
+  .plan-add__wrapper {
+    padding-top: 46px;
+    padding-left: 75px;
+    padding-right: 75px;
+    padding-bottom: 82px;
+  }
+
+  .plan-add__markers-list {
+    &--current {
+      top: 66px;
+      right: 80px;
+    }
+  }
+
+  .plan-add__field {
+    margin-bottom: 40px;
+    padding-top: 48px;
+    padding-bottom: 53px;
+    padding-left: 43px;
+    padding-right: 43px;
+    font-size: 20px;
+    line-height: 24px;
+    border-radius: 30px;
+  }
+
+  .plan-add__field-wrapper {
+    .indents-none();
+  }
+
+  .plan-add__field-title {
+    margin-bottom: 35px;
+    font-size: 36px;
+    line-height: 36px;
+  }
+
+  .plan-add__buttons-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .plan-add__next-step {
+    width: 285px;
+  }
+
+  .plan-add .round-button {
+    padding-top: 30px;
+    padding-left: 33px;
+    padding-bottom: 27px;
+    padding-right: 33px;
+    font-size: 24px;
+    line-height: 24px;
+    text-align: left;
+    text-transform: none;
+    color: @btn-darkblue;
+    border-radius: 20px;
+  }
+
+  .plan-add__previous-step {
+    align-items: center;
+    margin-top: 3px;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+    color: @btn-darkblue;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .plan-add {
+    .section-radius-top(60px);
+    margin-top: -60px;
+  }
+
+  .plan-add .user-form__section-title {
+    margin-left: 63px;
+    margin-bottom: 48px;
+  }
+
+  .plan-add__wrapper {
+    padding-top: 50px;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-bottom: 87px;
+  }
+
+
+  .plan-add__markers-list {
+    display: flex;
+    margin-top: 12px;
+    margin-right: 46px;
+
+    &--current {
+      position: static;
+    }
+  }
+
+  .plan-add__field {
+    margin-bottom: 45px;
+    padding-top: 98px;
+    padding-bottom: 104px;
+    padding-left: 160px;
+    padding-right: 160px;
+    border-radius: 60px;
+  }
+
+  .plan-add__field-title {
+    display: inline;
+  }
+
+  .plan-add__previous-step {
+    margin-right: 3px;
+  }
 }

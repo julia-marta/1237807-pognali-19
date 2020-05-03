@@ -42,5 +42,32 @@
     padding-bottom: 9px;
     font-size: 20px;
     border-radius: 25px;
+
+    &--darkblue {
+      padding-left: 42px;
+      line-height: 30px;
+      color: @btn-darkblue;
+      border-radius: 20px;
+    }
+
+    &--blue {
+      padding-top: 22px;
+      padding-bottom: 20px;
+      line-height: 18px;
+      letter-spacing: 2px;
+      font-weight: @medium;
+      color: @btn-darkblue;
+      border-radius: 10px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .round-button {
+    &--blue {
+      padding-top: 16px;
+      padding-bottom: 13px;
+      .section-radius-top(0);
+    }
   }
 }

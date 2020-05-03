@@ -7,7 +7,6 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  position: relative;
   margin-bottom: 13px;
 }
 
@@ -22,6 +21,11 @@
   &--unit {
     color: fade(@btn-darkblue, 30%);
   }
+}
+
+.add-dates__input-wrapper {
+  width: 100%;
+  position: relative;
 }
 
 .add-dates__input-number {
@@ -85,15 +89,15 @@
 
 .add-dates__checkbox {
   position: relative;
-  margin-top: 24px;
-  margin-bottom: 22px;
+  margin-top: 21px;
+  margin-bottom: 18px;
   padding-left: 39px;
 }
 
 .add-dates__input-checkbox + label::before {
   content: "";
   position: absolute;
-  top: -3px;
+  top: 0;
   left: 0;
   box-sizing: border-box;
   width: 26px;
@@ -105,7 +109,7 @@
 
 .add-dates__label-checkbox {
   font-size: 15px;
-  line-height: 15px;
+  line-height: 29px;
 }
 
 .add-dates__calendar {
@@ -114,4 +118,150 @@
 
 .add-dates .plan-add__next-step {
   margin-bottom: 7px;
+}
+
+@media (min-width: @tablet-width) {
+  .add-dates__message {
+    width: 500px;
+    margin-bottom: 38px;
+  }
+
+  .add-dates__wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 46px;
+  }
+
+  .add-dates__field {
+    border-top: 1px solid @border-lightgrey;
+
+    &--travelmates {
+      order: 1;
+    }
+
+    &--duration {
+      order: 3;
+    }
+  }
+
+  .add-dates__checkbox {
+    order: 2;
+    margin-top: 12px;
+    margin-bottom: 24px;
+    padding-left: 59px;
+  }
+
+  .add-dates__label {
+    line-height: 67px;
+    letter-spacing: 2px;
+  }
+
+  .add-dates__input-number {
+    min-height: 70px;
+    margin-left: 1px;
+    padding-top: 25px;
+    padding-bottom: 23px;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 2px;
+  }
+
+  .add-dates__button {
+    width: 20px;
+    height: 20px;
+
+    &--minus {
+      bottom: 21px;
+      left: 24px;
+    }
+
+    &--plus {
+      bottom: 21px;
+      right: 20px;
+    }
+
+    &::before,
+    &--plus::after {
+      width: 20px;
+      height: 2px;
+    }
+  }
+
+  .add-dates__input-checkbox + label::before {
+    left: 1px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .add-dates__label-checkbox {
+    font-size: 20px;
+    line-height: 38px;
+    font-weight: @medium;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: @btn-darkblue;
+  }
+
+  .add-dates__calendar {
+    margin-left: 1px;
+    margin-bottom: 46px;
+  }
+
+  .add-dates .plan-add__next-step {
+    margin-bottom: 2px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .add-dates__message {
+    width: 580px;
+    margin-top: 35px;
+    margin-bottom: 53px;
+  }
+
+  .add-dates__wrapper {
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    border-top: 1px solid @border-lightgrey;
+    padding-top: 30px;
+    margin-bottom: 18px;
+  }
+
+  .add-dates__field {
+    justify-content: flex-start;
+    width: 490px;
+    margin-bottom: 14px;
+    border: none;
+  }
+
+  .add-dates__label {
+    order: 1;
+    width: 195px;
+    margin-top: 3px;
+
+    &--unit {
+      order: 3;
+      width: 45px;
+      margin-left: 35px;
+      color: @btn-darkblue;
+      text-align: center;
+    }
+  }
+
+  .add-dates__input-wrapper {
+    order: 2;
+    width: 181px;
+    margin-left: 25px;
+  }
+
+  .add-dates__checkbox {
+    margin-top: 18px;
+    margin-bottom: 0;
+  }
+
+  .add-dates__calendar {
+    margin-left: 0;
+    margin-bottom: 56px;
+  }
 }

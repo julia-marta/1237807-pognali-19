@@ -1,21 +1,24 @@
 .travelmates {
   position: relative;
   margin-top: -30px;
-  padding-top: 102px;
-  padding-bottom: 30px;
   background-color: @darkblue;
-  background-image: url("../img/smolov-back-desktop@1x.png"),
-    url("../img/rogovaya-back-mobile@1x.png");
-  background-position: 152px 70px, -10px 342px;
-  background-repeat: no-repeat, no-repeat;
-  overflow: hidden;
   z-index: 5;
   .section-radius();
+}
+
+.travelmates__wrapper {
+  position: relative;
+  padding-top: 102px;
+  padding-bottom: 30px;
+  background-image: url("../img/smolov-back-desktop@1x.png"),
+    url("../img/rogovaya-back-mobile@1x.png");
+  background-position: 152px 69px, -10px 341px;
+  background-repeat: no-repeat, no-repeat;
 
   &::before {
     content: "";
     position: absolute;
-    top: 70px;
+    top: 69px;
     left: -19px;
     width: 132px;
     height: 132px;
@@ -27,7 +30,7 @@
 
 .travelmates__title {
   padding-left: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .travelmates__message {
@@ -36,8 +39,8 @@
   padding-left: 25px;
 
   &--strong {
-    margin-top: 20px;
-    margin-bottom: 58px;
+    margin-top: 21px;
+    margin-bottom: 56px;
     font-weight: @bold;
   }
 }
@@ -54,12 +57,15 @@
 @media (min-width: @tablet-width) {
   .travelmates {
     margin-top: -60px;
+    .section-radius(60px);
+  }
+
+  .travelmates__wrapper {
     padding-top: 200px;
     padding-bottom: 88px;
     background-image: url("../img/smolov-back-desktop@1x.png"),
       url("../img/rogovaya-back-desktop@1x.png");
-    background-position: 40px 486px, 408px 140px;
-    .section-radius(60px);
+    background-position: left 40px top 486px, right 75px top 140px;
 
     &::before {
       top: 140px;
@@ -80,6 +86,7 @@
 
     &--strong {
       margin-top: 40px;
+      margin-bottom: 58px;
       font-size: 21px;
       line-height: 25px;
     }
@@ -96,14 +103,14 @@
 }
 
 @media (min-width: @desktop-width) {
-  .travelmates {
+  .travelmates__wrapper {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: flex-start;
     padding-top: 189px;
     padding-bottom: 134px;
-    background-position: 547px 193px, 191px 445px;
+    background-position: left 547px top 193px, left 191px bottom 80px;
 
     &::before {
       top: 128px;
@@ -130,7 +137,7 @@
 
   .travelmates__to-all {
     width: 280px;
-    margin-top: -41px;
+    margin-top: -74px;
     margin-left: 71px;
   }
 }

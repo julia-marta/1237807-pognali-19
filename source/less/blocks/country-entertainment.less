@@ -16,7 +16,7 @@
   padding-right: 13px;
   padding-top: 9px;
   font: inherit;
-  font-weight: normal;
+  font-weight: @normal;
   color: @darkgrey;
   resize: none;
   border: 1px solid @border-grey;
@@ -24,5 +24,37 @@
 
   &::placeholder {
     color: fade(@darkgrey, 30%);
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .country-entertainment__title {
+    margin-bottom: 42px;
+    padding-left: 0;
+    font-size: 30px;
+    font-weight: @bold;
+  }
+
+  .country-entertainment__textarea {
+    width: 499px;
+    min-height: 142px;
+    margin-left: 2px;
+    padding-left: 16px;
+    padding-right: 30px;
+    padding-top: 17px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country-entertainment__title {
+    margin-left: -2px;
+  }
+
+  .country-entertainment__textarea {
+    width: 730px;
+    margin-left: 0;
+    padding-left: 24px;
+    padding-right: 20px;
+    padding-top: 24px;
   }
 }

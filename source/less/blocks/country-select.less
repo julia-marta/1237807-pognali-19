@@ -7,48 +7,51 @@
 }
 
 .country-select__field {
+  position: relative;
   box-sizing: border-box;
   width: 168px;
-  height: 42px;
+  min-height: 42px;
   padding-top: 13px;
   padding-left: 10px;
   background-color: @white;
   border: 1px solid @border-grey;
   border-radius: 4px;
 
+  &--flag {
+    width: 53px;
+    margin-left: -1px;
+  }
+
+  &--empty {
+    width: 220px;
+    padding-left: 11px;
+  }
+
+  &--add {
+    background-color: @lightgrey;
+    border-color: @lightgrey;
+  }
+
   &::before {
     content: "";
     position: absolute;
-    top: 17px;
-    right: 49px;
+    top: 16px;
+    right: -4px;
     box-sizing: border-box;
     width: 8px;
     height: 8px;
     border-radius: 50%;
   }
 
-  &--flag {
-    width: 53px;
-    margin-left: -1px;
-  }
-
-  &--flag::before {
+  &--chosen::before {
     background-color: @btn-darkblue;
-  }
-
-  &--empty {
-    width: 100%;
+    z-index: 2;
   }
 
   &--empty::before {
+    right: 48px;
     background-color: @white;
     border: 1px solid @border-grey;
-  }
-
-  &--add {
-    padding-left: 12px;
-    background-color: @lightgrey;
-    border: none;
   }
 
   &--add::before {
@@ -87,4 +90,94 @@
   height: 14px;
   background: none;
   border: none;
+}
+
+.country-select__dropdown-wrapper {
+  position: relative;
+}
+
+.country-select__dropdown {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+}
+
+.country-select__dropdown-wrapper--opened .country-select__delete {
+  display: none;
+}
+
+.country-select__dropdown-wrapper--opened .country-select__dropdown {
+  display: block;
+}
+
+.country-select__dropdown-wrapper--closed .country-select__dropdown {
+  display: none;
+}
+
+
+@media (min-width: @tablet-width) {
+  .country-select__field {
+    width: 369px;
+    min-height: 70px;
+    padding-top: 27px;
+    padding-left: 25px;
+
+    &--flag {
+      width: 122px;
+      margin-left: 26px;
+      border: none;
+      background-color: transparent;
+    }
+
+    &--empty {
+      width: 369px;
+    }
+
+    &::before {
+      top: 25px;
+      right: -35px;
+      width: 15px;
+      height: 15px;
+    }
+  }
+
+  .country-select__value {
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .country-select__delete {
+    top: 25px;
+    right: -2px;
+    width: 17px;
+    height: 17px;
+    background-color: transparent;
+    border-radius: 0;
+  }
+
+  .country-select__add {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .country-select__field {
+    width: 730px;
+
+    &--flag {
+      width: 122px;
+    }
+
+    &::before {
+      right: -53px;
+    }
+  }
+
+  .country-select__delete {
+    right: 6px;
+    width: 18px;
+    height: 18px;
+  }
 }

@@ -1,18 +1,34 @@
 .about {
   position: relative;
-  padding-top: 33px;
-  padding-bottom: 80px;
   background-color: @darkblue;
-  background-image: url("../img/about-mobile@1x.png");
-  background-position: -18px top;
-  background-repeat: no-repeat;
   z-index: 7;
   .section-radius();
 }
 
+.about__wrapper {
+  position: relative;
+  padding-top: 33px;
+  padding-bottom: 81px;
+  background-image: url("../img/about-mobile@1x.png");
+  background-position: right 10px top;
+  background-repeat: no-repeat;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -19px;
+    width: 132px;
+    height: 132px;
+    background-color: @blue;
+    border-radius: 20px;
+    z-index: -1;
+  }
+}
+
 .about__title {
   padding-left: 25px;
-  margin-bottom: 20px;
+  margin-bottom: 19px;
 }
 
 .about__message {
@@ -21,7 +37,7 @@
   padding-left: 25px;
 
   &--strong {
-    margin-top: 18px;
+    margin-top: 19px;
     font-weight: @bold;
   }
 }
@@ -32,11 +48,21 @@
 
 @media (min-width: @tablet-width) {
   .about {
+    .section-radius(60px);
+  }
+
+  .about__wrapper {
     padding-top: 42px;
     padding-bottom: 88px;
     background-image: url("../img/about-tablet@1x.png");
-    background-position: 40px top;
-    .section-radius(60px);
+    background-position: right 8px top 48px;
+
+    &::before {
+      top: 0;
+      left: 40px;
+      width: 688px;
+      height: 213px;
+    }
   }
 
   .about__title {
@@ -66,21 +92,19 @@
 @media (min-width: @desktop-width) {
   .about {
     margin-top: -60px;
+  }
+
+  .about__wrapper {
     padding-top: 191px;
     padding-bottom: 163px;
     background-image: url("../img/about-desktop@1x.png");
     background-position: right 60px top 145px;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: 130px;
+      top: 131px;
       left: 60px;
       width: 213px;
       height: 213px;
-      background-color: @blue;
-      border-radius: 20px;
-      z-index: -1;
     }
   }
 

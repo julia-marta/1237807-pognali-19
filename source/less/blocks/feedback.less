@@ -1,12 +1,15 @@
 .feedback {
   position: relative;
   margin-top: -30px;
-  padding-top: 102px;
-  padding-bottom: 28px;
-  text-align: center;
   background-color: @darkblue;
   z-index: 3;
   .section-radius();
+}
+
+.feedback__wrapper {
+  padding-top: 102px;
+  padding-bottom: 28px;
+  text-align: center;
 }
 
 .feedback__title {
@@ -25,8 +28,8 @@
 }
 
 .feedback__form {
-  margin-top: 30px;
-  margin-bottom: 28px;
+  margin-top: 29px;
+  margin-bottom: 29px;
 }
 
 .feedback__contacts {
@@ -37,9 +40,12 @@
 @media (min-width: @tablet-width) {
   .feedback {
     margin-top: -60px;
-    padding-top: 137px;
-    padding-bottom: 58px;
     .section-radius(60px);
+  }
+
+  .feedback__wrapper {
+    padding-top: 136px;
+    padding-bottom: 58px;
   }
 
   .feedback__title {
@@ -66,7 +72,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .feedback {
+  .feedback__wrapper {
     padding-top: 166px;
     padding-bottom: 101px;
   }

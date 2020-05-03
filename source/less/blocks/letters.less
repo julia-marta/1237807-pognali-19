@@ -1,6 +1,12 @@
 .letters {
   text-align: center;
   border-collapse: collapse;
+
+  &--big {
+    .inline-block();
+    position: relative;
+    padding-bottom: 250px;
+  }
 }
 
 .letters__item {
@@ -25,8 +31,119 @@
   font-weight: @medium;
   text-transform: uppercase;
   color: @btn-darkblue;
+}
 
-  &--current {
+.letters__countries-list {
+  .indents-none();
+  display: none;
+  position: absolute;
+  top: 218px;
+  left: 1px;
+}
+
+.letters__item--current .letters__link {
+  color: @white;
+}
+
+.letters__item--current .letters__countries-list {
+  display: block;
+}
+
+@media (min-width: @tablet-width) {
+  .letters {
+    &--big {
+      border-collapse: separate;
+      border-spacing: 33px 23px;
+      padding-bottom: 0;
+      padding-right: 250px;
+    }
+  }
+
+  .letters--big .letters__item {
+    width: auto;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+  }
+
+  .letters--big .letters__link {
+    font-size: 60px;
+    line-height: 60px;
+    font-weight: @bold;
+    letter-spacing: normal;
+    color: fade(@darkblue, 20%);
+  }
+
+  .letters--big .letters__countries-list {
+    top: 19px;
+    left: 483px;
+  }
+
+  .letters--big .letters__item--current .letters__link {
+    color: @darkblue;
+  }
+
+  .letters__item {
+    width: 52px;
+    padding-top: 17px;
+    padding-bottom: 13px;
+    padding-left: 3px;
+
+    &--current-light {
+      background-color: @btn-darkblue;
+      border-color: @btn-darkblue;
+    }
+  }
+
+  .letters__link {
+    font-size: 20px;
+    line-height: 38px;
+    letter-spacing: 2px;
+  }
+
+  .letters__item--current-light .letters__link {
     color: @white;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .letters {
+    border-collapse: separate;
+    border-spacing: 15px;
+
+    &--big {
+      border-spacing: 61px 50px;
+      padding-right: 0;
+    }
+  }
+
+  .letters__item {
+    width: 60px;
+    border-radius: 4px;
+  }
+
+  .letters--big .letters__item {
+    width: 190px;
+    vertical-align: top;
+    text-align: left;
+    border-radius: 0;
+  }
+
+  .letters--big .letters__link {
+    color: @darkblue;
+  }
+
+  .letters--big tr:nth-child(4) .letters__item {
+    padding-top: 7px;
+  }
+
+  .letters__countries-list {
+    display: block;
+    position: static;
+    margin-top: 30px;
+  }
+
+  .letters--big tr:last-child .letters__countries-list {
+    margin-top: 35px;
   }
 }

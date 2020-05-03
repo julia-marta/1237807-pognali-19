@@ -1,58 +1,96 @@
 .countries-filter {
   position: relative;
   margin-top: -30px;
-  padding-top: 47px;
-  padding-bottom: 13px;
   background-color: @bg-lightgrey;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  .section-radius(20px);
   z-index: 2;
 }
 
-.countries-filter__header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.countries-filter__title {
-  .indents-none();
-  padding-left: 28px;
-  font-weight: @bold;
-  font-size: inherit;
-  text-transform: uppercase;
-  color: @darkblue;
-}
-
-.countries-filter__toggle {
+.countries-filter__wrapper {
   position: relative;
-  width: 17px;
-  height: 3px;
-  margin-right: 4px;
-  background-color: transparent;
-  border: none;
+}
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: -1px;
-    left: 0;
-    width: 3px;
-    height: 3px;
-    background-color: @darkblue;
-    border-radius: 50%;
-    box-shadow: 7px 0 0 0 @darkblue, 14px 0 0 0 @darkblue;
+.countries-filter__list {
+  padding-top: 47px;
+  padding-bottom: 13px;
+}
+
+.countries-filter--expanded .countries-filter__list {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 25px;
+  padding-right: 25px;
+  background-color: @bg-lightgrey;
+  .section-radius(20px);
+}
+
+.countries-filter--collapsed .countries-filter__item {
+  display: none;
+}
+
+.countries-filter--collapsed .filter__title,
+.countries-filter--collapsed .filter__toggle {
+  display: block;
+}
+
+
+@media (min-width: @tablet-width) {
+  .countries-filter {
+    margin-top: -60px;
+    .section-radius(60px);
+  }
+
+  .countries-filter__list {
+    padding-top: 112px;
+    padding-bottom: 46px;
+  }
+
+  .countries-filter__list .filter__title {
+    display: none;
+  }
+
+  .countries-filter__list .filter__toggle-title--collapse {
+    display: block;
+  }
+
+  .countries-filter__list .filter__regions-list {
+    display: flex;
+  }
+
+  .countries-filter--expanded .countries-filter__list {
+    padding-left: 40px;
+    padding-right: 40px;
+    .section-radius(60px);
+  }
+
+  .countries-filter--collapsed .filter__toggle-title--collapse {
+    display: none;
+  }
+
+  .countries-filter--collapsed .filter__toggle-title--expand {
+    display: block;
   }
 }
 
-.countries-filter__toggle-title {
-  display: none;
-}
+@media (min-width: @desktop-width) {
+  .countries-filter {
+    background-color: @lightgrey;
 
-.countries-filter__expanded {
-  display: none;
+    &--collapsed {
+      background-color: @bg-lightgrey;
+    }
+  }
 
-  &--opened {
+  .countries-filter__list .filter__title {
     display: block;
+  }
+
+  .countries-filter--expanded .countries-filter__list {
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
+    background-color: @lightgrey;
+    border-radius: 0;
   }
 }

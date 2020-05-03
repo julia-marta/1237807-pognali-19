@@ -1,18 +1,21 @@
 .route {
   position: relative;
   margin-top: -30px;
-  padding-top: 61px;
-  padding-bottom: 35px;
   background-color: @yellow;
   z-index: 2;
   .section-radius();
+}
+
+.route__wrapper {
+  padding-top: 61px;
+  padding-bottom: 35px;
 }
 
 .route__address {
   .indents-none();
   position: relative;
   width: 145px;
-  margin-bottom: 30px;
+  margin-bottom: 31px;
   padding-top: 3px;
   padding-left: 61px;
   font-weight: @bold;
@@ -38,9 +41,12 @@
 @media (min-width: @tablet-width) {
   .route {
     margin-top: -60px;
+    .section-radius(60px);
+  }
+
+  .route__wrapper {
     padding-top: 108px;
     padding-bottom: 85px;
-    .section-radius(60px);
   }
 
   .route__address {
@@ -65,7 +71,7 @@
 }
 
 @media (min-width: @desktop-width) {
-  .route {
+  .route__wrapper {
     display: flex;
     justify-content: center;
     align-items: center;

@@ -1,21 +1,27 @@
 .features {
   position: relative;
-  padding-bottom: 39px;
   background-color: @darkblue;
   z-index: 9;
 }
 
+.features__wrapper {
+  padding-bottom: 39px;
+}
+
 @media (min-width: @tablet-width) {
-  .features {
+  .features__wrapper {
     padding-bottom: 96px;
   }
 }
 
 @media (min-width: @desktop-width) {
   .features {
+    background-color: transparent;
+  }
+
+  .features__wrapper {
     margin-top: -230px;
     padding-left: 90px;
     padding-bottom: 123px;
-    background-color: transparent;
   }
 }
