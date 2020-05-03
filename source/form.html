@@ -120,18 +120,20 @@
 
       <section class="plan-add">
         <div class="plan-add__wrapper container">
-          <div class="plan-add__title-wrapper">
-            <h2 class="user-form__section-title">Добавить план:</h2>
-            <ul class="plan-add__markers-list step-markers">
-              <li class="step-markers__item step-markers__item--active"><span class="step-markers__title">Даты</span></li>
-              <li class="step-markers__item"><span class="step-markers__title">Маршрут</span></li>
-              <li class="step-markers__item"><span class="step-markers__title">Развлечения</span></li>
-            </ul>
-          </div>
+          <h2 class="user-form__section-title">Добавить план:</h2>
           <fieldset class="plan-add__field add-dates" id="step1">
             <div class="plan-add__field-wrapper">
-              <h3 class="plan-add__field-title">Шаг 1. <span class="plan-add__field-title">Даты пребывания</span></h3>
-              <p class="add-dates__message">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+              <div class="plan-add__field-header">
+                <div class="plan-add__title-wrapper">
+                  <h3 class="plan-add__field-title">Шаг 1. <span class="plan-add__field-title">Даты пребывания</span></h3>
+                  <p class="add-dates__message">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                </div>
+                <ul class="plan-add__markers-list plan-add__markers-list--current step-markers">
+                  <li class="step-markers__item step-markers__item--active"><span class="step-markers__title">Даты</span></li>
+                  <li class="step-markers__item"><span class="step-markers__title">Маршрут</span></li>
+                  <li class="step-markers__item"><span class="step-markers__title">Развлечения</span></li>
+                </ul>
+              </div>
               <div class="add-dates__wrapper">
                 <div class="add-dates__field add-dates__field--travelmates">
                   <label class="add-dates__label" for="travelmates-number">Ищу попутчиков:</label>
@@ -231,8 +233,17 @@
           </fieldset>
           <fieldset class="plan-add__field add-route" id="step2">
             <div class="plan-add__field-wrapper">
-              <h3 class="plan-add__field-title">Шаг 2. <span class="plan-add__field-title">Маршрут</span></h3>
-              <p class="add-route__message">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+              <div class="plan-add__field-header">
+                <div class="plan-add__title-wrapper">
+                  <h3 class="plan-add__field-title">Шаг 2. <span class="plan-add__field-title">Маршрут</span></h3>
+                  <p class="add-route__message">Укажите страны, которые вы хотели посетить. Это может быть одна или сразу несколько.</p>
+                </div>
+                <ul class="plan-add__markers-list step-markers">
+                  <li class="step-markers__item"><span class="step-markers__title">Даты</span></li>
+                  <li class="step-markers__item step-markers__item--active"><span class="step-markers__title">Маршрут</span></li>
+                  <li class="step-markers__item"><span class="step-markers__title">Развлечения</span></li>
+                </ul>
+              </div>
               <ul class="add-route__countries countries-select">
                 <li class="countries-select__item country-select country-select--chosen">
                   <div class="country-select__field country-select__field--chosen">
@@ -329,8 +340,17 @@
           </fieldset>
           <fieldset class="plan-add__field add-entertainment" id="step3">
             <div class="plan-add__field-wrapper">
-              <h3 class="plan-add__field-title">Шаг 3. <span class="plan-add__field-title">Развлечения</span></h3>
-              <p class="add-entertainment__message">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+              <div class="plan-add__field-header">
+                <div class="plan-add__title-wrapper">
+                  <h3 class="plan-add__field-title">Шаг 3. <span class="plan-add__field-title">Развлечения</span></h3>
+                  <p class="add-entertainment__message">Наконец, расскажите о своих планах времяпровождения. Можно писать в свободной форме и ставить тэги.</p>
+                </div>
+                <ul class="plan-add__markers-list step-markers">
+                  <li class="step-markers__item"><span class="step-markers__title">Даты</span></li>
+                  <li class="step-markers__item"><span class="step-markers__title">Маршрут</span></li>
+                  <li class="step-markers__item step-markers__item--active"><span class="step-markers__title">Развлечения</span></li>
+                </ul>
+              </div>
               <div class="add-entertainment__wrapper">
                 <div class="add-entertainment__field country-entertainment country-entertainment--current">
                   <label class="country-entertainment__title flag flag--bosnia" for="plan-bosnia">Босния и Герцеговина</label>

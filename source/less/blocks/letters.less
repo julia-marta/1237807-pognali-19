@@ -53,7 +53,7 @@
   .letters {
     &--big {
       border-collapse: separate;
-      border-spacing: 33px 46px;
+      border-spacing: 33px 23px;
       padding-bottom: 0;
       padding-right: 250px;
     }
@@ -68,14 +68,14 @@
 
   .letters--big .letters__link {
     font-size: 60px;
-    line-height: 24px;
+    line-height: 60px;
     font-weight: @bold;
     letter-spacing: normal;
     color: fade(@darkblue, 20%);
   }
 
   .letters--big .letters__countries-list {
-    top: 23px;
+    top: 19px;
     left: 483px;
   }
 
@@ -112,7 +112,7 @@
     border-spacing: 15px;
 
     &--big {
-      border-spacing: 61px 70px;
+      border-spacing: 61px 50px;
       padding-right: 0;
     }
   }
@@ -133,9 +133,17 @@
     color: @darkblue;
   }
 
+  .letters--big tr:nth-child(4) .letters__item {
+    padding-top: 7px;
+  }
+
   .letters__countries-list {
     display: block;
     position: static;
+    margin-top: 30px;
+  }
+
+  .letters--big tr:last-child .letters__countries-list {
     margin-top: 35px;
   }
 }

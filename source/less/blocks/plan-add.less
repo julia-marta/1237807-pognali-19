@@ -5,19 +5,27 @@
 }
 
 .plan-add__wrapper {
+  position: relative;
   padding-top: 30px;
   padding-bottom: 64px;
 }
 
-.plan-add__title-wrapper {
+.plan-add__field-header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 29px;
+  align-items: flex-start;
 }
 
 .plan-add__markers-list {
   .indents-none();
+  display: none;
+
+  &--current {
+    display: flex;
+    position: absolute;
+    top: 39px;
+    right: 48px;
+  }
 }
 
 .plan-add__field {
@@ -66,6 +74,10 @@
 }
 
 @media (min-width: @tablet-width) {
+  .plan-add .user-form__section-title {
+    margin-bottom: 50px;
+  }
+
   .plan-add__wrapper {
     padding-top: 46px;
     padding-left: 75px;
@@ -73,8 +85,11 @@
     padding-bottom: 82px;
   }
 
-  .plan-add__title-wrapper {
-    margin-bottom: 49px;
+  .plan-add__markers-list {
+    &--current {
+      top: 66px;
+      right: 80px;
+    }
   }
 
   .plan-add__field {
@@ -136,6 +151,11 @@
     margin-top: -60px;
   }
 
+  .plan-add .user-form__section-title {
+    margin-left: 63px;
+    margin-bottom: 48px;
+  }
+
   .plan-add__wrapper {
     padding-top: 50px;
     padding-left: 60px;
@@ -143,15 +163,15 @@
     padding-bottom: 87px;
   }
 
-  .plan-add__title-wrapper {
-    position: relative;
-    margin-left: 62px;
-  }
 
   .plan-add__markers-list {
-    position: absolute;
-    right: 206px;
-    bottom: -290px;
+    display: flex;
+    margin-top: 12px;
+    margin-right: 46px;
+
+    &--current {
+      position: static;
+    }
   }
 
   .plan-add__field {
