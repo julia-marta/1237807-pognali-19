@@ -84,12 +84,27 @@
 
 .country-select__add {
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 14px;
+  right: 12px;
   width: 14px;
   height: 14px;
   background: none;
   border: none;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 5px;
+    left: 1px;
+    width: 14px;
+    height: 2px;
+    background-color: @plus-lightgrey;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
 }
 
 .country-select__dropdown-wrapper {
@@ -157,8 +172,19 @@
   }
 
   .country-select__add {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
+    top: 26px;
+    right: 26px;
+
+    &::before,
+    &::after {
+      top: 7px;
+      left: 0;
+      width: 18px;
+      height: 2px;
+      background-color: @plus-grey;
+    }
   }
 }
 
