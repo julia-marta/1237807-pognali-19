@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Сервис для поиска попутчиков для путешествий «Погнали»</title>
+    <title>Погнали? | Направления</title>
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
 
-  <header class="site-header">
+  <header class="site-header site-header--closed">
     <div class="site-header__wrapper container">
       <div class="site-header__top">
         <a class="site-header__logo" href="index.html">
@@ -17,7 +17,7 @@
         <button class="site-header__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
       <div class="site-navigation__wrapper">
-        <nav class="site-navigation site-navigation--closed">
+        <nav class="site-navigation">
           <ul class="site-navigation__list site-navigation__list--main main-menu">
             <li class="main-menu__item">
               <a class="main-menu__link" href="#">О сервисе</a>
@@ -127,7 +127,7 @@
               <div class="plan-add__field-header">
                 <div class="plan-add__title-wrapper">
                   <h3 class="plan-add__field-title">Шаг 1. <span class="plan-add__field-title">Даты пребывания</span></h3>
-                  <p class="add-dates__message">Укажите предпочтительное количество попутчиков, которых вы хотели бы позвать в поездку и ее предполагаемую длительность.</p>
+                  <p class="add-dates__message">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                 </div>
                 <ul class="plan-add__markers-list plan-add__markers-list--current step-markers">
                   <li class="step-markers__item step-markers__item--active"><span class="step-markers__title">Даты</span></li>
@@ -247,25 +247,25 @@
               </div>
               <ul class="add-route__countries countries-select">
                 <li class="countries-select__item country-select country-select--chosen">
-                  <div class="country-select__field country-select__field--chosen">
-                    <p class="country-select__value">Босния и герцеговина</p>
-                  </div>
+                  <select class="country-select__field country-select__field--chosen" name="country1">
+                    <option value="bosnia">Босния и герцеговина</option>
+                  </select>
                   <div class="country-select__field country-select__field--flag flag flag--bosnia"></div>
-                  <button class="country-select__delete" aria-label="Удалить"></button>
+                  <button class="country-select__delete" type="button" aria-label="Удалить"></button>
                 </li>
                 <li class="countries-select__item country-select country-select--chosen">
-                  <div class="country-select__field country-select__field--chosen">
-                    <p class="country-select__value">Чехия</p>
-                  </div>
+                  <select class="country-select__field country-select__field--chosen" name="country2">
+                    <option value="czech">Чехия</option>
+                  </select>
                   <div class="country-select__field country-select__field--flag flag flag--czech"></div>
-                  <button class="country-select__delete" aria-label="Удалить"></button>
+                  <button class="country-select__delete" type="button" aria-label="Удалить"></button>
                 </li>
-                <li class="countries-select__item country-select">
+                <li class="countries-select__item country-select country-select--empty">
                   <div class="country-select__dropdown-wrapper country-select__dropdown-wrapper--closed">
-                    <div class="country-select__field country-select__field--empty">
-                      <p class="country-select__value">Выберите страну</p>
-                    </div>
-                    <button class="country-select__delete" aria-label="Удалить"></button>
+                    <select class="country-select__field country-select__field--empty" name="country3">
+                      <option value="null">Выберите страну</option>
+                    </select>
+                    <button class="country-select__delete" type="button" aria-label="Удалить"></button>
                     <div class="country-select__dropdown dropdown">
                       <div class="dropdown__header">
                         <h3 class="dropdown__title">Выберите страну</h3>
@@ -326,11 +326,10 @@
                     </div>
                   </div>
                 </li>
-                <li class="countries-select__item country-select">
-                  <div class="country-select__field country-select__field--empty country-select__field--add">
-                    <p class="country-select__value">Добавить страну</p>
-                    <button class="country-select__add" aria-label="Добавить"></button>
-                  </div>
+                <li class="countries-select__item country-select country-select--add">
+                  <button class="country-select__field country-select__field--empty country-select__field--add" type="button">
+                    Добавить страну
+                  </button>
                 </li>
               </ul>
             </div>
@@ -359,7 +358,7 @@
                 </div>
                 <div class="add-entertainment__field country-entertainment">
                   <label class="country-entertainment__title flag flag--czech" for="plan-czech">Чехия</label>
-                  <textarea class="country-entertainment__textarea" name="plan" id="plan-czech" placeholder="План действий">Пить пиво и лазить по старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <textarea class="country-entertainment__textarea" name="plan" id="plan-czech" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </div>
               </div>
             </div>
@@ -370,7 +369,6 @@
           </fieldset>
         </div>
       </section>
-
     </form>
 
   </main>
