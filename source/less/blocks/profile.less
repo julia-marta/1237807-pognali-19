@@ -92,19 +92,52 @@
 }
 
 .profile__directions {
+  position: relative;
   padding-left: 8px;
+  margin-bottom: 17px;
+  z-index: 1;
 
-  &--three {
+  &--firsova {
     margin-bottom: 11px;
   }
 
-  &--two {
-    margin-bottom: 17px;
+  &--smolov {
+    margin-bottom: 14px;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -18px;
+    width: 270px;
+    height: 1px;
+    background-color: @lightgrey;
+    z-index: -1;
   }
 }
 
 .profile__legend {
   .indents-none();
+  min-height: 10px;
+  margin-left: -10px;
+  padding-left: 10px;
+  padding-right: 10px;
+  background-color: @white;
+
+  &--countries {
+    width: 96px;
+  }
+
+  &--transport {
+    width: 65px;
+  }
+
+  &--level {
+    width: 40px;
+    padding-left: 12px;
+    margin-right: -10px;
+  }
 }
 
 .profile__countries {
@@ -113,7 +146,20 @@
 }
 
 .profile__transport {
+  position: relative;
   padding-left: 8px;
+  z-index: 1;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -18px;
+    width: 270px;
+    height: 1px;
+    background-color: @lightgrey;
+    z-index: -1;
+  }
 }
 
 .profile__vehicles-list {
@@ -124,6 +170,7 @@
 .profile__rating {
   text-align: center;
   margin-right: 3px;
+  z-index: 1;
 }
 
 .profile__level {
@@ -158,6 +205,7 @@
     align-items: flex-start;
     flex-wrap: wrap;
     width: 688px;
+    min-height: 332px;
     padding-top: 33px;
     padding-bottom: 20px;
     padding-left: 35px;
@@ -237,15 +285,20 @@
   }
 
   .profile__legend {
-    margin-left: 43px;
+    margin-left: 33px;
 
-    &--transport {
+    &--transport,
+    &--level {
       display: none;
     }
   }
 
   .profile__transport {
     padding-left: 0;
+
+    &::before {
+      display: none;
+    }
   }
 
   .profile__vehicles-list {
@@ -286,6 +339,12 @@
     margin-top: 22px;
     margin-bottom: 0;
     padding-left: 5px;
+
+    &::before {
+      top: 9px;
+      left: -35px;
+      width: 688px;
+    }
   }
 
   .profile__countries {
@@ -298,7 +357,7 @@
     width: 950px;
     min-height: 285px;
     padding-top: 47px;
-    padding-bottom: 42px;
+    padding-bottom: 47px;
 
     &::before {
       content: "";
@@ -358,6 +417,10 @@
     width: auto;
     .indents-none();
     margin-left: 92px;
+
+    &::before {
+      display: none;
+    }
   }
 
   .profile__countries {

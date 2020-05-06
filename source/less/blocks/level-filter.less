@@ -5,7 +5,28 @@
 .level-filter__value {
   display: flex;
   justify-content: center;
+  position: relative;
   margin-bottom: 24px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 106px;
+    width: 7px;
+    height: 11px;
+    background-color: @white;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 17px;
+    left: 101px;
+    width: 16px;
+    height: 1px;
+    background-color: @border-grey;
+  }
 }
 
 .level-filter__input {
@@ -29,6 +50,10 @@
   }
 }
 
+.level-filter__range-controls {
+  position: relative;
+}
+
 .level-filter__range-scale {
   position: relative;
   width: 220px;
@@ -47,7 +72,39 @@
   border-radius: 1px;
 }
 
+.level-filter__range-toggle {
+  position: absolute;
+  top: -4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: @btn-darkblue;
+
+  &--min {
+    left: 66px;
+  }
+
+  &--max {
+    right: 0;
+  }
+}
+
 @media (min-width: @tablet-width) {
+  .level-filter__value {
+    &::before {
+      top: 17px;
+      left: 70px;
+      width: 9px;
+      height: 15px;
+    }
+
+    &::after {
+      top: 23px;
+      left: 64px;
+      width: 21px;
+    }
+  }
+
   .level-filter__input {
     width: 75px;
     min-height: 46px;
@@ -68,27 +125,39 @@
     height: 3px;
     border-radius: 1.5px;
   }
+
+  .level-filter__range-toggle {
+    top: -5px;
+    width: 13px;
+    height: 13px;
+
+    &--min {
+      left: 69px;
+    }
+
+    &--max {
+      right: -5px;
+    }
+  }
 }
 
-@media (max-width: @mobile-tablet-width-only) {
-  @media (min-width: @tablet-width) {
-    .level-filter {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding-top: 0;
-    }
+@media (max-width: @mobile-tablet-width-only) and (min-width: @tablet-width) {
+  .level-filter {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0;
+  }
 
-    .level-filter__value {
-      order: 2;
-      margin-bottom: 0;
-      padding-top: 1px;
-    }
+  .level-filter__value {
+    order: 2;
+    margin-bottom: 0;
+    padding-top: 1px;
+  }
 
-    .level-filter__range-controls {
-      order: 1;
-      margin-left: 126px;
-    }
+  .level-filter__range-controls {
+    order: 1;
+    margin-left: 126px;
   }
 }
 
@@ -100,10 +169,24 @@
   .level-filter__value {
     justify-content: flex-start;
     margin-bottom: 36px;
+
+    &::before {
+      top: 15px;
+      left: 91px;
+    }
+
+    &::after {
+      top: 22px;
+      left: 85px;
+    }
   }
 
   .level-filter__input {
     width: 96px;
+
+    &--min {
+      padding-left: 5px;
+    }
   }
 
   .level-filter__range-scale {
@@ -112,5 +195,15 @@
 
   .level-filter__range-bar {
     width: 125px;
+  }
+
+  .level-filter__range-toggle {
+    &--min {
+      left: 59px;
+    }
+
+    &--max {
+      right: 6px;
+    }
   }
 }

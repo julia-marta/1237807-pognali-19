@@ -1,4 +1,29 @@
+.country-entertainment {
+  position: relative;
+
+  &::before,
+  &--current::after {
+    content: "";
+    position: absolute;
+    left: -14px;
+    background-color: @btn-darkblue;
+  }
+
+  &::before {
+    top: 8px;
+    width: 15px;
+    height: 2px;
+  }
+
+  &--current::after {
+    top: 9px;
+    width: 2px;
+    height: 281px;
+  }
+}
+
 .country-entertainment__title {
+  position: relative;
   display: block;
   margin-bottom: 15px;
   padding-left: 10px;
@@ -6,6 +31,17 @@
   line-height: 18px;
   font-weight: @medium;
   color: @btn-darkblue;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 6px;
+    left: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: @btn-darkblue;
+    border-radius: 50%;
+  }
 }
 
 .country-entertainment__textarea {
@@ -28,11 +64,31 @@
 }
 
 @media (min-width: @tablet-width) {
+  .country-entertainment {
+    &::before {
+      display: none;
+    }
+
+    &--current::after {
+      top: 16px;
+      left: 526px;
+      width: 3px;
+      height: 247px;
+    }
+  }
+
   .country-entertainment__title {
     margin-bottom: 42px;
     padding-left: 0;
     font-size: 30px;
     font-weight: @bold;
+
+    &::before {
+      top: 2px;
+      left: 520px;
+      width: 15px;
+      height: 15px;
+    }
   }
 
   .country-entertainment__textarea {
@@ -46,8 +102,20 @@
 }
 
 @media (min-width: @desktop-width) {
+  .country-entertainment {
+    &--current::after {
+      top: 10px;
+      left: 773px;
+      height: 261px;
+    }
+  }
+
   .country-entertainment__title {
     margin-left: -2px;
+
+    &::before {
+      left: 769px;
+    }
   }
 
   .country-entertainment__textarea {

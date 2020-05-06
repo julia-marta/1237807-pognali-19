@@ -1,6 +1,14 @@
 .site-header {
   position: relative;
   z-index: 10;
+
+  &--scrolled {
+    position: fixed;
+    background-color: @white;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 .site-header__wrapper {
@@ -23,12 +31,59 @@
 .site-header__toggle {
   display: block;
   width: 25px;
-  height: 11px;
   border: none;
   background-color: transparent;
-  background-image: url("../img/menu.svg");
   background-position: top;
   background-repeat: no-repeat;
+}
+
+.site-header--closed .site-header__toggle {
+  height: 11px;
+  background-image: url("../img/menu.svg");
+}
+
+.site-header--opened .site-header__toggle {
+  height: 19px;
+  background-image: url("../img/menu-close.svg");
+}
+
+@media (max-width: @mobile-tablet-width-only) {
+  .site-header {
+    &--opened,
+    &--nojs {
+      background-color: @white;
+    }
+  }
+
+  .site-header--opened .site-navigation {
+    position: absolute;
+    top: 0;
+    left: -25px;
+    padding-left: 25px;
+    padding-right: 25px;
+    z-index: 10;
+  }
+
+  .site-header--closed .site-navigation__list {
+    display: none;
+  }
+
+  .site-header--nojs .site-navigation {
+    position: static;
+  }
+
+  .site-header--nojs .site-navigation__list {
+    display: block;
+
+    &--user,
+    &--social {
+      display: flex;
+    }
+  }
+
+  .site-header--nojs .site-header__toggle {
+    display: none;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -45,24 +100,49 @@
     width: 166px;
     height: 42px;
   }
+
+  .site-header--opened .site-header__toggle {
+    height: 18px;
+  }
 }
 
-@media (max-width: @mobile-tablet-width-only) {
+@media (min-width: @tablet-width) and (max-width: @mobile-tablet-width-only) {
   .site-header {
-    &--opened {
+    &--tablet-index {
+      background-color: @tablet-darkblue;
+    }
+
+    &--scrolled,
+    &--opened,
+    &--nojs {
       background-color: @white;
     }
   }
 
-  @media (min-width: @tablet-width) {
-    .site-header {
-      &--tablet-index {
-        background-color: @tablet-darkblue;
-      }
+  .site-header--opened .site-navigation {
+    padding-left: 97px;
+    padding-right: 0;
+    width: 671px;
+    left: -40px;
+  }
 
-      &--opened {
-        background-color: @white;
-      }
+  .site-header--closed .site-navigation__list {
+    &--user {
+      display: flex;
+      top: -92px;
+    }
+  }
+
+  .site-header--opened .site-navigation__list {
+    &--user {
+      top: -92px;
+      right: 40px;
+    }
+  }
+
+  .site-header--nojs .site-navigation__list {
+    &--user {
+      top: -142px;
     }
   }
 }
@@ -99,5 +179,19 @@
   .site-header__logo-image {
     width: 200px;
     height: 52px;
+  }
+
+  .site-header--scrolled .site-header__wrapper {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .site-header--scrolled .site-header__top::after {
+    width: 45px;
+    background-color: @darkblue;
+  }
+
+  .site-header--scrolled .main-menu__link {
+    color: @darkblue;
   }
 }
