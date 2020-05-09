@@ -25,6 +25,15 @@
 .feedback__login-link {
   color: @yellow;
   text-decoration: underline;
+
+  &:hover,
+  &:focus {
+    color: @darkorange;
+  }
+
+  &:active {
+    color: fade(@darkorange, 30%);
+  }
 }
 
 .feedback__form {

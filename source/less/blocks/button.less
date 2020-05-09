@@ -14,11 +14,31 @@
   border: none;
   border-radius: 10px;
 
+  &:hover:not(&--bordered),
+  &:focus:not(&--bordered) {
+    background-color: @lightorange;
+  }
+
+  &:active:not(&--bordered) {
+    color: fade(@btn-darkblue, 30%);
+  }
+
   &--bordered {
     padding-top: 21px;
     padding-left: 21px;
     padding-bottom: 17px;
     border: 3px solid @darkblue;
+
+    &:hover,
+    &:focus {
+      background-color: @darkblue;
+      border-color: @darkblue;
+      color: @white;
+    }
+
+    &:active {
+      color: fade(@white, 30%);
+    }
   }
 }
 

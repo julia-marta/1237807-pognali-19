@@ -44,5 +44,3 @@ window.addEventListener("keydown", function (evt) {
     }
   }
 });
-
-//сортировка по странам

@@ -43,6 +43,14 @@
   color: @btn-darkblue;
   border: 1px solid @border-grey;
   border-radius: 4px;
+
+  &:hover {
+    border-color: @hover-border-darkgrey;
+  }
+
+  &:focus {
+    border-color: @bg-darkblue;
+  }
 }
 
 .add-dates__button {
@@ -56,11 +64,39 @@
   &--minus {
     bottom: 13px;
     left: 14px;
+
+    &:hover,
+    &:focus {
+      &::before {
+        background-color: @hover-ctr-grey;
+      }
+    }
+
+    &:active {
+      &::before {
+        background-color: @active-ctr-grey;
+      }
+    }
   }
 
   &--plus {
     bottom: 13px;
     right: 14px;
+
+    &:hover,
+    &:focus {
+      &::before,
+      &::after {
+        background-color: @hover-ctr-grey;
+      }
+    }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: @active-ctr-grey;
+      }
+    }
   }
 
   &::before,
@@ -87,6 +123,17 @@
   }
 }
 
+.add-dates__input-number:hover ~ .add-dates__button::before,
+.add-dates__input-number:hover ~ .add-dates__button::after {
+  background-color: @hover-border-darkgrey;
+}
+
+.add-dates__input-number:focus ~ .add-dates__button::before,
+.add-dates__input-number:focus ~ .add-dates__button::after {
+  background-color: @bg-darkblue;
+}
+
+
 .add-dates__checkbox {
   position: relative;
   margin-top: 21px;
@@ -106,6 +153,21 @@
   border: 1px solid @border-grey;
   border-radius: 4px;
 }
+
+.add-dates__input-checkbox {
+  &:hover + label::before,
+  &:checked:hover + label::before {
+    border-color: @hover-border-darkgrey;
+    cursor: pointer;
+  }
+
+  &:focus + label::before,
+  &:checked:focus + label::before {
+    background-color: @checkbox-lightgrey;
+    border-color: @checkbox-lightgrey;
+  }
+}
+
 
 .add-dates__label-checkbox {
   font-size: 15px;
@@ -184,6 +246,7 @@
     &--plus::after {
       width: 20px;
       height: 2px;
+      background-color: @ctr-grey;
     }
   }
 

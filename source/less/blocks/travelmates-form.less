@@ -23,6 +23,21 @@
   border-top: 1px solid @darkyellow;
 }
 
+.travelmates-form__drop-toggle {
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: 18px;
+    right: 0;
+    width: 8px;
+    height: 4px;
+    // для сетки
+    outline: 1px solid black;
+  }
+}
+
 .travelmates-form__submit {
   width: 230px;
   margin-top: 26px;
@@ -38,39 +53,43 @@
   }
 }
 
-@media (max-width: @mobile-tablet-width-only) {
-  @media (min-width: @tablet-width) {
-    .travelmates-form {
-      padding-top: 36px;
-      padding-left: 35px;
-      padding-right: 35px;
-      padding-bottom: 38px;
+@media (min-width: @tablet-width) and (max-width: @mobile-tablet-width-only) {
+  .travelmates-form {
+    padding-top: 36px;
+    padding-left: 35px;
+    padding-right: 35px;
+    padding-bottom: 38px;
+  }
+
+  .travelmates-form__item-wrapper {
+    padding-left: 0;
+    margin-bottom: 9px;
+    border: none;
+
+    &--transport {
+      margin-top: 17px;
     }
 
-    .travelmates-form__item-wrapper {
-      padding-left: 0;
-      margin-bottom: 9px;
-      border: none;
-
-      &--transport {
-        margin-top: 17px;
-      }
-
-      &--top {
-        padding-top: 22px;
-        border-top: 1px solid @darkyellow;
-      }
-
-      &--bottom {
-        padding-bottom: 37px;
-        border-bottom: 1px solid @darkyellow;
-      }
+    &--top {
+      padding-top: 22px;
+      border-top: 1px solid @darkyellow;
     }
 
-    .travelmates-form__submit {
-      width: 618px;
-      margin-top: 27px;
+    &--bottom {
+      padding-bottom: 37px;
+      border-bottom: 1px solid @darkyellow;
     }
+  }
+
+  .travelmates-form__drop-toggle {
+    &::after {
+      display: none;
+    }
+  }
+
+  .travelmates-form__submit {
+    width: 618px;
+    margin-top: 27px;
   }
 }
 
@@ -92,6 +111,15 @@
   .travelmates-form__item-wrapper {
     padding-left: 0;
     border: none;
+  }
+
+  .travelmates-form__drop-toggle {
+    &::after {
+      top: 15px;
+      right: 6px;
+      width: 10px;
+      height: 5px;
+    }
   }
 
   .travelmates-form__submit {

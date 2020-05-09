@@ -18,6 +18,9 @@
 
 .paginator__buttons {
   position: relative;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 
   &::before {
     content: "";
@@ -28,6 +31,15 @@
     height: 50px;
     background-color: @lightgrey;
   }
+}
+
+.paginator__button {
+  display: block;
+  width: 10px;
+  height: 20px;
+  margin-top: 15px;
+  // для сетки
+  outline: 1px solid black;
 }
 
 @media (min-width: @tablet-width) {
@@ -49,11 +61,22 @@
     width: 50px;
     height: 50px;
     text-align: center;
+    cursor: pointer;
 
-    &--active {
+    &--active,
+    &:active {
       background-color: @yellow;
       border-radius: 50%;
     }
+  }
+
+  .paginator__page:hover .paginator__link,
+  .paginator__page:focus .paginator__link {
+    color: fade(@bg-darkblue, 60%);
+  }
+
+  .paginator__page:active .paginator__link {
+    color: @bg-darkblue;
   }
 
   .paginator__link {
@@ -64,9 +87,16 @@
   }
 
   .paginator__buttons {
+    width: 53px;
+    justify-content: space-between;
+
     &::before {
       display: none;
     }
+  }
+
+  .paginator__button {
+    margin-top: 0;
   }
 }
 

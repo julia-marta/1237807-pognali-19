@@ -1,0 +1,35 @@
+.flag {
+  &::after {
+    content: "";
+    position: absolute;
+    width: 35px;
+    height: 24px;
+    // для сетки
+    outline: 1px solid red;
+  }
+
+  &--small {
+    &::after {
+      width: 26px;
+      height: 18px;
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .flag {
+    &--big {
+      &::after {
+        width: 70px;
+        height: 47px;
+      }
+    }
+
+    &--small {
+      &::after {
+        width: 35px;
+        height: 24px;
+      }
+    }
+  }
+}

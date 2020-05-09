@@ -7,6 +7,15 @@
   display: block;
   font-weight: @normal;
   color: @darkgrey;
+
+  &:hover,
+  &:focus {
+    color: @btn-darkblue;
+  }
+
+  &:active {
+    color: fade(@btn-darkblue, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {

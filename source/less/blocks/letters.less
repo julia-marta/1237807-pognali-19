@@ -15,22 +15,41 @@
   background-color: @white;
   border: 1px solid @border-grey;
 
-  &--current {
+  &--current,
+  &--big:active {
     background-color: @btn-darkblue;
     border-color: @btn-darkblue;
   }
 
-  &--current-light {
+  &--current-light,
+  &:active:not(&--big) {
     background-color: @lightgrey;
   }
 }
 
 .letters__link {
+  .inline-block();
+  box-sizing: border-box;
+  width: 100%;
   font-size: 14px;
   line-height: 38px;
   font-weight: @medium;
   text-transform: uppercase;
   color: @btn-darkblue;
+}
+
+.letters__item--current .letters__link,
+.letters__item--big:active .letters__link {
+  color: @white;
+}
+
+.letters__item--current .letters__countries-list {
+  display: block;
+}
+
+.letters__item:hover .letters__link,
+.letters__item:focus .letters__link {
+  outline: 1px solid @hover-border-darkgrey;
 }
 
 .letters__countries-list {
@@ -41,32 +60,48 @@
   left: 1px;
 }
 
-.letters__item--current .letters__link {
-  color: @white;
-}
-
-.letters__item--current .letters__countries-list {
-  display: block;
-}
-
 @media (min-width: @tablet-width) {
   .letters {
     &--big {
       border-collapse: separate;
-      border-spacing: 33px 23px;
+      border-spacing: 30px 17px;
       padding-bottom: 0;
       padding-right: 250px;
     }
   }
 
-  .letters--big .letters__item {
-    width: auto;
-    padding: 0;
-    background-color: transparent;
-    border: none;
+  .letters__item {
+    width: 52px;
+
+    &--big {
+      width: auto;
+      padding: 0;
+      background-color: transparent;
+      border: none;
+
+      &:hover,
+      &:focus,
+      &:active {
+        background-color: transparent;
+      }
+    }
+
+    &--current-light,
+    &:active:not(&--big) {
+      background-color: @btn-darkblue;
+      border-color: @btn-darkblue;
+    }
   }
 
-  .letters--big .letters__link {
+  .letters__link {
+    height: 66px;
+    padding-left: 3px;
+    font-size: 20px;
+    line-height: 70px;
+    letter-spacing: 2px;
+  }
+
+  .letters__item--big .letters__link {
     font-size: 60px;
     line-height: 60px;
     font-weight: @bold;
@@ -74,33 +109,24 @@
     color: fade(@darkblue, 20%);
   }
 
+  .letters__item--big:hover .letters__link,
+  .letters__item--big:focus .letters__link {
+    outline: none;
+    color: fade(@darkblue, 60%);
+  }
+
+
   .letters--big .letters__countries-list {
-    top: 19px;
+    top: 14px;
     left: 483px;
   }
 
-  .letters--big .letters__item--current .letters__link {
+  .letters--big .letters__item--current .letters__link,
+  .letters__item--big:active .letters__link {
     color: @darkblue;
   }
 
-  .letters__item {
-    width: 52px;
-    padding-top: 17px;
-    padding-bottom: 13px;
-    padding-left: 3px;
-
-    &--current-light {
-      background-color: @btn-darkblue;
-      border-color: @btn-darkblue;
-    }
-  }
-
-  .letters__link {
-    font-size: 20px;
-    line-height: 38px;
-    letter-spacing: 2px;
-  }
-
+  .letters__item:active:not(.letters__item--big) .letters__link,
   .letters__item--current-light .letters__link {
     color: @white;
   }
@@ -120,27 +146,57 @@
   .letters__item {
     width: 60px;
     border-radius: 4px;
+
+    &--big {
+      width: 190px;
+      vertical-align: top;
+      text-align: left;
+      border-radius: 0;
+    }
+
+    &:hover:not(&--big),
+    &:focus:not(&--big) {
+      border-color: @hover-border-darkgrey;
+    }
   }
 
-  .letters--big .letters__item {
-    width: 190px;
-    vertical-align: top;
-    text-align: left;
-    border-radius: 0;
+  .letters__item:hover .letters__link,
+  .letters__item:focus .letters__link {
+    outline: none;
   }
 
-  .letters--big .letters__link {
+  .letters__item--big .letters__link {
+    padding-left: 0;
     color: @darkblue;
   }
 
-  .letters--big tr:nth-child(4) .letters__item {
-    padding-top: 7px;
+  .letters__item--big:hover .letters__link,
+  .letters__item--big:focus .letters__link,
+  .letters__item--big:active .letters__link {
+    color: @darkblue;
+  }
+
+  .letters__line2 .letters__item {
+    padding-top: 2px;
+  }
+
+  .letters__line4 .letters__item {
+    padding-top: 9px;
+  }
+
+  .letters__line4 .letters__countries-list {
+    margin-top: 25px;
+  }
+
+  .letters__line5 .letters__link {
+    margin-top: -5px;
   }
 
   .letters__countries-list {
     display: block;
     position: static;
-    margin-top: 30px;
+    margin-top: 23px;
+    padding-left: 3px;
   }
 
   .letters--big tr:last-child .letters__countries-list {

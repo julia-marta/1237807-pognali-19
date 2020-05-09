@@ -1,23 +1,21 @@
 .transport-filter {
   padding-top: 5px;
-  padding-bottom: 20px;
+  padding-bottom: 19px;
 }
 
 .transport-filter__list {
   .indents-none();
+  margin-left: -1px;
 }
 
+@media (min-width: @tablet-width) and (max-width: @mobile-tablet-width-only) {
+  .transport-filter {
+    padding-top: 2px;
+    padding-bottom: 3px;
+  }
 
-@media (max-width: @mobile-tablet-width-only) {
-  @media (min-width: @tablet-width) {
-    .transport-filter {
-      padding-top: 2px;
-      padding-bottom: 3px;
-    }
-
-    .transport-filter__list {
-      margin-left: 121px;
-    }
+  .transport-filter__list {
+    margin-left: 121px;
   }
 }
 

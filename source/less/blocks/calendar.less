@@ -51,33 +51,51 @@
 .calendar__day {
   box-sizing: border-box;
   width: 30px;
-  padding-top: 5px;
-  padding-bottom: 2.5px;
+  height: 30px;
   background-color: @lightgrey;
   border: 1px solid @border-grey;
-
-  &--chosen {
-    background-color: @btn-darkblue;
-  }
 
   &--disabled {
     background-color: @white;
   }
+
+  &--chosen {
+    background-color: @tooltip-darkblue;
+  }
+
+  &--current,
+  &:hover:not(&--disabled),
+  &:focus:not(&--disabled) {
+    background-color: @btn-darkblue;
+  }
 }
 
 .calendar__link {
+  .inline-block();
+  box-sizing: border-box;
+  width: 100%;
+  height: 28px;
+  line-height: 30px;
   font-size: 14px;
   color: @darkgrey;
-
-  &--chosen {
-    color: @white;
-  }
-
-  &--disabled {
-    color: fade(@darkgrey, 30%);
-    cursor: default;
-  }
 }
+
+.calendar__day--disabled .calendar__link {
+  color: fade(@darkgrey, 30%);
+  cursor: default;
+}
+
+.calendar__day--chosen .calendar__link {
+  color: @white;
+}
+
+.calendar__day--current .calendar__link,
+.calendar__day:hover:not(.calendar__day--disabled) .calendar__link,
+.calendar__day:focus:not(.calendar__day--disabled) .calendar__link {
+  color: @white;
+  outline: 2px solid @red;
+}
+
 
 @media (min-width: @tablet-width) {
   .calendar {
@@ -87,7 +105,7 @@
   .calendar__month-title {
     padding-top: 28px;
     padding-bottom: 21px;
-    margin-bottom: 32px;
+    margin-bottom: 33px;
     font-size: 36px;
     line-height: 36px;
     border-top-color: @border-lightgrey;
@@ -122,25 +140,29 @@
 
   .calendar__day {
     width: 77px;
-    padding-top: 23px;
-    padding-bottom: 21px;
-    padding-left: 4px;
+    height: 69px;
   }
 
   .calendar__link {
+    height: 66px;
+    padding-left: 4px;
     font-size: 20px;
-    line-height: 18px;
+    line-height: 70px;
     letter-spacing: 2px;
     font-weight: @medium;
     color: @btn-darkblue;
+  }
 
-    &--chosen {
-      color: @white;
-    }
+  .calendar__day--disabled .calendar__link {
+    color: fade(@btn-darkblue, 30%);
+  }
 
-    &--disabled {
-      color: fade(@btn-darkblue, 30%);
-    }
+  .calendar__day--current .calendar__link,
+  .calendar__day:hover:not(.calendar__day--disabled) .calendar__link,
+  .calendar__day:focus:not(.calendar__day--disabled) .calendar__link {
+    line-height: 68px;
+    border: 1px solid @red;
+    outline: 3px solid @red;
   }
 }
 
@@ -161,14 +183,8 @@
 
   .calendar__day {
     width: 143px;
-    padding-top: 8px;
-    padding-bottom: 32px;
-    padding-left: 15px;
+    height: 70px;
     vertical-align: top;
-
-    &--chosen {
-      padding-bottom: 10px;
-    }
   }
 
   .calendar__day-title {
@@ -176,23 +192,34 @@
 
     &--chosen {
       display: block;
-      line-height: 22px;
+      line-height: 8px;
     }
   }
 
   .calendar__link {
+    height: 68px;
+    padding-left: 14px;
     font-size: 18px;
-    line-height: 30px;
+    line-height: 45px;
     letter-spacing: 1.8px;
     font-weight: @normal;
     color: @darkgrey;
+  }
 
-    &--chosen {
-      color: @white;
-    }
+  .calendar__day--disabled .calendar__link {
+    color: fade(@darkgrey, 30%);
+  }
 
-    &--disabled {
-      color: fade(@darkgrey, 30%);
-    }
+  .calendar__day--current .calendar__link,
+  .calendar__day:hover:not(.calendar__day--disabled) .calendar__link,
+  .calendar__day:focus:not(.calendar__day--disabled) .calendar__link {
+    line-height: 43px;
+    padding-left: 13px;
+  }
+
+  .calendar__day--current .calendar__day-title--chosen,
+  .calendar__day:hover:not(.calendar__day--disabled) .calendar__day-title--chosen,
+  .calendar__day:focus:not(.calendar__day--disabled) .calendar__day-title--chosen {
+    line-height: 10px;
   }
 }

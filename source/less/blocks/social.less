@@ -2,6 +2,7 @@
   .list-reset();
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
 }
 
 .social__link {
@@ -11,12 +12,23 @@
   background-color: @yellow;
   border-radius: 50%;
 
+  &:hover:not(&--light),
+  &:focus:not(&--light) {
+    background-color: @lightorange;
+  }
+
   &--light {
     background-color: transparent;
+    // для сетки
+    outline: 1px solid green;
   }
 }
 
 @media (min-width: @tablet-width) {
+  .social {
+    justify-content: flex-start;
+  }
+
   .social__link {
     width: 60px;
     height: 60px;

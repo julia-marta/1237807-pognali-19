@@ -1,6 +1,9 @@
 .tooltip {
   .inline-block();
-  display: none;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  opacity: 0;
   padding-top: 17px;
   padding-left: 20px;
   padding-bottom: 16px;
@@ -9,6 +12,23 @@
   line-height: 24px;
   font-weight: @normal;
   text-align: center;
+  white-space: nowrap;
+  color: @white;
   background-color: @tooltip-darkblue;
   border-radius: 4px;
+  z-index: -1;
+  transform: translateX(-50%);
+
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -8px;
+    border: 8px solid @tooltip-darkblue;
+    border-top-color: transparent;
+    border-right-color: transparent;
+    border-left-color: transparent;
+  }
 }
