@@ -22,6 +22,38 @@
   &::placeholder {
     color: fade(@darkgrey, 30%);
   }
+
+  &:hover {
+    background-color: @lightgrey;
+
+    &::placeholder {
+      color: fade(@darkgrey, 50%);
+    }
+  }
+
+  &:focus {
+    padding-top: 19px;
+    padding-left: 20px;
+    padding-bottom: 17px;
+    background-color: @darkblue;
+    border: 4px solid @white;
+    outline: none;
+
+    &::placeholder {
+      color: @white;
+    }
+  }
+
+  &:required {
+    padding-left: 24px;
+    background-color: @lightpink;
+    color: @error-lightred;
+    border: none;
+
+    &::placeholder {
+      color: @error-lightred;
+    }
+  }
 }
 
 .registration__button {
@@ -45,6 +77,12 @@
     border-radius: 20px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
+
+    &:focus {
+      padding-top: 26px;
+      padding-left: 31px;
+      padding-bottom: 23px;
+    }
   }
 
   .registration__button {

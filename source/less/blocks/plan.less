@@ -34,6 +34,15 @@
     .inline-block();
     margin-top: 17px;
     color: fade(@black, 30%);
+
+    &:hover,
+    &:focus {
+      color: fade(@black, 60%);
+    }
+
+    &:active {
+      color: @transparent-black;
+    }
   }
 }
 

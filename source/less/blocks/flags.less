@@ -1,4 +1,27 @@
 .flags {
   .list-reset();
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flags__item {
+  position: relative;
+  width: 35px;
+  min-height: 24px;
+  margin-right: 19px;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &::after {
+    top: 0;
+    left: 0;
+  }
+}
+
+.flags__item:hover .tooltip,
+.flags__item:focus .tooltip {
+  .tooltip-show();
 }

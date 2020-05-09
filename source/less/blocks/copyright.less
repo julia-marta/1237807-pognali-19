@@ -3,18 +3,27 @@
   justify-content: space-between;
   align-items: center;
   width: 270px;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 13px;
+  padding-bottom: 15px;
+  font-weight: @normal;
+  color: @darkgrey;
   border-top: 1px solid fade(@black, 5%);
+
+  &:hover,
+  &:focus {
+    color: fade(@darkgrey, 60%);
+  }
+
+  &:active {
+    color: fade(@darkgrey, 30%);
+  }
 }
 
 .copyright__text {
   .indents-none();
-  font-weight: @normal;
-  color: @darkgrey;
 }
 
-.copyright__picture {
+.copyright__logo {
   display: block;
 }
 

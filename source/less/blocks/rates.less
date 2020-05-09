@@ -33,6 +33,15 @@
   line-height: 16px;
   font-weight: @bold;
   color: @darkblue;
+
+  &:hover,
+  &:focus {
+    color: fade(@darkblue, 70%);
+  }
+
+  &:active {
+    color: fade(@darkblue, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -76,6 +85,15 @@
     font-size: 20px;
     line-height: 20px;
     color: @lightblue;
+
+    &:hover,
+    &:focus {
+      color: fade(@lightblue, 70%);
+    }
+
+    &:active {
+      color: fade(@lightblue, 30%);
+    }
   }
 }
 

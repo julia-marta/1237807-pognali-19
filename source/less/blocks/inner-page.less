@@ -74,6 +74,15 @@
     font-weight: @bold;
     text-transform: uppercase;
     color: @white;
+
+    &:hover,
+    &:focus {
+      color: fade(@white, 60%);
+    }
+
+    &:active {
+      color: fade(@white, 30%);
+    }
   }
 }
 

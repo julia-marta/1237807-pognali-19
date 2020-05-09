@@ -25,6 +25,18 @@
   border-radius: 4px;
 }
 
+.checkbox-filter__checkbox {
+  &:hover + label,
+  &:checked:hover + label {
+    opacity: 0.6;
+  }
+
+  &:focus + label,
+  &:checked:focus + label {
+    opacity: 0.3;
+  }
+}
+
 .checkbox-filter__label {
   font-size: 15px;
   line-height: 15px;
@@ -62,7 +74,7 @@
     .checkbox-filter__item {
       width: 115px;
       margin-bottom: 0;
-      margin-right: 18px;
+      margin-right: 17px;
       padding-left: 36px;
 
       &:last-child {

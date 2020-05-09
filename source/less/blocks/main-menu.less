@@ -8,6 +8,15 @@
   font-weight: @medium;
   text-transform: uppercase;
   color: @darkblue;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -20,6 +29,7 @@
 @media (min-width: @desktop-width) {
   .main-menu {
     display: flex;
+    align-items: center;
     flex-wrap: wrap;
   }
 
@@ -32,8 +42,39 @@
   }
 
   .main-menu__link {
+    .inline-block();
+    min-height: 30px;
     font-size: 20px;
     line-height: 30px;
     color: @white;
+    overflow: hidden;
+
+    &:hover,
+    &:focus {
+      opacity: 1;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  .main-menu__link-text {
+    .inline-block();
+    position: relative;
+    transition: transform 0.3s;
+
+    &::before {
+      content: attr(data-hover);
+      position: absolute;
+      top: 100%;
+      color: @yellow;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+
+  .main-menu__link:hover .main-menu__link-text,
+  .main-menu__link:focus .main-menu__link-text {
+    transform: translateY(-100%);
   }
 }

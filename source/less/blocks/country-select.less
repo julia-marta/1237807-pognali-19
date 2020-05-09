@@ -60,9 +60,19 @@
     display: none;
   }
 
+  &:hover:not(&--add):not(&--flag),
+  &:focus:not(&--add):not(&--flag) {
+    border-color: @hover-border-darkgrey;
+  }
+
   &--flag {
     width: 53px;
     margin-left: -1px;
+
+    &::after {
+      top: 8px;
+      left: 8px;
+    }
   }
 
   &--empty {
@@ -75,21 +85,42 @@
     text-align: left;
     background-color: @lightgrey;
     border-color: @lightgrey;
-  }
 
-  &--add::before,
-  &--add::after {
-    content: "";
-    position: absolute;
-    top: 19px;
-    right: 13px;
-    width: 14px;
-    height: 2px;
-    background-color: @plus-lightgrey;
-  }
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: 19px;
+      right: 13px;
+      width: 14px;
+      height: 2px;
+      background-color: @plus-lightgrey;
+    }
 
-  &--add::after {
-    transform: rotate(90deg);
+    &::after {
+      transform: rotate(90deg);
+    }
+
+    &:hover,
+    &:focus {
+      background-color: @btn-lightblue;
+      border-color: @btn-lightblue;
+      cursor: pointer;
+
+      &::before,
+      &::after {
+        background-color: @hover-plus-grey;
+      }
+    }
+
+    &:active {
+      color: fade(@btn-darkblue, 30%);
+
+      &::before,
+      &::after {
+        background-color: @active-plus-grey;
+      }
+    }
   }
 }
 
@@ -151,6 +182,11 @@
       margin-left: 26px;
       border: none;
       background-color: transparent;
+
+      &::after {
+        top: 12px;
+        left: 27px;
+      }
     }
 
     &--empty {
@@ -193,7 +229,11 @@
     width: 730px;
 
     &--flag {
-      width: 122px;
+      width: 135px;
+
+      &::after {
+        left: 58px;
+      }
     }
   }
 

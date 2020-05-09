@@ -1,10 +1,25 @@
 .traveler-card {
   position: relative;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 6px 21px 0 fade(@black, 8%);
+  }
+}
+
+.traveler-card__picture {
+  .section-radius-top(10px);
+  overflow: hidden;
+}
+
+.traveler-card:hover .traveler-card__photo,
+.traveler-card:focus .traveler-card__photo {
+  transform: scale(1.1);
 }
 
 .traveler-card__photo {
   display: block;
-  .section-radius-top(10px);
+  transition: transform 0.3s linear;
 }
 
 .traveler-card__level {
@@ -35,10 +50,11 @@
 }
 
 .traveler-card__info {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 270px;
-  padding-top: 26px;
-  padding-bottom: 20px;
+  padding-bottom: 14px;
   text-align: center;
   background-color: @white;
   .section-radius(10px);
@@ -46,41 +62,61 @@
 
 .traveler-card__countries {
   .indents-none();
+  width: 143px;
+  margin: 0 auto;
+  margin-bottom: 14px;
+  margin-top: -12px;
 }
 
 .traveler-card__name {
-  position: relative;
   .indents-none();
   .inline-block();
   margin-bottom: 15px;
   font-size: 21px;
   line-height: 21px;
   font-weight: @bold;
+}
+
+.traveler-card__name-link {
+  position: relative;
   color: @btn-darkblue;
+
+  &:hover,
+  &:focus {
+    color: fade(@btn-darkblue, 70%);
+  }
+
+  &:active {
+    color: fade(@btn-darkblue, 30%);
+  }
 }
 
 .traveler-card__status::before {
   top: 7px;
-  left: -16px;
+  left: -17px;
 }
 
 .traveler-card__hashtags-list {
   .indents-none();
   width: 184px;
   margin: 0 auto;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   padding-left: 5px;
 }
 
 .traveler-card__vehicles-list {
   .indents-none();
+  margin: 0 auto;
 }
 
 @media (min-width: @tablet-width) {
+  .traveler-card__picture {
+    .section-radius-top(20px);
+  }
+
   .traveler-card__photo {
     width: 285px;
     height: 285px;
-    .section-radius-top(20px);
   }
 
   .traveler-card__level {
@@ -90,8 +126,11 @@
 
   .traveler-card__info {
     width: 285px;
-    padding-top: 30px;
     .section-radius(20px);
+  }
+
+  .traveler-card__countries {
+    margin-bottom: 18px;
   }
 
   .traveler-card__name {
@@ -107,6 +146,7 @@
 
   .traveler-card__hashtags-list {
     width: 229px;
+    margin-bottom: 15px;
   }
 }
 
@@ -116,11 +156,11 @@
     left: 23px;
   }
 
-  .traveler-card__info {
-    padding-top: 33px;
+  .traveler-card__countries {
+    margin-bottom: 20px;
   }
 
   .traveler-card__name {
-    margin-bottom: 18px;
+    margin-bottom: 20px;
   }
 }

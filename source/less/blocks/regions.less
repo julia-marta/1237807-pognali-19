@@ -15,7 +15,13 @@
   text-transform: uppercase;
   color: fade(@darkblue, 30%);
 
-  &--current {
+  &:hover,
+  &:focus {
+    color: fade(@darkblue, 60%);
+  }
+
+  &--current,
+  &:active {
     color: @darkblue;
   }
 }

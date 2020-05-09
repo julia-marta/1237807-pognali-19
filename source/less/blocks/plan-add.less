@@ -71,6 +71,15 @@
   font-weight: @bold;
   text-transform: uppercase;
   color: @bg-darkblue;
+
+  &:hover,
+  &:focus {
+    color: fade(@bg-darkblue, 70%);
+  }
+
+  &:active {
+    color: fade(@bg-darkblue, 30%);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -135,7 +144,6 @@
     line-height: 24px;
     text-align: left;
     text-transform: none;
-    color: @btn-darkblue;
     border-radius: 20px;
   }
 
@@ -146,6 +154,15 @@
     line-height: 24px;
     text-transform: none;
     color: @btn-darkblue;
+
+    &:hover,
+    &:focus {
+      color: fade(@btn-darkblue, 70%);
+    }
+
+    &:active {
+      color: fade(@btn-darkblue, 30%);
+    }
   }
 }
 

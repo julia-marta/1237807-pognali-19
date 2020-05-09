@@ -8,11 +8,18 @@
 }
 
 .countries-list__item {
+  position: relative;
   padding-left: 39px;
   margin-bottom: 10px;
+  white-space: nowrap;
 
   &:last-child {
     margin-bottom: 0;
+  }
+
+  &::after {
+    top: -1px;
+    left: 0;
   }
 }
 
@@ -29,6 +36,11 @@
     padding-left: 42px;
     margin-bottom: 0;
     margin-right: 30px;
+
+    &::after {
+      top: 0;
+      left: -3px;
+    }
   }
 }
 
@@ -44,6 +56,10 @@
 
     &:last-child {
       margin-bottom: 0;
+    }
+
+    &::after {
+      left: 1px;
     }
   }
 }

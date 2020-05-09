@@ -20,13 +20,19 @@
         <nav class="site-navigation">
           <ul class="site-navigation__list site-navigation__list--main main-menu">
             <li class="main-menu__item">
-              <a class="main-menu__link" href="#">О сервисе</a>
+              <a class="main-menu__link" href="">
+                <span class="main-menu__link-text" data-hover="О сервисе">О сервисе</span>
+              </a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="form.html">Направления</a>
+              <a class="main-menu__link" href="form.html">
+                <span class="main-menu__link-text" data-hover="Направления">Направления</span>
+              </a>
             </li>
             <li class="main-menu__item">
-              <a class="main-menu__link" href="catalog.html">Попутчики</a>
+              <a class="main-menu__link" href="catalog.html">
+                <span class="main-menu__link-text" data-hover="Попутчики">Попутчики</span>
+              </a>
             </li>
           </ul>
           <ul class="site-navigation__list site-navigation__list--user user-menu">
@@ -41,11 +47,11 @@
             </li>
           </ul>
           <ul class="site-navigation__list site-navigation__list--contacts contacts">
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--phone contacts__link--dark" href="tel:+78005558628">8 800 555-86-28</a>
+            <li class="contacts__item contacts__item--phone">
+              <a class="contacts__link contacts__link--dark" href="tel:+78005558628">8 800 555-86-28</a>
             </li>
-            <li class="contacts__item">
-              <a class="contacts__link contacts__link--mail contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <li class="contacts__item contacts__item--mail">
+              <a class="contacts__link contacts__link--dark" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </li>
           </ul>
           <ul class="site-navigation__list site-navigation__list--social social">
@@ -78,7 +84,10 @@
           <h2 class="visually-hidden">Информация обо мне</h2>
           <p class="user-info__level">80 <span class="user-info__level-legend">level</span></p>
           <img class="user-info__photo" src="img/photo-account-tablet@1x.jpg" width="99" height="100" alt="Моё фото">
-          <a class="user-info__edit-photo round-button round-button--blue" href="#"><span class="user-info__edit-title">Сменить</span> фото</a>
+          <label class="user-info__edit-photo round-button round-button--blue">
+              <span class="user-info__edit-title">Сменить</span> фото
+            <input class="visually-hidden" type="file" name="photo">
+          </label>
           <fieldset class="user-info__field user-info__field--hashtags">
             <legend class="user-info__field-title user-info__field-title--hashtags">Тэги</legend>
             <textarea class="user-info__textarea" name="hashtags" placeholder="Коротко о себе в виде 5-8 хештэгов">#бургер #бар #футбол #концерт #крафт</textarea>
@@ -86,10 +95,22 @@
           <fieldset class="user-info__field user-info__field--transport">
             <legend class="user-info__field-title user-info__field-title--transport">Транспорт</legend>
             <ul class="user-info__transport-list vehicles">
-              <li class="vehicles__item vehicles__item--plane vehicles__item--active"><span class="tooltip">Авиаперелет</span></li>
-              <li class="vehicles__item vehicles__item--bus vehicles__item--active"><span class="tooltip">Автотранспорт</span></li>
-              <li class="vehicles__item vehicles__item--bicycle"><span class="tooltip">Велосипед</span></li>
-              <li class="vehicles__item vehicles__item--hiking vehicles__item--active"><span class="tooltip">Пешком</span></li>
+              <li class="user-info__transport-list__item">
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="plane" id="flight" checked>
+                <label class="vehicles__item vehicles__item--plane" for="flight"><span class="visually-hidden">Авиаперелет</span></label>
+              </li>
+              <li class="user-info__transport-list__item">
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bus" id="auto" checked>
+                <label class="vehicles__item vehicles__item--bus" for="auto"><span class="visually-hidden">Автотранспорт</span></label>
+              </li>
+              <li class="user-info__transport-list__item">
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bicycle" id="cycling" checked>
+                <label class="vehicles__item vehicles__item--bicycle" for="cycling"><span class="visually-hidden">Велосипед</span></label>
+              </li>
+              <li class="user-info__transport-list__item">
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="hiking" id="onfoot" checked>
+                <label class="vehicles__item vehicles__item--hiking" for="onfoot"><span class="visually-hidden">Пешком</span></label>
+              </li>
             </ul>
           </fieldset>
         </div>
@@ -175,48 +196,48 @@
                   <th class="calendar__weekday calendar__weekday--weekend">В<span class="calendar__weekday-title">с</span></th>
                 </tr>
                 <tr class="calendar__week">
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">23</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">24</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">25</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">26</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">27</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">28</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">1 <span class="calendar__day-title">мар</span></a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">23</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">24</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">25</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">26</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">27</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">28</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">1 <span class="calendar__day-title">мар</span></a></td>
                 </tr>
                 <tr class="calendar__week">
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">2</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">3</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">4</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">5</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">6</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">7</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">8</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">2</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">3</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">4</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">5</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">6</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">7</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">8</a></td>
                 </tr>
                 <tr class="calendar__week">
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">9</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">10</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">11</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">12</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">13</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">14</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">15</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">9</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">10</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">11</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">12</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">13</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">14</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">15</a></td>
                 </tr>
                 <tr class="calendar__week">
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">16</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">17</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">18</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">19</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">20</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">21</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">22</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">16</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">17</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">18</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">19</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">20</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">21</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">22</a></td>
                 </tr>
                 <tr class="calendar__week">
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">23</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">24</a></td>
-                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link calendar__link--disabled" href="#">25</a></td>
-                  <td class="calendar__day calendar__day--chosen"><a class="calendar__link calendar__link--chosen" href="#">26 <span class="calendar__day-title calendar__day-title--chosen">Заезд</span></a></td>
-                  <td class="calendar__day calendar__day--chosen"><a class="calendar__link calendar__link--chosen" href="#">27</a></td>
-                  <td class="calendar__day calendar__day--chosen"><a class="calendar__link calendar__link--chosen" href="#">28 <span class="calendar__day-title calendar__day-title--chosen">Выезд</span></a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">23</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">24</a></td>
+                  <td class="calendar__day calendar__day--disabled"><a class="calendar__link" href="">25</a></td>
+                  <td class="calendar__day calendar__day--current"><a class="calendar__link" href="#">26 <span class="calendar__day-title calendar__day-title--chosen">Заезд</span></a></td>
+                  <td class="calendar__day calendar__day--chosen"><a class="calendar__link" href="#">27</a></td>
+                  <td class="calendar__day calendar__day--chosen"><a class="calendar__link" href="#">28 <span class="calendar__day-title calendar__day-title--chosen">Выезд</span></a></td>
                   <td class="calendar__day"><a class="calendar__link" href="#">29</a></td>
                 </tr>
                 <tr class="calendar__week">
@@ -250,20 +271,20 @@
                   <select class="country-select__field country-select__field--chosen" name="country1">
                     <option value="bosnia">Босния и герцеговина</option>
                   </select>
-                  <div class="country-select__field country-select__field--flag flag flag--bosnia"></div>
+                  <div class="country-select__field country-select__field--flag flag flag--bosnia flag--big"></div>
                   <button class="country-select__delete" type="button" aria-label="Удалить"></button>
                 </li>
                 <li class="countries-select__item country-select country-select--chosen">
                   <select class="country-select__field country-select__field--chosen" name="country2">
                     <option value="czech">Чехия</option>
                   </select>
-                  <div class="country-select__field country-select__field--flag flag flag--czech"></div>
+                  <div class="country-select__field country-select__field--flag flag flag--czech flag--big"></div>
                   <button class="country-select__delete" type="button" aria-label="Удалить"></button>
                 </li>
                 <li class="countries-select__item country-select country-select--empty">
                   <div class="country-select__dropdown-wrapper country-select__dropdown-wrapper--closed">
                     <select class="country-select__field country-select__field--empty" name="country3">
-                      <option value="null">Выберите страну</option>
+                      <option value="null" hidden="true">Выберите страну</option>
                     </select>
                     <button class="country-select__delete" type="button" aria-label="Удалить"></button>
                     <div class="country-select__dropdown dropdown">
@@ -352,13 +373,14 @@
                 </ul>
               </div>
               <div class="add-entertainment__wrapper">
-                <div class="add-entertainment__field country-entertainment country-entertainment--current">
-                  <label class="country-entertainment__title flag flag--bosnia" for="plan-bosnia">Босния и Герцеговина</label>
-                  <textarea class="country-entertainment__textarea" name="plan" id="plan-bosnia" placeholder="План действий"></textarea>
+                <div class="add-entertainment__field country-entertainment country-entertainment--current country-entertainment--error">
+                  <label class="country-entertainment__title" for="plan-bosnia"><span class="country-entertainment__flag flag flag--bosnia flag--big">Босния и Герцеговина</span></label>
+                  <textarea class="country-entertainment__textarea" name="plan1" id="plan-bosnia" placeholder="План действий" required></textarea>
+                  <span class="country-entertainment__textarea-error">Это поле должно быть заполнено</span>
                 </div>
                 <div class="add-entertainment__field country-entertainment">
-                  <label class="country-entertainment__title flag flag--czech" for="plan-czech">Чехия</label>
-                  <textarea class="country-entertainment__textarea" name="plan" id="plan-czech" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
+                  <label class="country-entertainment__title" for="plan-czech"><span class="country-entertainment__flag flag flag--czech flag--big">Чехия</span></label>
+                  <textarea class="country-entertainment__textarea" name="plan2" id="plan-czech" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </div>
               </div>
             </div>
@@ -389,14 +411,12 @@
           <a class="social__link social__link--instagram" href="#" aria-label="Инстаграм"></a>
         </li>
       </ul>
-      <div class="site-footer__copyright copyright">
+      <a class="site-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         <p class="copyright__text">Разработано</p>
-        <a class="copyright__logo" href="https://htmlacademy.ru/intensive/adaptive">
-          <img class="copyright__picture" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
-        </a>
-      </div>
+        <img class="copyright__logo" src="img/htmlacademy.svg" width="27" height="34" alt="Логотип HTML Academy">
+      </a>
     </div>
   </footer>
-
+  <script src="js/script.js"></script>
   </body>
 </html>

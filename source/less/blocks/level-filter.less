@@ -1,5 +1,5 @@
 .level-filter {
-  padding-top: 1px;
+  padding-top: 2px;
 }
 
 .level-filter__value {
@@ -48,6 +48,14 @@
   &--min {
     margin-right: -1px;
   }
+
+  &:hover {
+    border-color: @hover-border-darkgrey;
+  }
+
+  &:focus {
+    border-color: @bg-darkblue;
+  }
 }
 
 .level-filter__range-controls {
@@ -79,13 +87,35 @@
   height: 10px;
   border-radius: 50%;
   background-color: @btn-darkblue;
+  transition: all 0.2s linear;
 
   &--min {
     left: 66px;
+
+    &:hover,
+    &:focus {
+      left: 63px;
+    }
   }
 
   &--max {
     right: 0;
+
+    &:hover,
+    &:focus {
+      right: -3px;
+    }
+  }
+
+  &:hover,
+  &:focus {
+    top: -7px;
+    width: 16px;
+    height: 16px;
+  }
+
+  &:active {
+    box-shadow: 0 3px 7px 0 fade(@btn-darkblue, 35%);
   }
 }
 
@@ -133,10 +163,27 @@
 
     &--min {
       left: 69px;
+
+      &:hover,
+      &:focus {
+        left: 66px;
+      }
     }
 
     &--max {
       right: -5px;
+
+      &:hover,
+      &:focus {
+        right: -8px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      top: -8px;
+      width: 19px;
+      height: 19px;
     }
   }
 }
@@ -200,10 +247,20 @@
   .level-filter__range-toggle {
     &--min {
       left: 59px;
+
+      &:hover,
+      &:focus {
+        left: 56px;
+      }
     }
 
     &--max {
       right: 6px;
+
+      &:hover,
+      &:focus {
+        right: 3px;
+      }
     }
   }
 }

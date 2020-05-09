@@ -14,6 +14,10 @@
   color: @darkblue;
 }
 
+.filter__title-colon {
+  display: none;
+}
+
 .filter__toggle {
   .indents-none();
   position: relative;
@@ -24,6 +28,7 @@
   text-align: left;
   background-color: transparent;
   border: none;
+  cursor: pointer;
 
   &::after {
     content: "";
@@ -86,6 +91,16 @@
     font-weight: @bold;
     text-transform: uppercase;
     color: @darkblue;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      color: fade(@darkblue, 60%);
+    }
+
+    &:active {
+      color: fade(@darkblue, 30%);
+    }
 
     &--collapse {
       padding-left: 2px;
@@ -101,7 +116,7 @@
   .filter__letter-selector {
     order: 3;
     .indents-none();
-    margin-top: 30px;
+    margin-top: 35px;
     margin-left: -5px;
   }
 
@@ -110,7 +125,7 @@
     width: 618px;
     height: 100px;
     margin: 0 auto;
-    margin-top: 40px;
+    margin-top: 41px;
     margin-bottom: 28px;
   }
 }
@@ -129,9 +144,14 @@
     line-height: 24px;
   }
 
+  .filter__title-colon {
+    display: inline;
+  }
+
   .filter__regions-list {
     order: 2;
-    margin-left: 39px;
+    margin-left: 34px;
+    padding-top: 1px;
   }
 
   .filter__toggle {
@@ -148,6 +168,6 @@
   .filter__collapse {
     order: 5;
     width: 100%;
-    margin-top: 12px;
+    margin-top: 10px;
   }
 }
