@@ -15,6 +15,13 @@
   background-position: 152px 69px, -10px 341px;
   background-repeat: no-repeat, no-repeat;
 
+  @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+    background-image:
+      url("../img/smolov-back-desktop@2x.png"),
+      url("../img/rogovaya-back-mobile@2x.png");
+    background-size: 143px auto, 71px auto;
+  }
+
   &::before {
     content: "";
     position: absolute;
@@ -66,6 +73,13 @@
     background-image: url("../img/smolov-back-desktop@1x.png"),
       url("../img/rogovaya-back-desktop@1x.png");
     background-position: left 40px top 486px, right 75px top 140px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image:
+        url("../img/smolov-back-desktop@2x.png"),
+        url("../img/rogovaya-back-desktop@2x.png");
+      background-size: 143px auto, 285px auto;
+    }
 
     &::before {
       top: 140px;
