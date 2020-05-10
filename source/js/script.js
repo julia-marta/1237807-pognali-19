@@ -84,3 +84,15 @@ if (dropdown) {
     }
   });
 }
+
+// активная/неактивная кнопка лайков
+
+let likeButtons = document.querySelectorAll(".profile__like-button");
+
+if (likeButtons) {
+  for (let likeButton of likeButtons) {
+    likeButton.onclick = function (evt) {
+      likeButton.classList.toggle("profile__like-button--active");
+    };
+  }
+}

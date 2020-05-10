@@ -12,7 +12,11 @@
     <div class="site-header__wrapper container">
       <div class="site-header__top">
         <a class="site-header__logo">
-          <img class="site-header__logo-image" src="img/logo-desktop-white@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
+          <picture>
+            <source media="(min-width: 1440px)" srcset="img/logo-desktop-white@1x.png, img/logo-desktop-white@2x.png 2x">
+            <source media="(min-width: 768px)" srcset="img/logo-tablet-white@1x.png, img/logo-tablet-white@2x.png 2x">
+            <img class="site-header__logo-image" src="img/logo-mobile-white@1x.png" srcset="img/logo-mobile-white@2x.png 2x" width="100" height="19" alt="Логотип сервиса «Погнали»">
+          </picture>
         </a>
         <button class="site-header__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
@@ -136,7 +140,12 @@
         </div>
         <ul class="destinations__list countries">
           <li class="countries__item country-card">
-            <img class="country-card__picture" src="img/thailand-desktop@1x.jpg" width="270" height="110" alt="Тайланд">
+          <div class="country-card__picture">
+            <picture>
+              <source media="(min-width: 768px)" srcset="img/thailand-desktop@1x.jpg, img/thailand-desktop@2x.jpg 2x">
+              <img class="country-card__photo" src="img/thailand-mobile@1x.jpg" srcset="img/thailand-mobile@2x.jpg 2x" width="270" height="110" alt="Тайланд">
+            </picture>
+          </div>
             <div class="country-card__info country-card__flag flag flag--big flag--thailand">
               <div class="country-card__title-wrapper">
                 <h3 class="country-card__title">Таиланд</h3>
@@ -146,7 +155,12 @@
             </div>
           </li>
           <li class="countries__item country-card">
-            <img class="country-card__picture" src="img/france-desktop@1x.jpg" width="270" height="110" alt="Франция">
+            <div class="country-card__picture">
+              <picture>
+                  <source media="(min-width: 768px)" srcset="img/france-desktop@1x.jpg, img/france-desktop@2x.jpg 2x">
+                <img class="country-card__photo" src="img/france-mobile@1x.jpg" srcset="img/france-mobile@2x.jpg 2x" width="270" height="110" alt="Франция">
+              </picture>
+            </div>
             <div class="country-card__info country-card__flag flag flag--big flag--france">
               <div class="country-card__title-wrapper">
                 <h3 class="country-card__title">Франция</h3>
@@ -156,7 +170,12 @@
             </div>
           </li>
           <li class="countries__item country-card">
-            <img class="country-card__picture" src="img/czech-desktop@1x.jpg" width="270" height="110" alt="Чехия">
+            <div class="country-card__picture">
+              <picture>
+                  <source media="(min-width: 768px)" srcset="img/czech-desktop@1x.jpg, img/czech-desktop@2x.jpg 2x">
+                <img class="country-card__photo" src="img/czech-mobile@1x.jpg" srcset="img/czech-mobile@2x.jpg 2x" width="270" height="110" alt="Чехия">
+              </picture>
+            </div>
             <div class="country-card__info country-card__flag flag flag--big flag--czech">
               <div class="country-card__title-wrapper">
                 <h3 class="country-card__title">Чехия</h3>
@@ -181,7 +200,7 @@
           <li class="travelers__item traveler-card">
             <div class="traveler-card__picture">
               <a class="traveler-card__photo-link" href="#">
-                <img class="traveler-card__photo" src="img/firsova-desktop@1x.jpg" width="270" height="270" alt="Таня Фирсова">
+                <img class="traveler-card__photo" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
               </a>
               <p class="traveler-card__level">99 <span class="traveler-card__level-legend">level</span></p>
             </div>
@@ -213,7 +232,7 @@
           <li class="travelers__item traveler-card">
             <div class="traveler-card__picture">
               <a class="traveler-card__photo-link" href="#">
-                <img class="traveler-card__photo" src="img/demin-desktop@1x.jpg" width="270" height="270" alt="Петя Демин">
+                <img class="traveler-card__photo" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
               </a>
               <p class="traveler-card__level">80 <span class="traveler-card__level-legend">level</span></p>
             </div>
@@ -306,7 +325,11 @@
   <footer class="site-footer">
     <div class="site-footer__wrapper container">
       <a class="site-footer__logo">
-        <img class="site-footer__logo-image" src="img/logo-desktop-blue@1x.png" width="100" height="19" alt="Логотип сервиса «Погнали»">
+        <picture>
+          <source media="(min-width: 1440px)" srcset="img/logo-desktop-blue@1x.png, img/logo-desktop-blue@2x.png 2x">
+          <source media="(min-width: 768px)" srcset="img/logo-tablet-blue@1x.png, img/logo-tablet-blue@2x.png 2x">
+          <img class="site-footer__logo-image" src="img/logo-mobile-blue@1x.png" srcset="img/logo-mobile-blue@2x.png 2x" width="100" height="19" alt="Логотип сервиса «Погнали»">
+        </picture>
       </a>
       <ul class="site-footer__social-list social">
         <li class="social__item">
