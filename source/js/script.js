@@ -51,7 +51,54 @@ if (popup) {
   });
 }
 
-// открытие и закрытие выпадающего списка стран
+// открытие и закрытие фильтра по странам в каталоге
+
+let countriesFilter = document.querySelector(".countries-filter");
+let filterToggle = document.querySelector(".filter__toggle");
+let collapseButton = document.querySelector(".filter__collapse");
+
+if(filterToggle) {
+  filterToggle.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    if(countriesFilter.classList.contains("countries-filter--collapsed")) {
+      countriesFilter.classList.remove("countries-filter--collapsed");
+      countriesFilter.classList.add("countries-filter--expanded");
+    } else {
+      countriesFilter.classList.add("countries-filter--collapsed");
+      countriesFilter.classList.remove("countries-filter--expanded");
+    }
+  });
+}
+
+if (collapseButton) {
+  collapseButton.addEventListener("click", function (evt) {
+    evt.preventDefault();
+    countriesFilter.classList.add("countries-filter--collapsed");
+    countriesFilter.classList.remove("countries-filter--expanded");
+  });
+}
+
+// открытие и закрытие секций фильтра попутчиков
+
+let formToggles = document.querySelectorAll(".travelmates-form__drop-toggle");
+
+if (formToggles) {
+  for (let formToggle of formToggles) {
+    let formSection = formToggle.querySelector(".form-section__expanded");
+    formToggle.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      if (formSection.classList.contains("form-section__expanded--closed")) {
+        formSection.classList.remove("form-section__expanded--closed");
+        formSection.classList.add("form-section__expanded--opened");
+      } else {
+        formSection.classList.add("form-section__expanded--closed");
+        formSection.classList.remove("form-section__expanded--opened");
+      }
+    });
+  }
+}
+
+// открытие и закрытие выпадающего списка стран в форме
 
 let selectField = document.querySelector("select[name=country3]");
 let dropdown = document.querySelector(".country-select__dropdown-wrapper");
@@ -79,10 +126,27 @@ if (dropdown) {
       if (dropdown.classList.contains("country-select__dropdown-wrapper--opened")) {
         evt.preventDefault();
         dropdown.classList.add("country-select__dropdown-wrapper--closed");
-        popup.classList.remove("country-select__dropdown-wrapper--opened");
+        dropdown.classList.remove("country-select__dropdown-wrapper--opened");
       }
     }
   });
+}
+
+//сортировка по буквам
+
+let letterCells = document.querySelectorAll(".letters__item");
+
+if(letterCells) {
+  for (let letterCell of letterCells) {
+    let letter = letterCell.querySelector(".letters__link");
+    letter.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      letterCells.forEach(function (item) {
+        item.classList.remove("letters__item--current");
+      });
+      letterCell.classList.add("letters__item--current");
+    });
+  }
 }
 
 // активная/неактивная кнопка лайков
