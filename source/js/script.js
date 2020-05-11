@@ -17,6 +17,14 @@ toggle.addEventListener("click", function() {
 
 //скролл меню
 
+window.onscroll = function () {
+  if (window.pageYOffset > 50) {
+    header.classList.add("site-header--scrolled");
+  } else {
+    header.classList.remove("site-header--scrolled");
+  }
+}
+
 // открытие и закрытие модального окна
 
 let openButton = document.querySelector(".rates__to-business");
@@ -80,19 +88,20 @@ if (collapseButton) {
 
 // открытие и закрытие секций фильтра попутчиков
 
-let formToggles = document.querySelectorAll(".travelmates-form__drop-toggle");
+let formSections = document.querySelectorAll(".form-section");
 
-if (formToggles) {
-  for (let formToggle of formToggles) {
-    let formSection = formToggle.querySelector(".form-section__expanded");
+if (formSections) {
+  for (let formSection of formSections) {
+    let formToggle = formSection.querySelector(".form-section__title");
+    let formExpanded = formSection.querySelector(".form-section__expanded");
     formToggle.addEventListener("click", function (evt) {
       evt.preventDefault();
-      if (formSection.classList.contains("form-section__expanded--closed")) {
-        formSection.classList.remove("form-section__expanded--closed");
-        formSection.classList.add("form-section__expanded--opened");
+      if (formExpanded.classList.contains("form-section__expanded--closed")) {
+        formExpanded.classList.remove("form-section__expanded--closed");
+        formExpanded.classList.add("form-section__expanded--opened");
       } else {
-        formSection.classList.add("form-section__expanded--closed");
-        formSection.classList.remove("form-section__expanded--opened");
+        formExpanded.classList.add("form-section__expanded--closed");
+        formExpanded.classList.remove("form-section__expanded--opened");
       }
     });
   }
@@ -149,6 +158,30 @@ if(letterCells) {
   }
 }
 
+//фильтрация по континентам
+
+let regionLinks = document.querySelectorAll(".regions__link");
+let countryItems = document.querySelectorAll(".country-selector__item");
+
+if(regionLinks) {
+  for (let regionLink of regionLinks) {
+    regionLink.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      regionLinks.forEach(function (item) {
+        item.classList.remove("regions__link--current");
+      });
+      regionLink.classList.add("regions__link--current");
+      for (let countryItem of countryItems) {
+        if (countryItem.dataset.category !== regionLink.dataset.value) {
+          countryItem.classList.add("country-selector--hidden");
+        } else {
+          countryItem.classList.remove("country-selector--hidden");
+        }
+      }
+    });
+  }
+}
+
 // активная/неактивная кнопка лайков
 
 let likeButtons = document.querySelectorAll(".profile__like-button");
@@ -159,4 +192,31 @@ if (likeButtons) {
       likeButton.classList.toggle("profile__like-button--active");
     };
   }
+}
+
+//изменения чисел в инпутах
+
+let travelmatesField = document.querySelector(".add-dates__field--travelmates");
+let durationField = document.querySelector(".add-dates__field--duration");
+
+let changeNumber = function(fieldName) {
+  let buttonPlus = fieldName.querySelector(".add-dates__button--plus");
+  let buttonMinus = fieldName.querySelector(".add-dates__button--minus");
+  let inputNumber = fieldName.querySelector("input");
+
+  buttonPlus.onclick = function (evt) {
+    inputNumber.value++;
+  }
+
+  buttonMinus.onclick = function (evt) {
+    inputNumber.value--;
+  }
+};
+
+if (travelmatesField) {
+  changeNumber(travelmatesField);
+}
+
+if (durationField) {
+  changeNumber(durationField);
 }

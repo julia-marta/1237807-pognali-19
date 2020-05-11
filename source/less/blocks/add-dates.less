@@ -44,12 +44,18 @@
   border: 1px solid @border-grey;
   border-radius: 4px;
 
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+  }
+
   &:hover {
     border-color: @hover-border-darkgrey;
   }
 
   &:focus {
     border-color: @bg-darkblue;
+    outline: none;
   }
 }
 
@@ -60,6 +66,7 @@
   background: none;
   border: none;
   cursor: pointer;
+  outline: none;
 
   &--minus {
     bottom: 13px;
