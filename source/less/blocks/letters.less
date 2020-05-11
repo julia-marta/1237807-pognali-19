@@ -21,7 +21,6 @@
     border-color: @btn-darkblue;
   }
 
-  &--current-light,
   &:active:not(&--big) {
     background-color: @lightgrey;
   }
@@ -60,6 +59,16 @@
   left: 1px;
 }
 
+.letters--light .letters__item--current {
+  background-color: @lightgrey;
+  border-color: @border-grey;
+}
+
+.letters--light .letters__item--current .letters__link {
+  color: @btn-darkblue;
+}
+
+
 @media (min-width: @tablet-width) {
   .letters {
     &--big {
@@ -86,7 +95,6 @@
       }
     }
 
-    &--current-light,
     &:active:not(&--big) {
       background-color: @btn-darkblue;
       border-color: @btn-darkblue;
@@ -126,8 +134,16 @@
     color: @darkblue;
   }
 
-  .letters__item:active:not(.letters__item--big) .letters__link,
-  .letters__item--current-light .letters__link {
+  .letters__item:active:not(.letters__item--big) .letters__link {
+    color: @white;
+  }
+
+  .letters--light .letters__item--current {
+    background-color: @btn-darkblue;
+    border-color: @btn-darkblue;
+  }
+
+  .letters--light .letters__item--current .letters__link {
     color: @white;
   }
 }
@@ -199,7 +215,7 @@
     padding-left: 3px;
   }
 
-  .letters--big tr:last-child .letters__countries-list {
+  .letters__line5 .letters__countries-list {
     margin-top: 35px;
   }
 }

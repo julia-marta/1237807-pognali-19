@@ -87,7 +87,13 @@
         <div class="user-info__wrapper container">
           <h2 class="visually-hidden">Информация обо мне</h2>
           <p class="user-info__level">80 <span class="user-info__level-legend">level</span></p>
-          <img class="user-info__photo" src="img/photo-account-tablet@1x.jpg" width="99" height="100" alt="Моё фото">
+          <div class="user-info__photo">
+            <picture>
+              <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
+              <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg, img/photo-account-tablet@2x.jpg 2x">
+              <img class="user-info__image" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x"  width="99" height="100" alt="Моё фото">
+            </picture>
+          </div>
           <label class="user-info__edit-photo round-button round-button--blue">
               <span class="user-info__edit-title">Сменить</span> фото
             <input class="visually-hidden" type="file" name="photo">
@@ -297,9 +303,9 @@
                         <button class="dropdown__close" type="button" aria-label="Закрыть окно"></button>
                       </div>
                       <div class="dropdown__wrapper">
-                        <table class="dropdown__letter-selector letters">
+                        <table class="dropdown__letter-selector letters letters--light">
                           <tr>
-                            <td class="letters__item letters__item--current-light"><a class="letters__link" href="#">А</a></td>
+                            <td class="letters__item letters__item--current"><a class="letters__link" href="#">А</a></td>
                             <td class="letters__item"><a class="letters__link" href="#">Б</a></td>
                             <td class="letters__item"><a class="letters__link" href="#">В</a></td>
                             <td class="letters__item"><a class="letters__link" href="#">Г</a></td>
