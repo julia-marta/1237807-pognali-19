@@ -1,10 +1,12 @@
 .button {
-  .inline-block();
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   box-sizing: border-box;
   padding-top: 23px;
   padding-left: 24px;
   padding-bottom: 21px;
-  padding-right: 24px;
+  padding-right: 23px;
   font: inherit;
   font-size: 18px;
   line-height: 18px;
@@ -42,12 +44,21 @@
   }
 }
 
+.button__arrow {
+  fill: @btn-darkblue;
+  margin-top: 1px;
+}
+
+.button:active .button__arrow {
+  opacity: 0.3;
+}
+
 @media (min-width: @tablet-width) {
   .button {
     padding-top: 30px;
     padding-left: 33px;
     padding-bottom: 27px;
-    padding-right: 33px;
+    padding-right: 36px;
     font-size: 24px;
     line-height: 24px;
     border-radius: 20px;
@@ -61,6 +72,10 @@
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
+  }
+
+  .button__arrow {
+    margin-top: 4px;
   }
 }
 

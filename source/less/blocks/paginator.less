@@ -37,9 +37,21 @@
   display: block;
   width: 10px;
   height: 20px;
+  line-height: 20px;
   margin-top: 15px;
-  // для сетки
-  outline: 1px solid black;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.paginator__button-icon {
+  fill: @darkblue;
 }
 
 @media (min-width: @tablet-width) {

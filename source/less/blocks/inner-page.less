@@ -67,7 +67,6 @@
 
   .inner-page__to-index {
     .inline-block();
-    padding-right: 62px;
     padding-top: 5px;
     font-size: 20px;
     line-height: 24px;
@@ -77,12 +76,17 @@
 
     &:hover,
     &:focus {
-      color: fade(@white, 60%);
+      opacity: 0.6;
     }
 
     &:active {
-      color: fade(@white, 30%);
+      opacity: 0.3;
     }
+  }
+
+  .inner-page__button-icon {
+    margin-left: 24px;
+    fill: @white;
   }
 }
 

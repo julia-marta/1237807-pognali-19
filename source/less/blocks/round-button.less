@@ -40,6 +40,13 @@
     &:active {
       background-color: @hover-btn-blue;
     }
+
+    &:active {
+      &::before,
+      &::after {
+        background-color: @active-darkblue;
+      }
+    }
   }
 
   &--blue {
@@ -68,8 +75,8 @@
 
 @media (min-width: @tablet-width) {
   .round-button {
-    padding-top: 11px;
-    padding-bottom: 9px;
+    padding-top: 12px;
+    padding-bottom: 8px;
     font-size: 20px;
     color: @btn-darkblue;
     border-radius: 25px;

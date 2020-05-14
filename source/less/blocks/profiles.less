@@ -23,6 +23,21 @@
   text-transform: uppercase;
   color: @btn-darkblue;
 
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 0;
+    width: 18px;
+    height: 2px;
+    background-color: @btn-darkblue;
+  }
+
+  &::after {
+    transform: rotate(90deg);
+  }
+
   &:hover,
   &:focus {
     opacity: 0.6;
@@ -50,6 +65,15 @@
     padding-left: 47px;
     font-size: 20px;
     line-height: 30px;
+
+    &::before,
+    &::after {
+      top: 11px;
+      left: -4px;
+      width: 27px;
+      height: 3px;
+      border-radius: 4px;
+    }
   }
 }
 

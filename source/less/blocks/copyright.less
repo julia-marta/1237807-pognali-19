@@ -11,11 +11,11 @@
 
   &:hover,
   &:focus {
-    color: fade(@darkgrey, 60%);
+    opacity: 0.6;
   }
 
   &:active {
-    color: fade(@darkgrey, 30%);
+    opacity: 0.3;
   }
 }
 
@@ -24,7 +24,7 @@
 }
 
 .copyright__logo {
-  display: block;
+  fill: @darkblue;
 }
 
 @media (min-width: @tablet-width) {

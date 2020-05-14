@@ -29,17 +29,23 @@
   background-color: transparent;
   border: none;
   cursor: pointer;
+  outline: none;
 
+  &::before,
   &::after {
     content: "";
     position: absolute;
     top: 0;
-    right: 14px;
-    width: 3px;
-    height: 3px;
     background-color: @darkblue;
-    border-radius: 50%;
-    box-shadow: 7px 0 0 0 @darkblue, 14px 0 0 0 @darkblue;
+  }
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }
 
@@ -63,6 +69,26 @@
   position: relative;
   width: 270px;
   margin-bottom: 15px;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 20px;
+    left: 82px;
+    width: 16px;
+    height: 1.5px;
+    border-radius: 3px;
+    background-color: @darkblue;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
 }
 
 @media (min-width: @tablet-width) {
@@ -75,14 +101,6 @@
     width: 176px;
     min-height: 38px;
     margin-right: 35px;
-
-    &::after {
-      top: 14px;
-      right: 22px;
-      width: 5px;
-      height: 5px;
-      box-shadow: 11px 0 0 0 @darkblue, 22px 0 0 0 @darkblue;
-    }
   }
 
   .filter__toggle-title {
@@ -92,15 +110,6 @@
     text-transform: uppercase;
     color: @darkblue;
     cursor: pointer;
-
-    &:hover,
-    &:focus {
-      color: fade(@darkblue, 60%);
-    }
-
-    &:active {
-      color: fade(@darkblue, 30%);
-    }
 
     &--collapse {
       padding-left: 2px;
@@ -127,6 +136,15 @@
     margin: 0 auto;
     margin-top: 41px;
     margin-bottom: 28px;
+
+    &::before,
+    &::after {
+      top: 48px;
+      left: 239px;
+      width: 25px;
+      height: 2px;
+      border-radius: 4px;
+    }
   }
 }
 
@@ -169,5 +187,10 @@
     order: 5;
     width: 100%;
     margin-top: 10px;
+
+    &::before,
+    &::after {
+      left: 590px;
+    }
   }
 }

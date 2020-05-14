@@ -1,18 +1,20 @@
 .vehicles {
   .list-reset();
   display: flex;
+  justify-content: space-between;
+  align-items: center;
   flex-wrap: wrap;
 }
 
 .vehicles__item {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 33px;
   height: 33px;
   background-color: @white;
   border-radius: 50%;
-  // для сетки
-  outline: 1px solid blueviolet;
 
   &--blue {
     width: 32px;
@@ -24,6 +26,20 @@
 .vehicles__item:hover .tooltip,
 .vehicles__item:focus .tooltip {
   .tooltip-show();
+}
+
+.vehicles__icon {
+  fill: @black;
+  opacity: 0.15;
+
+  &--plane {
+    margin-right: 3px;
+  }
+}
+
+.vehicles__item--active .vehicles__icon {
+  fill: @btn-darkblue;
+  opacity: 1;
 }
 
 .vehicles__checkbox {
@@ -53,6 +69,37 @@
       width: 32px;
       height: 32px;
       background-color: transparent;
+    }
+  }
+
+  .vehicles__item--blue .vehicles__icon {
+    &--plane {
+      width: 19px;
+      height: 21px;
+    }
+
+    &--bus {
+      width: 17px;
+      height: 21px;
+    }
+
+    &--bicycle {
+      width: 24px;
+      height: 21px;
+    }
+
+    &--hiking {
+      width: 20px;
+      height: 21px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .vehicles__item {
+    &--blue {
+      width: 33px;
+      height: 33px;
     }
   }
 }

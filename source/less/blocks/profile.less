@@ -41,17 +41,22 @@
 }
 
 .profile__like-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   top: 54px;
   left: 67px;
   width: 31px;
   height: 31px;
+  padding-top: 2px;
   font: inherit;
   text-align: left;
   background-color: @lightgrey;
   border: none;
   border-radius: 50%;
   outline: none;
+  cursor: pointer;
 
   &:hover,
   &:focus {
@@ -68,6 +73,38 @@
     }
   }
 }
+
+.profile__like-icon {
+  fill: @darkblue;
+  opacity: 0.3;
+}
+
+.profile__like-icon-active {
+  display: none;
+  fill: @like-red;
+}
+
+.profile__like-button--active .profile__like-icon-active {
+  display: block;
+}
+
+.profile__like-button--active .profile__like-icon {
+  display: none;
+}
+
+.profile__like-button:hover .profile__like-icon,
+.profile__like-button:focus .profile__like-icon {
+  opacity: 0.5;
+}
+
+.profile__like-button:active .profile__like-icon {
+  opacity: 0.1;
+}
+
+.profile__like-button--active:active .profile__like-icon-active {
+  opacity: 0.3;
+}
+
 
 .profile__like-counter {
   position: absolute;
@@ -139,40 +176,38 @@
   &--smolov {
     margin-bottom: 14px;
   }
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 9px;
-    left: -18px;
-    width: 270px;
-    height: 1px;
-    background-color: @lightgrey;
-    z-index: -1;
-  }
 }
 
 .profile__legend {
   .indents-none();
+  position: relative;
+  z-index: 1;
+
+  &--countries,
+  &--transport {
+    &::before {
+      content: "";
+      position: absolute;
+      top: 9px;
+      left: -26px;
+      width: 270px;
+      height: 1px;
+      background-color: @lightgrey;
+      z-index: -1;
+    }
+  }
+
+  &--level {
+    margin-right: -10px;
+  }
+}
+
+.profile__legend-text {
   min-height: 10px;
   margin-left: -10px;
   padding-left: 10px;
   padding-right: 10px;
   background-color: @white;
-
-  &--countries {
-    width: 96px;
-  }
-
-  &--transport {
-    width: 65px;
-  }
-
-  &--level {
-    width: 40px;
-    padding-left: 12px;
-    margin-right: -10px;
-  }
 }
 
 .profile__countries {
@@ -181,20 +216,7 @@
 }
 
 .profile__transport {
-  position: relative;
   padding-left: 8px;
-  z-index: 1;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 9px;
-    left: -18px;
-    width: 270px;
-    height: 1px;
-    background-color: @lightgrey;
-    z-index: -1;
-  }
 }
 
 .profile__vehicles-list {
@@ -317,6 +339,12 @@
     height: 50px;
   }
 
+  .profile__like-icon,
+  .profile__like-icon-active {
+    width: 20px;
+    height: 17px;
+  }
+
   .profile__like-counter {
     top: 11px;
     left: 57px;
@@ -325,20 +353,23 @@
   }
 
   .profile__legend {
-    margin-left: 33px;
+    margin-left: 43px;
 
     &--transport,
     &--level {
       display: none;
     }
+
+    &--countries {
+      &::before {
+        left: -83px;
+        width: 688px;
+      }
+    }
   }
 
   .profile__transport {
     padding-left: 0;
-
-    &::before {
-      display: none;
-    }
   }
 
   .profile__vehicles-list {
@@ -379,12 +410,6 @@
     margin-top: 22px;
     margin-bottom: 0;
     padding-left: 5px;
-
-    &::before {
-      top: 9px;
-      left: -35px;
-      width: 688px;
-    }
   }
 
   .profile__countries {
@@ -484,7 +509,7 @@
 
   .profile__vehicles-list {
     margin-top: 0;
-    margin-right: 50px;
+    margin-right: 45px;
   }
 
   .profile__level {
