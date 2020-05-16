@@ -1,3 +1,19 @@
+// замена цвета лого в хедере
+
+const logoImage = document.querySelector(".site-header__logo picture").children;
+
+let changeLogoColor = function (currentColor, newColor) {
+  const regExp = new RegExp(currentColor,"g");
+  for (let i = 0; i < logoImage.length; i++) {
+    if (logoImage[i].hasAttribute("srcset")) {
+      logoImage[i].srcset = logoImage[i].srcset.replace(regExp, newColor);
+    }
+    if (logoImage[i].hasAttribute("src")) {
+      logoImage[i].src = logoImage[i].src.replace(regExp, newColor);
+    }
+  }
+};
+
 // открытие и закрытие меню
 
 let header = document.querySelector(".site-header");
@@ -5,25 +21,30 @@ let toggle = document.querySelector(".site-header__toggle");
 
 header.classList.remove("site-header--nojs");
 
-toggle.addEventListener("click", function() {
+toggle.addEventListener("click", function(evt) {
+
   if (header.classList.contains("site-header--closed")) {
     header.classList.remove("site-header--closed");
     header.classList.add("site-header--opened");
+    changeLogoColor("white", "blue");
   } else {
     header.classList.remove("site-header--opened");
     header.classList.add("site-header--closed");
+    changeLogoColor("blue", "white");
   }
 });
 
 //скролл меню
 
-window.onscroll = function () {
-  if (window.pageYOffset > 50) {
-    header.classList.add("site-header--scrolled");
-  } else {
-    header.classList.remove("site-header--scrolled");
-  }
-}
+// window.onscroll = function () {
+//   if (window.pageYOffset > 50) {
+//     header.classList.add("site-header--scrolled");
+//     changeLogoColor("white", "blue");
+//   } else {
+//     header.classList.remove("site-header--scrolled");
+//     changeLogoColor("blue", "white");
+//   }
+// }
 
 // открытие и закрытие модального окна
 
@@ -57,6 +78,32 @@ if (popup) {
       }
     }
   });
+}
+
+// переключение шагов в форме
+
+let step = document.querySelectorAll(".plan-add__field");
+let marker = document.querySelectorAll(".step-markers__item");
+
+if (step) {
+  for (let i = 0; i < step.length; i++) {
+    let nextButton = step[i].querySelector(".plan-add__next-step");
+    let previousButton = step[i].querySelector(".plan-add__previous-step");
+    if(nextButton) {
+      nextButton.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        step[i].classList.add("plan-add__field--hidden");
+        step[i+1].classList.remove("plan-add__field--hidden");
+      });
+    }
+    if(previousButton) {
+      previousButton.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        step[i].classList.add("plan-add__field--hidden");
+        step[i-1].classList.remove("plan-add__field--hidden");
+      });
+    }
+  }
 }
 
 // открытие и закрытие фильтра по странам в каталоге
@@ -96,12 +143,12 @@ if (formSections) {
     let formExpanded = formSection.querySelector(".form-section__expanded");
     formToggle.addEventListener("click", function (evt) {
       evt.preventDefault();
-      if (formExpanded.classList.contains("form-section__expanded--closed")) {
-        formExpanded.classList.remove("form-section__expanded--closed");
-        formExpanded.classList.add("form-section__expanded--opened");
+      if (formSection.classList.contains("form-section--closed")) {
+        formSection.classList.remove("form-section--closed");
+        formSection.classList.add("form-section--opened");
       } else {
-        formExpanded.classList.add("form-section__expanded--closed");
-        formExpanded.classList.remove("form-section__expanded--opened");
+        formSection.classList.add("form-section--closed");
+        formSection.classList.remove("form-section--opened");
       }
     });
   }
@@ -193,6 +240,7 @@ if (likeButtons) {
     };
   }
 }
+
 
 //изменения чисел в инпутах
 

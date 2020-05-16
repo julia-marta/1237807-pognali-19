@@ -1,7 +1,7 @@
 .vehicles {
   .list-reset();
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -37,26 +37,49 @@
   }
 }
 
-.vehicles__item--active .vehicles__icon {
+.vehicles__item--active .vehicles__icon,
+.vehicles__checkbox:checked ~ label .vehicles__icon {
   fill: @btn-darkblue;
   opacity: 1;
 }
 
 .vehicles__checkbox {
-  width: 33px;
-  height: 33px;
+  width: 32px;
+  height: 32px;
 
   &:hover + label,
-  &:checked:hover + label {
+  &:checked:hover + label,
+  &:focus + label,
+  &:checked:focus + label {
     box-shadow: 0 2px 10px 0 fade(@black, 8%);
     cursor: pointer;
   }
 
-  &:focus + label,
-  &:checked:focus + label {
+  &:active + label,
+  &:checked:active + label {
     background-color: @checkbox-lightgrey;
     box-shadow: none;
   }
+}
+
+.vehicles__checkbox:hover ~ label .vehicles__icon,
+.vehicles__checkbox:focus ~ label .vehicles__icon {
+  opacity: 0.3;
+}
+
+.vehicles__checkbox:active ~ label .vehicles__icon {
+  opacity: 0.1;
+}
+
+.vehicles__checkbox:checked:hover ~ label .vehicles__icon,
+.vehicles__checkbox:checked:focus ~ label .vehicles__icon {
+  fill: @checkbox-darkblue;
+  opacity: 0.7;
+}
+
+.vehicles__checkbox:checked:active ~ label .vehicles__icon {
+  fill: @checkbox-darkblue;
+  opacity: 0.3;
 }
 
 
@@ -72,6 +95,8 @@
     }
   }
 
+  .transport-filter__list .vehicles__icon,
+  .user-info__transport-list .vehicles__icon,
   .vehicles__item--blue .vehicles__icon {
     &--plane {
       width: 19px;

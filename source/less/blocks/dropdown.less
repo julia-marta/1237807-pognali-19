@@ -24,15 +24,30 @@
 
 .dropdown__close {
   position: absolute;
-  display: block;
   top: 16px;
   right: 13px;
   width: 9px;
   height: 9px;
   background: none;
   border: none;
-  // для сетки
-  outline: 1px solid white;
+  cursor: pointer;
+}
+
+.dropdown__close-icon {
+  position: absolute;
+  top: 1px;
+  left: 3px;
+  fill: @white;
+  opacity: 0.3;
+}
+
+.dropdown__close:hover .dropdown__close-icon,
+.dropdown__close:focus .dropdown__close-icon {
+  opacity: 1;
+}
+
+.dropdown__close:active .dropdown__close-icon {
+  opacity: 0.1;
 }
 
 .dropdown__wrapper {
@@ -76,6 +91,13 @@
     right: 26px;
   }
 
+  .dropdown__close-icon {
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+  }
+
   .dropdown__wrapper {
     display: flex;
     justify-content: flex-start;
@@ -110,6 +132,11 @@
   }
 
   .dropdown__close {
+    width: 18px;
+    height: 18px;
+  }
+
+  .dropdown__close-icon {
     width: 18px;
     height: 18px;
   }

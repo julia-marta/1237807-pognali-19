@@ -15,6 +15,7 @@
   background-color: @yellow;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 
   &:hover:not(&--bordered),
   &:focus:not(&--bordered) {
@@ -26,9 +27,10 @@
   }
 
   &--bordered {
-    padding-top: 21px;
+    padding-top: 20px;
     padding-left: 21px;
-    padding-bottom: 17px;
+    padding-bottom: 18px;
+    padding-right: 20px;
     border: 3px solid @darkblue;
 
     &:hover,
@@ -42,11 +44,22 @@
       color: fade(@white, 30%);
     }
   }
+
+  &--half {
+    justify-content: center;
+    padding-right: 20px;
+  }
 }
 
 .button__arrow {
   fill: @btn-darkblue;
   margin-top: 1px;
+}
+
+.button--bordered:hover .button__arrow,
+.button--bordered:focus .button__arrow,
+.button--bordered:active .button__arrow {
+  fill: @white;
 }
 
 .button:active .button__arrow {
@@ -66,9 +79,11 @@
     &--bordered {
       padding-top: 27px;
       padding-bottom: 24px;
+      padding-right: 33px;
     }
 
     &--half {
+      padding-left: 36px;
       border-top-left-radius: 0;
       border-bottom-left-radius: 0;
     }
@@ -82,6 +97,7 @@
 @media (min-width: @desktop-width) {
   .button {
     &--half {
+      justify-content: space-between;
       padding-left: 35px;
       text-align: left;
     }

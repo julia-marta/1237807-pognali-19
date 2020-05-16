@@ -31,6 +31,19 @@
     background-color: @lightgrey;
     border: 1px solid @border-grey;
   }
+
+  &--chosen::after,
+  &--empty::after {
+    content: "";
+    position: absolute;
+    bottom: -16px;
+    right: 50px;
+    width: 5px;
+    height: 10px;
+    background-image: url("../img/icon-small-arrow.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+  }
 }
 
 .country-select__field {
@@ -52,7 +65,7 @@
   white-space: nowrap;
   overflow: hidden;
   color: @btn-darkblue;
-  background-color: @white;
+  background-color: transparent;
   border: 1px solid @border-grey;
   border-radius: 4px;
   appearance: none;
@@ -126,6 +139,33 @@
   }
 }
 
+.country-select__label {
+  display: block;
+  position: relative;
+}
+
+.country-select--chosen .country-select__label {
+  &::after {
+    .fade();
+    top: 3px;
+    right: 0;
+  }
+}
+
+.country-select__field-arrow {
+  position: absolute;
+  top: 18px;
+  right: 14px;
+  fill: @arrow-black;
+  opacity: 0.3;
+  z-index: 1;
+}
+
+.country-select__field:hover ~ .country-select__field-arrow,
+.country-select__field:focus ~ .country-select__field-arrow {
+  opacity: 0.5;
+}
+
 .country-select__delete {
   position: absolute;
   top: -10px;
@@ -135,6 +175,15 @@
   background-color: @lightgrey;
   border: none;
   border-radius: 50%;
+  cursor: pointer;
+}
+
+.country-select__delete-icon {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  fill: @black;
+  opacity: 0.3;
 }
 
 .country-select__dropdown-wrapper {
@@ -168,6 +217,11 @@
       right: 129px;
       width: 15px;
       height: 15px;
+    }
+
+    &--chosen::after,
+    &--empty::after {
+      display: none;
     }
   }
 
@@ -210,6 +264,23 @@
     }
   }
 
+  .country-select__label {
+    width: 369px;
+  }
+
+  .country-select--chosen .country-select__label {
+    &::after {
+      display: none;
+    }
+  }
+
+  .country-select__field-arrow {
+    top: 30px;
+    right: 27px;
+    width: 17px;
+    height: 9px;
+  }
+
   .country-select__delete {
     top: 25px;
     right: -2px;
@@ -217,6 +288,27 @@
     height: 17px;
     background-color: transparent;
     border-radius: 0;
+  }
+
+  .country-select__delete-icon {
+    top: 0;
+    left: 0;
+    width: 17px;
+    height: 17px;
+    opacity: 0.1;
+  }
+
+  .country-select__delete:hover .country-select__delete-icon,
+  .country-select__delete:focus .country-select__delete-icon {
+    opacity: 0.3;
+  }
+
+  .country-select__delete:active .country-select__delete-icon {
+    opacity: 0.05;
+  }
+
+  .country-select__dropdown-wrapper--opened .country-select__delete {
+    display: block;
   }
 }
 
@@ -237,6 +329,10 @@
         left: 58px;
       }
     }
+  }
+
+  .country-select__label {
+    width: 730px;
   }
 
   .country-select__delete {

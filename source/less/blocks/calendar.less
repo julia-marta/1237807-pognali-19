@@ -32,6 +32,20 @@
   }
 }
 
+.calendar__arrow-icon {
+  fill: @arrow-black;
+  opacity: 0.3;
+}
+
+.calendar__month-arrow:hover .calendar__arrow-icon,
+.calendar__month-arrow:focus .calendar__arrow-icon {
+  opacity: 0.5;
+}
+
+.calendar__month-arrow:active .calendar__arrow-icon {
+  opacity: 0.1;
+}
+
 .calendar__weekday {
   padding-bottom: 7px;
   font-size: 14px;
@@ -126,6 +140,11 @@
     }
   }
 
+  .calendar__arrow-icon {
+    width: 15px;
+    height: 28px;
+  }
+
   .calendar__weekday {
     padding-left: 4px;
     padding-bottom: 1px;
@@ -174,6 +193,24 @@
 
   .calendar__month-title {
     margin-bottom: 12px;
+  }
+
+  .calendar__month-arrow {
+    width: 18px;
+    height: 34px;
+
+    &--previous {
+      left: 0;
+    }
+
+    &--next {
+      right: 0;
+    }
+  }
+
+  .calendar__arrow-icon {
+    width: 18px;
+    height: 34px;
   }
 
   .calendar__weekday {

@@ -10,6 +10,9 @@
 
     <div style="display: none;">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="icon-level" viewBox="0 0 100 100">
+          <circle r="48" cx="50" cy="50" stroke="#ff8d30" stroke-linejoin="round" fill="none"></circle>
+        </symbol>
         <symbol id="icon-bike" viewBox="0 0 24 21">
           <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
           S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
@@ -457,7 +460,10 @@
                   <img class="traveler-card__photo" src="img/firsova-desktop@1x.jpg" srcset="img/firsova-desktop@2x.jpg 2x" width="270" height="270" alt="Таня Фирсова">
                 </picture>
               </a>
-              <p class="traveler-card__level">99 <span class="traveler-card__level-legend">level</span></p>
+              <div class="traveler-card__level">
+                <svg class="traveler-card__level-circle traveler-card__level-circle--99" width="60" height="60"><use xlink:href="#icon-level"></use></svg>
+                <p class="traveler-card__level-text">99 <span class="traveler-card__level-legend">level</span></p>
+              </div>
             </div>
             <div class="traveler-card__info">
               <ul class="traveler-card__countries flags">
@@ -504,7 +510,10 @@
                   <img class="traveler-card__photo" src="img/demin-desktop@1x.jpg" srcset="img/demin-desktop@2x.jpg 2x" width="270" height="270" alt="Петя Демин">
                 </picture>
               </a>
-              <p class="traveler-card__level">80 <span class="traveler-card__level-legend">level</span></p>
+              <div class="traveler-card__level">
+                <svg class="traveler-card__level-circle traveler-card__level-circle--80" width="60" height="60"><use xlink:href="#icon-level"></use></svg>
+                <p class="traveler-card__level-text">80 <span class="traveler-card__level-legend">level</span></p>
+              </div>
             </div>
             <div class="traveler-card__info">
               <ul class="traveler-card__countries flags">
@@ -580,15 +589,24 @@
         <form class="feedback__form registration" action="https://echo.htmlacademy.ru" method="post">
           <label class="visually-hidden" for="registration-email">E-mail</label>
           <input class="registration__input" id="registration-email" type="email" name="email" placeholder="E-mail">
-          <button class="registration__button button button--half" type="submit"><span class="registration__button-title">Регистрация</span></button>
+          <button class="registration__button button button--half" type="submit">
+            <span class="registration__button-title">Регистрация</span>
+            <svg class="button__arrow" width="10" height="14"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
+          </button>
         </form>
         <p class="feedback__message">Остались вопросы? <span class="feedback__message feedback__message--wrap feedback__message--head">Мы с радостью на них ответим!</span></p>
         <ul class="feedback__contacts contacts">
           <li class="contacts__item contacts__item--phone">
-            <a class="contacts__link" href="tel:+78005558628">8 800 555-86-28</a>
+            <a class="contacts__link" href="tel:+78005558628">
+              <svg class="contacts__icon" width="18" height="18"><use xlink:href="#icon-contacts-phone"></use></svg>
+              8 800 555-86-28
+            </a>
           </li>
           <li class="contacts__item contacts__item--mail">
-            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+            <a class="contacts__link" href="mailto:mail@htmlacademy.ru">
+              <svg class="contacts__icon" width="18" height="18"><use xlink:href="#icon-contacts-mail"></use></svg>
+              mail@htmlacademy.ru
+            </a>
           </li>
         </ul>
       </div>
@@ -597,8 +615,12 @@
     <section class="route">
       <div class="route__wrapper container">
         <h2 class="visually-hidden">Адрес и маршрут проезда</h2>
-        <p class="route__address">ул. Большая Конюшенная, 19/8</p>
-        <a class="route__to-go button button--bordered" href="https://goo.gl/maps/6PmeDfW8GCa7gmRCA">Проложить маршрут</a>
+        <p class="route__address">
+          <svg class="route__icon" width="14" height="22"><use xlink:href="#icon-contacts-location"></use></svg>
+          ул. Большая Конюшенная, 19/8</p>
+        <a class="route__to-go button button--bordered" href="https://goo.gl/maps/6PmeDfW8GCa7gmRCA">Проложить маршрут
+          <svg class="button__arrow" width="10" height="14"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
+        </a>
       </div>
     </section>
 

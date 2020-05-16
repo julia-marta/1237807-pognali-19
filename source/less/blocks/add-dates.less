@@ -31,8 +31,8 @@
 .add-dates__input-number {
   width: 100%;
   box-sizing: border-box;
-  padding-top: 13px;
-  padding-bottom: 11px;
+  padding-top: 14px;
+  padding-bottom: 10px;
   font: inherit;
   font-size: 15px;
   line-height: 13.5px;
@@ -144,7 +144,7 @@
 .add-dates__checkbox {
   position: relative;
   margin-top: 21px;
-  margin-bottom: 18px;
+  margin-bottom: 19px;
   padding-left: 39px;
 }
 
@@ -159,20 +159,38 @@
   background-color: @white;
   border: 1px solid @border-grey;
   border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-dates__checkbox-tick {
+  display: none;
+  position: absolute;
+  top: 8px;
+  left: 9px;
+  fill: @darkblue;
+}
+
+.add-dates__input-checkbox:checked ~ label .add-dates__checkbox-tick {
+  display: block;
 }
 
 .add-dates__input-checkbox {
   &:hover + label::before,
-  &:checked:hover + label::before {
-    border-color: @hover-border-darkgrey;
-    cursor: pointer;
-  }
-
+  &:checked:hover + label::before,
   &:focus + label::before,
   &:checked:focus + label::before {
+    border-color: @hover-border-darkgrey;
+  }
+
+  &:active + label::before,
+  &:checked:active + label::before {
     background-color: @checkbox-lightgrey;
     border-color: @checkbox-lightgrey;
   }
+}
+
+.add-dates__input-checkbox:checked:active ~ label .add-dates__checkbox-tick {
+  opacity: 0.3;
 }
 
 
@@ -261,6 +279,13 @@
     left: 1px;
     width: 36px;
     height: 36px;
+  }
+
+  .add-dates__checkbox-tick {
+    top: 12px;
+    left: 14px;
+    width: 12px;
+    height: 12px;
   }
 
   .add-dates__label-checkbox {

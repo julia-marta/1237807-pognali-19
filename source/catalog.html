@@ -10,6 +10,9 @@
 
     <div style="display: none;">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="icon-level" viewBox="0 0 100 100">
+          <circle r="48" cx="50" cy="50" stroke="#ff8d30" stroke-linejoin="round" fill="none"></circle>
+        </symbol>
         <symbol id="icon-bike" viewBox="0 0 24 21">
           <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
           S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
@@ -313,7 +316,10 @@
     <section class="countries-filter countries-filter--collapsed">
       <div class="countries-filter__wrapper container">
         <div class="countries-filter__list filter">
-          <h2 class="countries-filter__item filter__title">Фильтрация по странам<span class="filter__title-colon">:</span></h2>
+          <h2 class="countries-filter__item filter__title">
+            <svg class="filter__icon" width="15" height="10"><use xlink:href="#icon-filter"></use></svg>
+            Фильтрация по странам<span class="filter__title-colon">:</span>
+          </h2>
           <button class="countries-filter__item filter__toggle" type="button">
             <span class="filter__toggle-title filter__toggle-title--expand">Показать всё</span>
             <span class="filter__toggle-title filter__toggle-title--collapse">Свернуть</span>
@@ -635,98 +641,138 @@
           <h2 class="visually-hidden">Фильтрация по попутчикам</h2>
           <form class="travelmates-filter__form travelmates-form" action="https://echo.htmlacademy.ru" method="get">
             <h3 class="travelmates-form__title">Подберите идеального попутчика</h3>
-            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--top travelmates-form__drop-toggle">
-              <fieldset class="travelmates-form__item form-section">
-                <legend class="form-section__title">Хобби<span class="form-section__title-colon">:</span></legend>
-                <div class="form-section__expanded form-section__expanded--closed checkbox-filter">
-                  <ul class="checkbox-filter__list">
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="gym" id="sport" checked="">
-                      <label class="checkbox-filter__label" for="sport">Спортзал</label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="hookah" id="kalian">
-                      <label class="checkbox-filter__label" for="kalian">Кальян</label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="sofa" id="lazy">
-                      <label class="checkbox-filter__label" for="lazy">Диван</label>
-                    </li>
-                  </ul>
-                </div>
-              </fieldset>
-            </div>
-            <div class="travelmates-form__item-wrapper travelmates-form__drop-toggle">
-              <fieldset class="travelmates-form__item form-section">
-                <legend class="form-section__title">Музыка<span class="form-section__title-colon">:</span></legend>
+            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--top">
+              <fieldset class="travelmates-form__item form-section form-section--closed">
+                <legend class="form-section__title">Хобби<span class="form-section__title-colon">:</span>
+                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                </legend>
                 <div class="form-section__expanded checkbox-filter">
                   <ul class="checkbox-filter__list">
                     <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="rock" id="hardrock" checked="">
-                      <label class="checkbox-filter__label" for="hardrock">Тяжелый рок</label>
+                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="gym" id="sport" checked>
+                      <label class="checkbox-filter__label" for="sport">Спортзал
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
+                    </li>
+                    <li class="checkbox-filter__item">
+                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="hookah" id="kalian">
+                      <label class="checkbox-filter__label" for="kalian">Кальян
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
+                    </li>
+                    <li class="checkbox-filter__item">
+                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="sofa" id="lazy">
+                      <label class="checkbox-filter__label" for="lazy">Диван
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
+                    </li>
+                  </ul>
+                </div>
+              </fieldset>
+            </div>
+            <div class="travelmates-form__item-wrapper">
+              <fieldset class="travelmates-form__item form-section form-section--opened">
+                <legend class="form-section__title">Музыка<span class="form-section__title-colon">:</span>
+                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                </legend>
+                <div class="form-section__expanded checkbox-filter">
+                  <ul class="checkbox-filter__list">
+                    <li class="checkbox-filter__item">
+                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="rock" id="hardrock" checked>
+                      <label class="checkbox-filter__label" for="hardrock">Тяжелый рок
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
                     </li>
                     <li class="checkbox-filter__item">
                       <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="rap" id="russianrap">
-                      <label class="checkbox-filter__label" for="russianrap">Русский рэп</label>
+                      <label class="checkbox-filter__label" for="russianrap">Русский рэп
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
                     </li>
                     <li class="checkbox-filter__item">
                       <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="dance" id="eurodance">
-                      <label class="checkbox-filter__label" for="eurodance">Евроденс</label>
+                      <label class="checkbox-filter__label" for="eurodance">Евроденс
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
                     </li>
                   </ul>
                 </div>
               </fieldset>
             </div>
-            <div class="travelmates-form__item-wrapper travelmates-form__drop-toggle">
-              <fieldset class="travelmates-form__item form-section">
-                <legend class="form-section__title">Еда<span class="form-section__title-colon">:</span></legend>
-                <div class="form-section__expanded form-section__expanded--closed checkbox-filter">
+            <div class="travelmates-form__item-wrapper">
+              <fieldset class="travelmates-form__item form-section form-section--closed">
+                <legend class="form-section__title">Еда<span class="form-section__title-colon">:</span>
+                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                </legend>
+                <div class="form-section__expanded checkbox-filter">
                   <ul class="checkbox-filter__list">
                     <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="meat" id="meat-eater" checked="">
-                      <label class="checkbox-filter__label" for="meat-eater">Мясоед</label>
+                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="meat" id="meat-eater" checked>
+                      <label class="checkbox-filter__label" for="meat-eater">Мясоед
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
                     </li>
                     <li class="checkbox-filter__item">
                       <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="healthy" id="healthy-diet">
-                      <label class="checkbox-filter__label" for="healthy-diet">Сидит на ПП</label>
+                      <label class="checkbox-filter__label" for="healthy-diet">Сидит на ПП
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
                     </li>
                     <li class="checkbox-filter__item">
                       <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="vegan" id="raw-food">
-                      <label class="checkbox-filter__label" for="raw-food">Веган-сыроед</label>
+                      <label class="checkbox-filter__label" for="raw-food">Веган-сыроед
+                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                      </label>
                     </li>
                   </ul>
                 </div>
               </fieldset>
             </div>
-            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--transport travelmates-form__drop-toggle">
-              <fieldset class="travelmates-form__item form-section">
-                <legend class="form-section__title">Транспорт<span class="form-section__title-colon">:</span></legend>
-                <div class="form-section__expanded form-section__expanded--opened transport-filter">
+            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--transport">
+              <fieldset class="travelmates-form__item form-section form-section--opened">
+                <legend class="form-section__title">Транспорт<span class="form-section__title-colon">:</span>
+                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                </legend>
+                <div class="form-section__expanded transport-filter">
                   <ul class="transport-filter__list vehicles">
                     <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="plane" id="flight" checked="">
-                      <label class="vehicles__item vehicles__item--plane" for="flight"><span class="visually-hidden">Авиаперелет</span></label>
+                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="plane" id="flight" checked>
+                      <label class="vehicles__item" for="flight">
+                        <span class="visually-hidden">Авиаперелет</span>
+                        <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
+                      </label>
                     </li>
                     <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bus" id="auto" checked="">
-                      <label class="vehicles__item vehicles__item--bus" for="auto"><span class="visually-hidden">Автотранспорт</span></label>
+                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bus" id="auto" checked>
+                      <label class="vehicles__item" for="auto">
+                        <span class="visually-hidden">Автотранспорт</span>
+                        <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
+                      </label>
                     </li>
                     <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bicycle" id="cycling" checked="">
-                      <label class="vehicles__item vehicles__item--bicycle" for="cycling"><span class="visually-hidden">Велосипед</span></label>
+                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bicycle" id="cycling">
+                      <label class="vehicles__item" for="cycling">
+                        <span class="visually-hidden">Велосипед</span>
+                        <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
+                      </label>
                     </li>
                     <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="hiking" id="onfoot" checked="">
-                      <label class="vehicles__item vehicles__item--hiking" for="onfoot"><span class="visually-hidden">Пешком</span></label>
+                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="hiking" id="onfoot" checked>
+                      <label class="vehicles__item vehicles__item--hiking" for="onfoot">
+                        <span class="visually-hidden">Пешком</span>
+                        <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
+                      </label>
                     </li>
                   </ul>
                 </div>
               </fieldset>
             </div>
-            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--bottom travelmates-form__drop-toggle">
-              <fieldset class="travelmates-form__item form-section">
-                <legend class="form-section__title">Левел<span class="form-section__title-colon">:</span></legend>
-                <div class="form-section__expanded form-section__expanded--opened level-filter">
+            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--bottom">
+              <fieldset class="travelmates-form__item form-section form-section--opened">
+                <legend class="form-section__title">Левел<span class="form-section__title-colon">:</span>
+                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                </legend>
+                <div class="form-section__expanded level-filter">
                   <div class="level-filter__value">
                     <label class="visually-hidden" for="min-value">Минимальный левел</label>
                     <input class="level-filter__input level-filter__input--min" name="min-level" id="min-value" type="number" value="30">
@@ -817,7 +863,10 @@
                   <p class="profile__legend profile__legend--level">
                     <span class="profile__legend-text">левел:</span>
                   </p>
-                  <p class="profile__level">99<span class="profile__level-legend">level</span></p>
+                  <div class="profile__level">
+                    <svg class="profile__level-circle profile__level-circle--99" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                    <p class="profile__level-text">99 <span class="profile__level-legend">level</span></p>
+                  </div>
                 </div>
               </div>
               <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
@@ -887,7 +936,11 @@
                   <p class="profile__legend profile__legend--level">
                     <span class="profile__legend-text">левел:</span>
                   </p>
-                  <p class="profile__level">80<span class="profile__level-legend">level</span></p>
+                  <div class="profile__level">
+                    <svg class="profile__level-circle profile__level-circle--80" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                    <p class="profile__level-text">80 <span class="profile__level-legend">level</span></p>
+                  </div>
+
                 </div>
               </div>
               <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
@@ -959,7 +1012,10 @@
                   <p class="profile__legend profile__legend--level">
                     <span class="profile__legend-text">левел:</span>
                   </p>
-                  <p class="profile__level">25<span class="profile__level-legend">level</span></p>
+                  <div class="profile__level">
+                    <svg class="profile__level-circle profile__level-circle--25" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                    <p class="profile__level-text">25 <span class="profile__level-legend">level</span></p>
+                  </div>
                 </div>
               </div>
               <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
@@ -1029,7 +1085,10 @@
                   <p class="profile__legend profile__legend--level">
                     <span class="profile__legend-text">левел:</span>
                   </p>
-                  <p class="profile__level">50<span class="profile__level-legend">level</span></p>
+                  <div class="profile__level">
+                    <svg class="profile__level-circle profile__level-circle--50" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                    <p class="profile__level-text">50 <span class="profile__level-legend">level</span></p>
+                  </div>
                 </div>
               </div>
               <a class="profile__to-call round-button" href="respond.html">Позвать!</a>

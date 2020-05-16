@@ -4,7 +4,7 @@
 
 .level-filter__value {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   position: relative;
   margin-bottom: 24px;
 
@@ -32,6 +32,7 @@
 .level-filter__input {
   box-sizing: border-box;
   width: 110px;
+  margin-left: -1px;
   min-height: 35px;
   padding-top: 5px;
   appearance: textfield;
@@ -46,7 +47,7 @@
   border-radius: 3px;
 
   &--min {
-    margin-right: -1px;
+    width: 111px;
   }
 
   &:hover {
@@ -122,14 +123,14 @@
 @media (min-width: @tablet-width) {
   .level-filter__value {
     &::before {
-      top: 17px;
+      top: 15px;
       left: 70px;
       width: 9px;
       height: 15px;
     }
 
     &::after {
-      top: 23px;
+      top: 22px;
       left: 64px;
       width: 21px;
     }
@@ -199,7 +200,7 @@
   .level-filter__value {
     order: 2;
     margin-bottom: 0;
-    padding-top: 1px;
+    margin-top: 2px;
   }
 
   .level-filter__range-controls {
