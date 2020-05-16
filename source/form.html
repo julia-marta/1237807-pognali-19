@@ -10,6 +10,9 @@
 
     <div style="display: none;">
       <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+        <symbol id="icon-level" viewBox="0 0 100 100">
+          <circle r="48" cx="50" cy="50" stroke="#ff8d30" stroke-linejoin="round" fill="none"></circle>
+        </symbol>
         <symbol id="icon-bike" viewBox="0 0 24 21">
           <path d="M16,3.6c1,0,1.8-0.8,1.8-1.8S17,0,16,0s-1.8,0.8-1.8,1.8S15,3.6,16,3.6z M19,11c-2.8,0-5,2.3-5,5s2.2,5,5,5s5-2.3,5-5
           S21.8,11,19,11z M19,19.6c-1.9,0-3.5-1.6-3.5-3.5s1.6-3.5,3.5-3.5s3.5,1.6,3.5,3.5S20.9,19.6,19,19.6z M14.8,8.9H19V7.1h-3.2
@@ -230,7 +233,7 @@
         </a>
         <button class="site-header__toggle" type="button" aria-label="Открыть меню"></button>
       </div>
-      <div class="site-navigation__wrapper">
+      <div class="site-header__navigation-wrapper">
         <nav class="site-navigation">
           <ul class="site-navigation__list site-navigation__list--main main-menu">
             <li class="main-menu__item">
@@ -312,16 +315,23 @@
       <section class="user-info">
         <div class="user-info__wrapper container">
           <h2 class="visually-hidden">Информация обо мне</h2>
-          <p class="user-info__level">80 <span class="user-info__level-legend">level</span></p>
+          <div class="user-info__level">
+            <svg class="user-info__level-circle" width="100" height="100"><use xlink:href="#icon-level"></use></svg>
+            <p class="user-info__level-text">80 <span class="user-info__level-legend">level</span></p>
+          </div>
           <div class="user-info__photo">
             <picture>
+              <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+              <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.webp 1x, img/photo-account-tablet@2x.webp 2x">
+              <source type="image/webp" srcset="img/photo-account-mobile@1x.webp 1x, img/photo-account-mobile@2x.webp 2x">
+
               <source media="(min-width: 1440px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
               <source media="(min-width: 768px)" srcset="img/photo-account-tablet@1x.jpg, img/photo-account-tablet@2x.jpg 2x">
               <img class="user-info__image" src="img/photo-account-mobile@1x.jpg" srcset="img/photo-account-mobile@2x.jpg 2x" width="99" height="100" alt="Моё фото">
             </picture>
           </div>
           <label class="user-info__edit-photo round-button round-button--blue">
-              <span class="user-info__edit-title">Сменить</span> фото
+            <span class="user-info__edit-title">Сменить</span> фото
             <input class="visually-hidden" type="file" name="photo">
           </label>
           <fieldset class="user-info__field user-info__field--hashtags">
@@ -332,20 +342,32 @@
             <legend class="user-info__field-title user-info__field-title--transport">Транспорт</legend>
             <ul class="user-info__transport-list vehicles">
               <li class="user-info__transport-list__item">
-                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="plane" id="flight" checked="">
-                <label class="vehicles__item vehicles__item--plane" for="flight"><span class="visually-hidden">Авиаперелет</span></label>
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="plane" id="flight" checked>
+                <label class="vehicles__item" for="flight">
+                  <span class="visually-hidden">Авиаперелет</span>
+                  <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
+                </label>
               </li>
               <li class="user-info__transport-list__item">
-                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bus" id="auto" checked="">
-                <label class="vehicles__item vehicles__item--bus" for="auto"><span class="visually-hidden">Автотранспорт</span></label>
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bus" id="auto" checked>
+                <label class="vehicles__item" for="auto">
+                  <span class="visually-hidden">Автотранспорт</span>
+                  <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
+                </label>
               </li>
               <li class="user-info__transport-list__item">
-                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bicycle" id="cycling" checked="">
-                <label class="vehicles__item vehicles__item--bicycle" for="cycling"><span class="visually-hidden">Велосипед</span></label>
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bicycle" id="cycling">
+                <label class="vehicles__item" for="cycling">
+                  <span class="visually-hidden">Велосипед</span>
+                  <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
+                </label>
               </li>
               <li class="user-info__transport-list__item">
-                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="hiking" id="onfoot" checked="">
-                <label class="vehicles__item vehicles__item--hiking" for="onfoot"><span class="visually-hidden">Пешком</span></label>
+                <input class="visually-hidden vehicles__checkbox" type="checkbox" name="hiking" id="onfoot" checked>
+                <label class="vehicles__item vehicles__item--hiking" for="onfoot">
+                  <span class="visually-hidden">Пешком</span>
+                  <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -378,7 +400,14 @@
 
       <section class="plan-add">
         <div class="plan-add__wrapper container">
-          <h2 class="user-form__section-title">Добавить план:</h2>
+          <div class="plan-add__header">
+            <h2 class="user-form__section-title">Добавить план:</h2>
+            <ul class="plan-add__markers-list plan-add__markers-list--header step-markers">
+                <li class="step-markers__item step-markers__item--header step-markers__item--active"><span class="visually-hidden">Даты</span></li>
+                <li class="step-markers__item step-markers__item--header"><span class="visually-hidden">Маршрут</span></li>
+                <li class="step-markers__item step-markers__item--header"><span class="visually-hidden">Развлечения</span></li>
+              </ul>
+          </div>
           <fieldset class="plan-add__field add-dates" id="step1">
             <div class="plan-add__field-wrapper">
               <div class="plan-add__field-header">
@@ -386,7 +415,7 @@
                   <h3 class="plan-add__field-title">Шаг 1. <span class="plan-add__field-title">Даты пребывания</span></h3>
                   <p class="add-dates__message">Укажите предпочтительное количество попутчиков, которых вы&nbsp;хотели бы позвать в поездку и ее предполагаемую длительность.</p>
                 </div>
-                <ul class="plan-add__markers-list plan-add__markers-list--current step-markers">
+                <ul class="plan-add__markers-list step-markers">
                   <li class="step-markers__item step-markers__item--active"><span class="step-markers__title">Даты</span></li>
                   <li class="step-markers__item"><span class="step-markers__title">Маршрут</span></li>
                   <li class="step-markers__item"><span class="step-markers__title">Развлечения</span></li>
@@ -413,14 +442,20 @@
                 </div>
                 <div class="add-dates__checkbox">
                   <input class="add-dates__input-checkbox visually-hidden" type="checkbox" name="withthekids" id="withthekids-flag" checked="">
-                  <label class="add-dates__label-checkbox" for="withthekids-flag">Можно с детьми</label>
+                  <label class="add-dates__label-checkbox" for="withthekids-flag">Можно с детьми
+                    <svg class="add-dates__checkbox-tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                  </label>
                 </div>
               </div>
               <table class="add-dates__calendar calendar">
                 <caption class="calendar__month-title">
-                  <a class="calendar__month-arrow calendar__month-arrow--previous" href="#" aria-label="Предыдущий месяц"></a>
+                  <a class="calendar__month-arrow calendar__month-arrow--previous" href="#" aria-label="Предыдущий месяц">
+                    <svg class="calendar__arrow-icon" width="9" height="17"><use xlink:href="#icon-month-arrow-left"></use></svg>
+                  </a>
                   Март 2019
-                  <a class="calendar__month-arrow calendar__month-arrow--next" href="#" aria-label="Следующий месяц"></a>
+                  <a class="calendar__month-arrow calendar__month-arrow--next" href="#" aria-label="Следующий месяц">
+                    <svg class="calendar__arrow-icon" width="9" height="17"><use xlink:href="#icon-month-arrow-right"></use></svg>
+                  </a>
                 </caption>
                 <tr class="calendar__week">
                   <th class="calendar__weekday">П<span class="calendar__weekday-title">н</span></th>
@@ -487,9 +522,11 @@
                 </tr>
               </table>
             </div>
-            <a class="plan-add__next-step round-button" href="#step2">Следующий шаг</a>
+            <a class="plan-add__next-step round-button" href="#step2">Следующий шаг
+              <svg class="plan-add__next-arrow" width="10" height="14"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
+            </a>
           </fieldset>
-          <fieldset class="plan-add__field add-route" id="step2">
+          <fieldset class="plan-add__field plan-add__field--hidden add-route" id="step2">
             <div class="plan-add__field-wrapper">
               <div class="plan-add__field-header">
                 <div class="plan-add__title-wrapper">
@@ -504,29 +541,46 @@
               </div>
               <ul class="add-route__countries countries-select">
                 <li class="countries-select__item country-select country-select--chosen">
-                  <select class="country-select__field country-select__field--chosen" name="country1">
-                    <option value="bosnia">Босния и герцеговина</option>
-                  </select>
+                  <label class="country-select__label"><span class="visually-hidden">Выбрать страну</span>
+                    <select class="country-select__field country-select__field--chosen" name="country1">
+                      <option value="bosnia">Босния и герцеговина</option>
+                    </select>
+                    <svg class="country-select__field-arrow" width="12" height="7"><use xlink:href="#icon-dropdown-form"></use></svg>
+                  </label>
                   <div class="country-select__field country-select__field--flag flag flag--bosnia flag--big"></div>
-                  <button class="country-select__delete" type="button" aria-label="Удалить"></button>
+                  <button class="country-select__delete" type="button" aria-label="Удалить">
+                    <svg class="country-select__delete-icon" width="9" height="9"><use xlink:href="#icon-small-cross"></use></svg>
+                  </button>
                 </li>
                 <li class="countries-select__item country-select country-select--chosen">
-                  <select class="country-select__field country-select__field--chosen" name="country2">
-                    <option value="czech">Чехия</option>
-                  </select>
+                  <label class="country-select__label"><span class="visually-hidden">Выбрать страну</span>
+                    <select class="country-select__field country-select__field--chosen" name="country2">
+                      <option value="czech">Чехия</option>
+                    </select>
+                    <svg class="country-select__field-arrow" width="12" height="7"><use xlink:href="#icon-dropdown-form"></use></svg>
+                  </label>
                   <div class="country-select__field country-select__field--flag flag flag--czech flag--big"></div>
-                  <button class="country-select__delete" type="button" aria-label="Удалить"></button>
+                  <button class="country-select__delete" type="button" aria-label="Удалить">
+                    <svg class="country-select__delete-icon" width="9" height="9"><use xlink:href="#icon-small-cross"></use></svg>
+                  </button>
                 </li>
                 <li class="countries-select__item country-select country-select--empty">
                   <div class="country-select__dropdown-wrapper country-select__dropdown-wrapper--closed">
-                    <select class="country-select__field country-select__field--empty" name="country3">
-                      <option value="null" hidden="true">Выберите страну</option>
-                    </select>
-                    <button class="country-select__delete" type="button" aria-label="Удалить"></button>
+                    <label class="country-select__label"><span class="visually-hidden">Выбрать страну</span>
+                      <select class="country-select__field country-select__field--empty" name="country3">
+                        <option value="null" hidden="hidden">Выберите страну</option>
+                      </select>
+                      <svg class="country-select__field-arrow" width="12" height="7"><use xlink:href="#icon-dropdown-form"></use></svg>
+                    </label>
+                    <button class="country-select__delete" type="button" aria-label="Удалить">
+                      <svg class="country-select__delete-icon" width="9" height="9"><use xlink:href="#icon-small-cross"></use></svg>
+                    </button>
                     <div class="country-select__dropdown dropdown">
                       <div class="dropdown__header">
                         <h3 class="dropdown__title">Выберите страну</h3>
-                        <button class="dropdown__close" type="button" aria-label="Закрыть окно"></button>
+                        <button class="dropdown__close" type="button" aria-label="Закрыть окно">
+                          <svg class="dropdown__close-icon" width="9" height="9"><use xlink:href="#icon-small-cross"></use></svg>
+                        </button>
                       </div>
                       <div class="dropdown__wrapper">
                         <table class="dropdown__letter-selector letters letters--light">
@@ -591,11 +645,16 @@
               </ul>
             </div>
             <div class="plan-add__buttons-wrapper">
-              <a class="plan-add__next-step round-button" href="#step3">Следующий шаг</a>
-              <a class="plan-add__previous-step" href="#step1">На шаг назад</a>
+              <a class="plan-add__next-step round-button" href="#step3">Следующий шаг
+                <svg class="plan-add__next-arrow" width="10" height="14"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
+              </a>
+              <a class="plan-add__previous-step" href="#step1">
+              <svg class="plan-add__previous-arrow" width="10" height="14"><use xlink:href="#icon-triangle-arrow-left"></use></svg>
+                На шаг назад
+              </a>
             </div>
           </fieldset>
-          <fieldset class="plan-add__field add-entertainment" id="step3">
+          <fieldset class="plan-add__field plan-add__field--hidden add-entertainment" id="step3">
             <div class="plan-add__field-wrapper">
               <div class="plan-add__field-header">
                 <div class="plan-add__title-wrapper">
@@ -610,19 +669,28 @@
               </div>
               <div class="add-entertainment__wrapper">
                 <div class="add-entertainment__field country-entertainment country-entertainment--current country-entertainment--error">
-                  <label class="country-entertainment__title" for="plan-bosnia"><span class="country-entertainment__flag flag flag--bosnia flag--big">Босния и Герцеговина</span></label>
+                  <label class="country-entertainment__title" for="plan-bosnia">
+                    <span class="country-entertainment__flag flag flag--bosnia flag--big">Босния и Герцеговина</span>
+                  </label>
                   <textarea class="country-entertainment__textarea" name="plan1" id="plan-bosnia" placeholder="План действий" required=""></textarea>
                   <span class="country-entertainment__textarea-error">Это поле должно быть заполнено</span>
                 </div>
                 <div class="add-entertainment__field country-entertainment">
-                  <label class="country-entertainment__title" for="plan-czech"><span class="country-entertainment__flag flag flag--czech flag--big">Чехия</span></label>
+                  <label class="country-entertainment__title" for="plan-czech">
+                    <span class="country-entertainment__flag flag flag--czech flag--big">Чехия</span>
+                  </label>
                   <textarea class="country-entertainment__textarea" name="plan2" id="plan-czech" placeholder="План действий">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.</textarea>
                 </div>
               </div>
             </div>
             <div class="plan-add__buttons-wrapper">
-            <button class="user-form__submit round-button" type="submit">Отправить</button>
-            <a class="plan-add__previous-step" href="#step2">На шаг назад</a>
+            <button class="user-form__submit round-button" type="submit">Отправить
+              <svg class="plan-add__next-arrow" width="10" height="14"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
+            </button>
+            <a class="plan-add__previous-step" href="#step2">
+              <svg class="plan-add__previous-arrow" width="10" height="14"><use xlink:href="#icon-triangle-arrow-left"></use></svg>
+              На шаг назад
+            </a>
           </div>
           </fieldset>
         </div>

@@ -9,7 +9,7 @@
 
 .travelmates-form__title {
   .indents-none();
-  margin-bottom: 20px;
+  margin-bottom: 21px;
   padding-left: 5px;
   width: 120px;
   font-size: 22.5px;
@@ -21,21 +21,6 @@
 .travelmates-form__item-wrapper {
   padding-left: 6px;
   border-top: 1px solid @darkyellow;
-}
-
-.travelmates-form__drop-toggle {
-  position: relative;
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 18px;
-    right: 0;
-    width: 8px;
-    height: 4px;
-    // для сетки
-    outline: 1px solid black;
-  }
 }
 
 .travelmates-form__submit {
@@ -76,14 +61,8 @@
     }
 
     &--bottom {
-      padding-bottom: 37px;
+      padding-bottom: 36px;
       border-bottom: 1px solid @darkyellow;
-    }
-  }
-
-  .travelmates-form__drop-toggle {
-    &::after {
-      display: none;
     }
   }
 
@@ -111,15 +90,6 @@
   .travelmates-form__item-wrapper {
     padding-left: 0;
     border: none;
-  }
-
-  .travelmates-form__drop-toggle {
-    &::after {
-      top: 15px;
-      right: 6px;
-      width: 10px;
-      height: 5px;
-    }
   }
 
   .travelmates-form__submit {

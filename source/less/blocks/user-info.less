@@ -12,30 +12,50 @@
 }
 
 .user-info__level {
-  .indents-none();
+  margin-top: -1px;
   position: relative;
   box-sizing: border-box;
   width: 100px;
   height: 100px;
-  font-size: 38px;
-  line-height: 80px;
-  font-weight: @bold;
-  text-align: center;
-  color: @bg-darkblue;
   background-color: transparent;
-  border: 3px solid @darkorange;
   border-radius: 50%;
 }
 
-.user-info__level-legend {
+.user-info__level-circle {
+  stroke-width: 3px;
+  stroke-dashoffset: 90;
+  stroke-dasharray: 265 50;
+}
+
+.user-info__level-text {
+  .indents-none();
   position: absolute;
-  top: 60px;
-  left: 32px;
+  top: 23px;
+  left: 30px;
+  font-size: 38px;
+  line-height: 40px;
+  font-weight: @bold;
+  text-align: center;
+  color: @bg-darkblue;
+}
+
+.user-info__level-legend {
+  position: relative;
   display: block;
   font-size: 18px;
   line-height: 22px;
   font-weight: @normal;
   color: @darkgrey;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -4px;
+    left: -4px;
+    width: 49px;
+    height: 2px;
+    background-color: @border-grey;
+  }
 }
 
 .user-info__image {
@@ -141,12 +161,23 @@
     order: 1;
     width: 94px;
     height: 94px;
-    line-height: 76px;
+  }
+
+  .user-info__level-circle {
+    width: 94px;
+    height: 94px;
+  }
+
+  .user-info__level-text {
+    top: 20px;
+    left: 26px;
   }
 
   .user-info__level-legend {
-    top: 58px;
-    left: 28px;
+    &::before {
+      background-color: @black;
+      opacity: 0.3;
+    }
   }
 
   .user-info__field {
@@ -224,11 +255,18 @@
     order: 1;
     margin-top: 43px;
     margin-right: 45px;
+  }
+
+  .user-info__level-text {
     color: @white;
   }
 
   .user-info__level-legend {
     color: @white;
+
+    &::before {
+      background-color: @white;
+    }
   }
 
   .user-info__photo {

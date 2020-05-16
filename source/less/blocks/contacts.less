@@ -28,6 +28,25 @@
 
   &--dark {
     color: @darkblue;
+
+    &:hover,
+    &:focus {
+      opacity: 0.6;
+    }
+
+    &:active {
+      opacity: 0.3;
+    }
+  }
+
+  &:hover:not(&--dark),
+  &:focus:not(&--dark) {
+    color: @lightorange;
+  }
+
+  &:active:not(&--dark) {
+    color: @lightorange;
+    opacity: 0.3;
   }
 }
 
@@ -40,22 +59,10 @@
   fill: @yellow;
 }
 
-.contacts__item:hover .contacts__link:not(.contacts__link--dark),
-.contacts__item:focus .contacts__link:not(.contacts__link--dark) {
-  color: @lightorange;
-}
-
-.contacts__item:active .contacts__link:not(.contacts__link--dark) {
-  color: fade(@lightorange, 30%);
-}
-
-.contacts__item:hover .contacts__link--dark,
-.contacts__item:focus .contacts__link--dark {
-  opacity: 0.6;
-}
-
-.contacts__item:active .contacts__link--dark {
-  opacity: 0.3;
+.contacts__link:hover .contacts__icon,
+.contacts__link:focus .contacts__icon,
+.contacts__link:active .contacts__icon {
+  fill: @lightorange;
 }
 
 @media (min-width: @tablet-width) {
@@ -74,11 +81,10 @@
   }
 
   .contacts__icon {
-    top: 16px;
+    top: 17px;
     left: 20px;
     width: 27px;
     height: 27px;
-    fill: @yellow;
   }
 }
 
@@ -106,5 +112,12 @@
     padding-left: 122px;
     line-height: 90px;
     color: @lightyellow;
+  }
+
+  .contacts__icon {
+    top: 25px;
+    left: 28px;
+    width: 36px;
+    height: 36px;
   }
 }
