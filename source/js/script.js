@@ -94,6 +94,8 @@ if (step) {
                 evt.preventDefault();
                 step[i].classList.add("plan-add__field--hidden");
                 step[i + 1].classList.remove("plan-add__field--hidden");
+                marker[i].classList.remove("step-markers__item--active");
+                marker[i + 1].classList.add("step-markers__item--active");
             });
         }
         if (previousButton) {
@@ -101,6 +103,8 @@ if (step) {
                 evt.preventDefault();
                 step[i].classList.add("plan-add__field--hidden");
                 step[i - 1].classList.remove("plan-add__field--hidden");
+                marker[i].classList.remove("step-markers__item--active");
+                marker[i - 1].classList.add("step-markers__item--active");
             });
         }
     }
