@@ -86,6 +86,7 @@ let marker = document.querySelectorAll(".step-markers__item--header");
 
 if (step) {
     for (let i = 0; i < step.length; i++) {
+        step[i].classList.remove("plan-add__field--nojs");
         let nextButton = step[i].querySelector(".plan-add__next-step");
         let previousButton = step[i].querySelector(".plan-add__previous-step");
 

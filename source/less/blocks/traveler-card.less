@@ -10,7 +10,7 @@
 .traveler-card__picture {
   .section-radius-top(10px);
   overflow: hidden;
-  mask-image: radial-gradient(white, black);
+  mask-image: radial-gradient(@white, @black);
 }
 
 .traveler-card:hover .traveler-card__photo,
@@ -135,6 +135,7 @@
 .traveler-card__vehicles-list {
   .indents-none();
   margin: 0 auto;
+  width: 132px;
 }
 
 @media (min-width: @tablet-width) {
