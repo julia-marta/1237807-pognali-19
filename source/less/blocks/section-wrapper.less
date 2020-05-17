@@ -1,8 +1,30 @@
-@media (min-width: @desktop-width) {
+.section-wrapper {
+  position: relative;
+  margin-top: -30px;
+  background-color: @lightgrey;
+  z-index: 1;
+}
+
+.section-wrapper__columns {
+  padding-top: 55px;
+}
+
+@media (min-width: @tablet-width) {
   .section-wrapper {
+    margin-top: -60px;
+  }
+
+  .section-wrapper__columns {
+    padding-top: 106px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .section-wrapper__columns {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     flex-wrap: wrap;
+    padding-top: 138px;
   }
 }

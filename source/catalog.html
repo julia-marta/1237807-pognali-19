@@ -4,7 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Погнали? | Попутчики</title>
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style.min.css" rel="stylesheet">
+    <script src="js/picturefill.js"></script>
   </head>
   <body>
 
@@ -217,7 +218,7 @@
       </svg>
     </div>
 
-  <header class="site-header site-header--closed">
+  <header class="site-header site-header--closed site-header--nojs">
     <div class="site-header__wrapper container">
       <div class="site-header__top">
         <a class="site-header__logo" href="index.html">
@@ -636,486 +637,487 @@
       </div>
     </section>
 
-    <div class="section-wrapper container">
-        <section class="travelmates-filter">
-          <h2 class="visually-hidden">Фильтрация по попутчикам</h2>
-          <form class="travelmates-filter__form travelmates-form" action="https://echo.htmlacademy.ru" method="get">
-            <h3 class="travelmates-form__title">Подберите идеального попутчика</h3>
-            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--top">
-              <fieldset class="travelmates-form__item form-section form-section--closed">
-                <legend class="form-section__title">Хобби<span class="form-section__title-colon">:</span>
-                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
-                </legend>
-                <div class="form-section__expanded checkbox-filter">
-                  <ul class="checkbox-filter__list">
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="gym" id="sport" checked>
-                      <label class="checkbox-filter__label" for="sport">Спортзал
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="hookah" id="kalian">
-                      <label class="checkbox-filter__label" for="kalian">Кальян
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="sofa" id="lazy">
-                      <label class="checkbox-filter__label" for="lazy">Диван
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </fieldset>
-            </div>
-            <div class="travelmates-form__item-wrapper">
-              <fieldset class="travelmates-form__item form-section form-section--opened">
-                <legend class="form-section__title">Музыка<span class="form-section__title-colon">:</span>
-                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
-                </legend>
-                <div class="form-section__expanded checkbox-filter">
-                  <ul class="checkbox-filter__list">
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="rock" id="hardrock" checked>
-                      <label class="checkbox-filter__label" for="hardrock">Тяжелый рок
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="rap" id="russianrap">
-                      <label class="checkbox-filter__label" for="russianrap">Русский рэп
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="dance" id="eurodance">
-                      <label class="checkbox-filter__label" for="eurodance">Евроденс
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </fieldset>
-            </div>
-            <div class="travelmates-form__item-wrapper">
-              <fieldset class="travelmates-form__item form-section form-section--closed">
-                <legend class="form-section__title">Еда<span class="form-section__title-colon">:</span>
-                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
-                </legend>
-                <div class="form-section__expanded checkbox-filter">
-                  <ul class="checkbox-filter__list">
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="meat" id="meat-eater" checked>
-                      <label class="checkbox-filter__label" for="meat-eater">Мясоед
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="healthy" id="healthy-diet">
-                      <label class="checkbox-filter__label" for="healthy-diet">Сидит на ПП
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                    <li class="checkbox-filter__item">
-                      <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="vegan" id="raw-food">
-                      <label class="checkbox-filter__label" for="raw-food">Веган-сыроед
-                        <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </fieldset>
-            </div>
-            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--transport">
-              <fieldset class="travelmates-form__item form-section form-section--opened">
-                <legend class="form-section__title">Транспорт<span class="form-section__title-colon">:</span>
-                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
-                </legend>
-                <div class="form-section__expanded transport-filter">
-                  <ul class="transport-filter__list vehicles">
-                    <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="plane" id="flight" checked>
-                      <label class="vehicles__item" for="flight">
-                        <span class="visually-hidden">Авиаперелет</span>
-                        <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
-                      </label>
-                    </li>
-                    <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bus" id="auto" checked>
-                      <label class="vehicles__item" for="auto">
-                        <span class="visually-hidden">Автотранспорт</span>
-                        <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
-                      </label>
-                    </li>
-                    <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bicycle" id="cycling">
-                      <label class="vehicles__item" for="cycling">
-                        <span class="visually-hidden">Велосипед</span>
-                        <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
-                      </label>
-                    </li>
-                    <li class="transport-filter__list-item">
-                      <input class="visually-hidden vehicles__checkbox" type="checkbox" name="hiking" id="onfoot" checked>
-                      <label class="vehicles__item vehicles__item--hiking" for="onfoot">
-                        <span class="visually-hidden">Пешком</span>
-                        <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
-                      </label>
-                    </li>
-                  </ul>
-                </div>
-              </fieldset>
-            </div>
-            <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--bottom">
-              <fieldset class="travelmates-form__item form-section form-section--opened">
-                <legend class="form-section__title">Левел<span class="form-section__title-colon">:</span>
-                  <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
-                </legend>
-                <div class="form-section__expanded level-filter">
-                  <div class="level-filter__value">
-                    <label class="visually-hidden" for="min-value">Минимальный левел</label>
-                    <input class="level-filter__input level-filter__input--min" name="min-level" id="min-value" type="number" value="30">
-                    <label class="visually-hidden" for="max-value">Максимальный левел</label>
-                    <input class="level-filter__input level-filter__input--max" name="max-level" id="max-value" type="number" value="100">
+    <div class="section-wrapper">
+      <div class="section-wrapper__columns container">
+          <section class="travelmates-filter">
+            <h2 class="visually-hidden">Фильтрация по попутчикам</h2>
+            <form class="travelmates-filter__form travelmates-form" action="https://echo.htmlacademy.ru" method="get">
+              <h3 class="travelmates-form__title">Подберите идеального попутчика</h3>
+              <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--top">
+                <fieldset class="travelmates-form__item form-section form-section--closed">
+                  <legend class="form-section__title">Хобби<span class="form-section__title-colon">:</span>
+                    <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                  </legend>
+                  <div class="form-section__expanded checkbox-filter">
+                    <ul class="checkbox-filter__list">
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="gym" id="sport" checked>
+                        <label class="checkbox-filter__label" for="sport">Спортзал
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="hookah" id="kalian">
+                        <label class="checkbox-filter__label" for="kalian">Кальян
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="sofa" id="lazy">
+                        <label class="checkbox-filter__label" for="lazy">Диван
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                    </ul>
                   </div>
-                  <div class="level-filter__range-controls">
-                    <div class="level-filter__range-scale">
-                      <div class="level-filter__range-bar"></div>
+                </fieldset>
+              </div>
+              <div class="travelmates-form__item-wrapper">
+                <fieldset class="travelmates-form__item form-section form-section--opened">
+                  <legend class="form-section__title">Музыка<span class="form-section__title-colon">:</span>
+                    <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                  </legend>
+                  <div class="form-section__expanded checkbox-filter">
+                    <ul class="checkbox-filter__list">
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="rock" id="hardrock" checked>
+                        <label class="checkbox-filter__label" for="hardrock">Тяжелый рок
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="rap" id="russianrap">
+                        <label class="checkbox-filter__label" for="russianrap">Русский рэп
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="dance" id="eurodance">
+                        <label class="checkbox-filter__label" for="eurodance">Евроденс
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="travelmates-form__item-wrapper">
+                <fieldset class="travelmates-form__item form-section form-section--closed">
+                  <legend class="form-section__title">Еда<span class="form-section__title-colon">:</span>
+                    <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                  </legend>
+                  <div class="form-section__expanded checkbox-filter">
+                    <ul class="checkbox-filter__list">
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="meat" id="meat-eater" checked>
+                        <label class="checkbox-filter__label" for="meat-eater">Мясоед
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="healthy" id="healthy-diet">
+                        <label class="checkbox-filter__label" for="healthy-diet">Сидит на ПП
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                      <li class="checkbox-filter__item">
+                        <input class="visually-hidden checkbox-filter__checkbox" type="checkbox" name="vegan" id="raw-food">
+                        <label class="checkbox-filter__label" for="raw-food">Веган-сыроед
+                          <svg class="checkbox-filter__tick" width="9" height="9"><use xlink:href="#icon-tick"></use></svg>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--transport">
+                <fieldset class="travelmates-form__item form-section form-section--opened">
+                  <legend class="form-section__title">Транспорт<span class="form-section__title-colon">:</span>
+                    <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                  </legend>
+                  <div class="form-section__expanded transport-filter">
+                    <ul class="transport-filter__list vehicles">
+                      <li class="transport-filter__list-item">
+                        <input class="visually-hidden vehicles__checkbox" type="checkbox" name="plane" id="flight" checked>
+                        <label class="vehicles__item" for="flight">
+                          <span class="visually-hidden">Авиаперелет</span>
+                          <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
+                        </label>
+                      </li>
+                      <li class="transport-filter__list-item">
+                        <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bus" id="auto" checked>
+                        <label class="vehicles__item" for="auto">
+                          <span class="visually-hidden">Автотранспорт</span>
+                          <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
+                        </label>
+                      </li>
+                      <li class="transport-filter__list-item">
+                        <input class="visually-hidden vehicles__checkbox" type="checkbox" name="bicycle" id="cycling">
+                        <label class="vehicles__item" for="cycling">
+                          <span class="visually-hidden">Велосипед</span>
+                          <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
+                        </label>
+                      </li>
+                      <li class="transport-filter__list-item">
+                        <input class="visually-hidden vehicles__checkbox" type="checkbox" name="hiking" id="onfoot" checked>
+                        <label class="vehicles__item vehicles__item--hiking" for="onfoot">
+                          <span class="visually-hidden">Пешком</span>
+                          <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
+                        </label>
+                      </li>
+                    </ul>
+                  </div>
+                </fieldset>
+              </div>
+              <div class="travelmates-form__item-wrapper travelmates-form__item-wrapper--bottom">
+                <fieldset class="travelmates-form__item form-section form-section--opened">
+                  <legend class="form-section__title">Левел<span class="form-section__title-colon">:</span>
+                    <svg class="form-section__toggle" width="8" height="4"><use xlink:href="#icon-dropdown"></use></svg>
+                  </legend>
+                  <div class="form-section__expanded level-filter">
+                    <div class="level-filter__value">
+                      <label class="visually-hidden" for="min-value">Минимальный левел</label>
+                      <input class="level-filter__input level-filter__input--min" name="min-level" id="min-value" type="number" value="30">
+                      <label class="visually-hidden" for="max-value">Максимальный левел</label>
+                      <input class="level-filter__input level-filter__input--max" name="max-level" id="max-value" type="number" value="100">
                     </div>
-                    <div class="level-filter__range-toggle level-filter__range-toggle--min"></div>
-                    <div class="level-filter__range-toggle level-filter__range-toggle--max"></div>
+                    <div class="level-filter__range-controls">
+                      <div class="level-filter__range-scale">
+                        <div class="level-filter__range-bar"></div>
+                      </div>
+                      <div class="level-filter__range-toggle level-filter__range-toggle--min"></div>
+                      <div class="level-filter__range-toggle level-filter__range-toggle--max"></div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+              <button class="travelmates-form__submit round-button round-button--white" type="submit">Показать</button>
+            </form>
+          </section>
+          <section class="profiles">
+            <h2 class="visually-hidden">Профили попутчиков</h2>
+            <ul class="profiles__list travelers-profiles">
+              <li class="travelers-profiles__item profile">
+                <a class="profile__avatar" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg, img/firsova-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg, img/firsova-tablet@2x.jpg 2x">
+                    <img class="profile__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
+                  </picture>
+                </a>
+                <button class="profile__like-button profile__like-button--active" type="button">
+                  <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
+                  <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
+                  <span class="profile__like-counter">1,5 m</span>
+                </button>
+                <div class="profile__wrapper profile__wrapper--name">
+                  <h3 class="profile__name">
+                    <a class="profile__name-link profile__status status status--big" href="#">Таня Фирсова</a>
+                  </h3>
+                  <ul class="profile__hashtags-list hashtags hashtags--small">
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#ЗОЖ</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#ПП</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#Фитнес</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#пляж</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#авокадо</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#смузи</a></li>
+                  </ul>
+                </div>
+                <div class="profile__directions profile__directions--firsova">
+                  <p class="profile__legend profile__legend--countries">
+                    <span class="profile__legend-text">хочет посетить:</span>
+                  </p>
+                  <ul class="profile__countries countries-list">
+                    <li class="countries-list__item flag flag--srilanka flag--small">Шри-ланка</li>
+                    <li class="countries-list__item flag flag--thailand flag--small">Таиланд</li>
+                    <li class="countries-list__item flag flag--seychelles flag--small">Сейшелы</li>
+                  </ul>
+                </div>
+                <div class="profile__wrapper profile__wrapper--transport">
+                  <div class="profile__transport">
+                    <p class="profile__legend profile__legend--transport">
+                      <span class="profile__legend-text">транспорт:</span>
+                    </p>
+                    <ul class="profile__vehicles-list vehicles">
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
+                        <span class="tooltip">Авиаперелет</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
+                        <span class="tooltip">Автотранспорт</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
+                        <span class="tooltip">Велосипед</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
+                        <span class="tooltip">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="profile__rating">
+                    <p class="profile__legend profile__legend--level">
+                      <span class="profile__legend-text">левел:</span>
+                    </p>
+                    <div class="profile__level">
+                      <svg class="profile__level-circle profile__level-circle--99" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                      <p class="profile__level-text">99 <span class="profile__level-legend">level</span></p>
+                    </div>
                   </div>
                 </div>
-              </fieldset>
+                <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+              </li>
+              <li class="travelers-profiles__item profile">
+                <a class="profile__avatar" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
+                    <img class="profile__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
+                  </picture>
+                </a>
+                <button class="profile__like-button" type="button">
+                  <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
+                  <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
+                  <span class="profile__like-counter">1500</span>
+                </button>
+                <div class="profile__wrapper profile__wrapper--name">
+                  <h3 class="profile__name">
+                    <a class="profile__name-link profile__status status status--big" href="#">Петя Демин</a></h3>
+                  <ul class="profile__hashtags-list hashtags hashtags--small">
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#бургер</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#бар</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#футбол</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#концерт</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#крафт</a></li>
+                  </ul>
+                </div>
+                <div class="profile__directions profile__directions--demin">
+                  <p class="profile__legend profile__legend--countries">
+                    <span class="profile__legend-text">хочет посетить:</span>
+                  </p>
+                  <ul class="profile__countries countries-list">
+                    <li class="countries-list__item flag flag--belgium flag--small">Бельгия</li>
+                    <li class="countries-list__item flag flag--czech flag--small">Чехия</li>
+                  </ul>
+                </div>
+                <div class="profile__wrapper profile__wrapper--transport">
+                  <div class="profile__transport">
+                    <p class="profile__legend profile__legend--transport">
+                      <span class="profile__legend-text">транспорт:</span>
+                    </p>
+                    <ul class="profile__vehicles-list vehicles">
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
+                        <span class="tooltip">Авиаперелет</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
+                        <span class="tooltip">Автотранспорт</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
+                        <span class="tooltip">Велосипед</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
+                        <span class="tooltip">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="profile__rating">
+                    <p class="profile__legend profile__legend--level">
+                      <span class="profile__legend-text">левел:</span>
+                    </p>
+                    <div class="profile__level">
+                      <svg class="profile__level-circle profile__level-circle--80" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                      <p class="profile__level-text">80 <span class="profile__level-legend">level</span></p>
+                    </div>
+                  </div>
+                </div>
+                <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+              </li>
+              <li class="travelers-profiles__item profile">
+                <a class="profile__avatar" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg, img/smolov-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x">
+                    <img class="profile__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
+                  </picture>
+                </a>
+                <button class="profile__like-button" type="button">
+                  <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
+                  <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
+                  <span class="profile__like-counter">170</span>
+                </button>
+                <div class="profile__wrapper profile__wrapper--name">
+                  <h3 class="profile__name">
+                    <a class="profile__name-link profile__status status status--big" href="#">Марк Смолов</a>
+                  </h3>
+                  <ul class="profile__hashtags-list hashtags hashtags--small">
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#рэп</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#тату</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#хайпбист</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#кроссовки</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#суприм</a></li>
+                  </ul>
+                </div>
+                <div class="profile__directions profile__directions--smolov">
+                  <p class="profile__legend profile__legend--countries">
+                    <span class="profile__legend-text">хочет посетить:</span>
+                  </p>
+                  <ul class="profile__countries countries-list">
+                    <li class="countries-list__item flag flag--usa flag--small">США</li>
+                    <li class="countries-list__item flag flag--australia flag--small">Австралия</li>
+                    <li class="countries-list__item flag flag--dominica flag--small">Доминика</li>
+                  </ul>
+                </div>
+                <div class="profile__wrapper profile__wrapper--transport">
+                  <div class="profile__transport">
+                    <p class="profile__legend profile__legend--transport">
+                      <span class="profile__legend-text">транспорт:</span>
+                    </p>
+                    <ul class="profile__vehicles-list vehicles">
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
+                        <span class="tooltip">Авиаперелет</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
+                        <span class="tooltip">Автотранспорт</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
+                        <span class="tooltip">Велосипед</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
+                        <span class="tooltip">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="profile__rating">
+                    <p class="profile__legend profile__legend--level">
+                      <span class="profile__legend-text">левел:</span>
+                    </p>
+                    <div class="profile__level">
+                      <svg class="profile__level-circle profile__level-circle--25" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                      <p class="profile__level-text">25 <span class="profile__level-legend">level</span></p>
+                    </div>
+                  </div>
+                </div>
+                <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+              </li>
+              <li class="travelers-profiles__item profile">
+                <a class="profile__avatar" href="#">
+                  <picture>
+                    <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
+                    <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
+
+                    <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg, img/rogovaya-desktop@2x.jpg 2x">
+                    <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x">
+                    <img class="profile__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
+                  </picture>
+                </a>
+                <button class="profile__like-button" type="button">
+                  <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
+                  <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
+                  <span class="profile__like-counter">23</span>
+                </button>
+                <div class="profile__wrapper profile__wrapper--name">
+                  <h3 class="profile__name">
+                    <a class="profile__name-link profile__status status status--big status--online" href="#">Лариса Роговая</a>
+                  </h3>
+                  <ul class="profile__hashtags-list hashtags hashtags--small">
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#образование</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#карьера</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#учеба</a></li>
+                    <li class="hashtags__item"><a class="hashtags__link" href="">#линкедин</a></li>
+                  </ul>
+                </div>
+                <div class="profile__directions profile__directions--rogovaya">
+                  <p class="profile__legend profile__legend--countries">
+                    <span class="profile__legend-text">хочет посетить:</span>
+                  </p>
+                  <ul class="profile__countries countries-list">
+                    <li class="countries-list__item flag flag--uk flag--small">Великобритания</li>
+                    <li class="countries-list__item flag flag--germany flag--small">Германия</li>
+                  </ul>
+                </div>
+                <div class="profile__wrapper profile__wrapper--transport">
+                  <div class="profile__transport">
+                    <p class="profile__legend profile__legend--transport">
+                      <span class="profile__legend-text">транспорт:</span>
+                    </p>
+                    <ul class="profile__vehicles-list vehicles">
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
+                        <span class="tooltip">Авиаперелет</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue vehicles__item--active">
+                        <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
+                        <span class="tooltip">Автотранспорт</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
+                        <span class="tooltip">Велосипед</span>
+                      </li>
+                      <li class="vehicles__item vehicles__item--blue">
+                        <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
+                        <span class="tooltip">Пешком</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <div class="profile__rating">
+                    <p class="profile__legend profile__legend--level">
+                      <span class="profile__legend-text">левел:</span>
+                    </p>
+                    <div class="profile__level">
+                      <svg class="profile__level-circle profile__level-circle--50" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
+                      <p class="profile__level-text">50 <span class="profile__level-legend">level</span></p>
+                    </div>
+                  </div>
+                </div>
+                <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
+              </li>
+            </ul>
+            <a class="profiles__to-all" href="travelmates.html">Показать еще</a>
+            <div class="profiles__pagination paginator">
+              <ul class="paginator__pages">
+                <li class="paginator__page paginator__page--active"><a class="paginator__link" href="#">1</a></li>
+                <li class="paginator__page"><a class="paginator__link" href="#">2</a></li>
+                <li class="paginator__page"><a class="paginator__link" href="#">3</a></li>
+                <li class="paginator__page"><a class="paginator__link" href="#">4</a></li>
+              </ul>
+              <ul class="paginator__buttons">
+                <li class="paginator__item">
+                  <a class="paginator__button paginator__button--back" href="#" aria-label="Показать предыдущую страницу">
+                    <svg class="paginator__button-icon" width="10" height="20"><use xlink:href="#icon-triangle-arrow-left"></use></svg>
+                  </a>
+                </li>
+                <li class="paginator__item">
+                  <a class="paginator__button paginator__button--forward" href="#" aria-label="Показать следующую страницу">
+                    <svg class="paginator__button-icon" width="10" height="20"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
+                  </a>
+                </li>
+              </ul>
             </div>
-            <button class="travelmates-form__submit round-button round-button--white" type="submit">Показать</button>
-          </form>
-        </section>
-        <section class="profiles">
-          <h2 class="visually-hidden">Профили попутчиков</h2>
-          <ul class="profiles__list travelers-profiles">
-            <li class="travelers-profiles__item profile">
-              <a class="profile__avatar" href="#">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.webp 1x, img/firsova-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/firsova-tablet@1x.webp 1x, img/firsova-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/firsova-mobile@1x.webp 1x, img/firsova-mobile@2x.webp 2x">
-
-                  <source media="(min-width: 1440px)" srcset="img/firsova-desktop@1x.jpg, img/firsova-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/firsova-tablet@1x.jpg, img/firsova-tablet@2x.jpg 2x">
-                  <img class="profile__photo" src="img/firsova-mobile@1x.jpg" srcset="img/firsova-mobile@2x.jpg 2x" width="70" height="70" alt="Таня Фирсова">
-                </picture>
-              </a>
-              <button class="profile__like-button profile__like-button--active" type="button">
-                <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
-                <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
-                <span class="profile__like-counter">1,5 m</span>
-              </button>
-              <div class="profile__wrapper profile__wrapper--name">
-                <h3 class="profile__name">
-                  <a class="profile__name-link profile__status status status--big" href="#">Таня Фирсова</a>
-                </h3>
-                <ul class="profile__hashtags-list hashtags hashtags--small">
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#ЗОЖ</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#ПП</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#Фитнес</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#пляж</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#авокадо</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#смузи</a></li>
-                </ul>
-              </div>
-              <div class="profile__directions profile__directions--firsova">
-                <p class="profile__legend profile__legend--countries">
-                  <span class="profile__legend-text">хочет посетить:</span>
-                </p>
-                <ul class="profile__countries countries-list">
-                  <li class="countries-list__item flag flag--srilanka flag--small">Шри-ланка</li>
-                  <li class="countries-list__item flag flag--thailand flag--small">Таиланд</li>
-                  <li class="countries-list__item flag flag--seychelles flag--small">Сейшелы</li>
-                </ul>
-              </div>
-              <div class="profile__wrapper profile__wrapper--transport">
-                <div class="profile__transport">
-                  <p class="profile__legend profile__legend--transport">
-                    <span class="profile__legend-text">транспорт:</span>
-                  </p>
-                  <ul class="profile__vehicles-list vehicles">
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
-                      <span class="tooltip">Авиаперелет</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
-                      <span class="tooltip">Автотранспорт</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
-                      <span class="tooltip">Велосипед</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
-                      <span class="tooltip">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="profile__rating">
-                  <p class="profile__legend profile__legend--level">
-                    <span class="profile__legend-text">левел:</span>
-                  </p>
-                  <div class="profile__level">
-                    <svg class="profile__level-circle profile__level-circle--99" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
-                    <p class="profile__level-text">99 <span class="profile__level-legend">level</span></p>
-                  </div>
-                </div>
-              </div>
-              <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
-            </li>
-            <li class="travelers-profiles__item profile">
-              <a class="profile__avatar" href="#">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/demin-desktop@1x.webp 1x, img/demin-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/demin-tablet@1x.webp 1x, img/demin-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/demin-mobile@1x.webp 1x, img/demin-mobile@2x.webp 2x">
-
-                  <source media="(min-width: 1440px)" srcset="img/demin-desktop@1x.jpg, img/demin-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/demin-tablet@1x.jpg, img/demin-tablet@2x.jpg 2x">
-                  <img class="profile__photo" src="img/demin-mobile@1x.jpg" srcset="img/demin-mobile@2x.jpg 2x" width="70" height="70" alt="Петя Демин">
-                </picture>
-              </a>
-              <button class="profile__like-button" type="button">
-                <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
-                <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
-                <span class="profile__like-counter">1500</span>
-              </button>
-              <div class="profile__wrapper profile__wrapper--name">
-                <h3 class="profile__name">
-                  <a class="profile__name-link profile__status status status--big" href="#">Петя Демин</a></h3>
-                <ul class="profile__hashtags-list hashtags hashtags--small">
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#бургер</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#бар</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#футбол</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#концерт</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#крафт</a></li>
-                </ul>
-              </div>
-              <div class="profile__directions profile__directions--demin">
-                <p class="profile__legend profile__legend--countries">
-                  <span class="profile__legend-text">хочет посетить:</span>
-                </p>
-                <ul class="profile__countries countries-list">
-                  <li class="countries-list__item flag flag--belgium flag--small">Бельгия</li>
-                  <li class="countries-list__item flag flag--czech flag--small">Чехия</li>
-                </ul>
-              </div>
-              <div class="profile__wrapper profile__wrapper--transport">
-                <div class="profile__transport">
-                  <p class="profile__legend profile__legend--transport">
-                    <span class="profile__legend-text">транспорт:</span>
-                  </p>
-                  <ul class="profile__vehicles-list vehicles">
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
-                      <span class="tooltip">Авиаперелет</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
-                      <span class="tooltip">Автотранспорт</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
-                      <span class="tooltip">Велосипед</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
-                      <span class="tooltip">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="profile__rating">
-                  <p class="profile__legend profile__legend--level">
-                    <span class="profile__legend-text">левел:</span>
-                  </p>
-                  <div class="profile__level">
-                    <svg class="profile__level-circle profile__level-circle--80" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
-                    <p class="profile__level-text">80 <span class="profile__level-legend">level</span></p>
-                  </div>
-
-                </div>
-              </div>
-              <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
-            </li>
-            <li class="travelers-profiles__item profile">
-              <a class="profile__avatar" href="#">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.webp 1x, img/smolov-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/smolov-tablet@1x.webp 1x, img/smolov-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/smolov-mobile@1x.webp 1x, img/smolov-mobile@2x.webp 2x">
-
-                  <source media="(min-width: 1440px)" srcset="img/smolov-desktop@1x.jpg, img/smolov-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/smolov-tablet@1x.jpg, img/smolov-tablet@2x.jpg 2x">
-                  <img class="profile__photo" src="img/smolov-mobile@1x.jpg" srcset="img/smolov-mobile@2x.jpg 2x" width="70" height="70" alt="Марк Смолов">
-                </picture>
-              </a>
-              <button class="profile__like-button" type="button">
-                <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
-                <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
-                <span class="profile__like-counter">170</span>
-              </button>
-              <div class="profile__wrapper profile__wrapper--name">
-                <h3 class="profile__name">
-                  <a class="profile__name-link profile__status status status--big" href="#">Марк Смолов</a>
-                </h3>
-                <ul class="profile__hashtags-list hashtags hashtags--small">
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#рэп</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#тату</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#хайпбист</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#кроссовки</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#суприм</a></li>
-                </ul>
-              </div>
-              <div class="profile__directions profile__directions--smolov">
-                <p class="profile__legend profile__legend--countries">
-                  <span class="profile__legend-text">хочет посетить:</span>
-                </p>
-                <ul class="profile__countries countries-list">
-                  <li class="countries-list__item flag flag--usa flag--small">США</li>
-                  <li class="countries-list__item flag flag--australia flag--small">Австралия</li>
-                  <li class="countries-list__item flag flag--dominica flag--small">Доминика</li>
-                </ul>
-              </div>
-              <div class="profile__wrapper profile__wrapper--transport">
-                <div class="profile__transport">
-                  <p class="profile__legend profile__legend--transport">
-                    <span class="profile__legend-text">транспорт:</span>
-                  </p>
-                  <ul class="profile__vehicles-list vehicles">
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
-                      <span class="tooltip">Авиаперелет</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
-                      <span class="tooltip">Автотранспорт</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
-                      <span class="tooltip">Велосипед</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
-                      <span class="tooltip">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="profile__rating">
-                  <p class="profile__legend profile__legend--level">
-                    <span class="profile__legend-text">левел:</span>
-                  </p>
-                  <div class="profile__level">
-                    <svg class="profile__level-circle profile__level-circle--25" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
-                    <p class="profile__level-text">25 <span class="profile__level-legend">level</span></p>
-                  </div>
-                </div>
-              </div>
-              <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
-            </li>
-            <li class="travelers-profiles__item profile">
-              <a class="profile__avatar" href="#">
-                <picture>
-                  <source type="image/webp" media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.webp 1x, img/rogovaya-desktop@2x.webp 2x">
-                  <source type="image/webp" media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.webp 1x, img/rogovaya-tablet@2x.webp 2x">
-                  <source type="image/webp" srcset="img/rogovaya-mobile@1x.webp 1x, img/rogovaya-mobile@2x.webp 2x">
-
-                  <source media="(min-width: 1440px)" srcset="img/rogovaya-desktop@1x.jpg, img/rogovaya-desktop@2x.jpg 2x">
-                  <source media="(min-width: 768px)" srcset="img/rogovaya-tablet@1x.jpg, img/rogovaya-tablet@2x.jpg 2x">
-                  <img class="profile__photo" src="img/rogovaya-mobile@1x.jpg" srcset="img/rogovaya-mobile@2x.jpg 2x" width="70" height="70" alt="Лариса Роговая">
-                </picture>
-              </a>
-              <button class="profile__like-button" type="button">
-                <svg class="profile__like-icon" width="13" height="11"><use xlink:href="#icon-heart"></use></svg>
-                <svg class="profile__like-icon-active" width="13" height="11"><use xlink:href="#icon-heart-active"></use></svg>
-                <span class="profile__like-counter">23</span>
-              </button>
-              <div class="profile__wrapper profile__wrapper--name">
-                <h3 class="profile__name">
-                  <a class="profile__name-link profile__status status status--big status--online" href="#">Лариса Роговая</a>
-                </h3>
-                <ul class="profile__hashtags-list hashtags hashtags--small">
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#образование</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#карьера</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#учеба</a></li>
-                  <li class="hashtags__item"><a class="hashtags__link" href="">#линкедин</a></li>
-                </ul>
-              </div>
-              <div class="profile__directions profile__directions--rogovaya">
-                <p class="profile__legend profile__legend--countries">
-                  <span class="profile__legend-text">хочет посетить:</span>
-                </p>
-                <ul class="profile__countries countries-list">
-                  <li class="countries-list__item flag flag--uk flag--small">Великобритания</li>
-                  <li class="countries-list__item flag flag--germany flag--small">Германия</li>
-                </ul>
-              </div>
-              <div class="profile__wrapper profile__wrapper--transport">
-                <div class="profile__transport">
-                  <p class="profile__legend profile__legend--transport">
-                    <span class="profile__legend-text">транспорт:</span>
-                  </p>
-                  <ul class="profile__vehicles-list vehicles">
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--plane" width="14" height="16"><use xlink:href="#icon-plane"></use></svg>
-                      <span class="tooltip">Авиаперелет</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue vehicles__item--active">
-                      <svg class="vehicles__icon vehicles__icon--bus" width="13" height="16"><use xlink:href="#icon-bus"></use></svg>
-                      <span class="tooltip">Автотранспорт</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--bicycle" width="19" height="17"><use xlink:href="#icon-bike"></use></svg>
-                      <span class="tooltip">Велосипед</span>
-                    </li>
-                    <li class="vehicles__item vehicles__item--blue">
-                      <svg class="vehicles__icon vehicles__icon--hiking" width="15" height="17"><use xlink:href="#icon-run"></use></svg>
-                      <span class="tooltip">Пешком</span>
-                    </li>
-                  </ul>
-                </div>
-                <div class="profile__rating">
-                  <p class="profile__legend profile__legend--level">
-                    <span class="profile__legend-text">левел:</span>
-                  </p>
-                  <div class="profile__level">
-                    <svg class="profile__level-circle profile__level-circle--50" width="45" height="45"><use xlink:href="#icon-level"></use></svg>
-                    <p class="profile__level-text">50 <span class="profile__level-legend">level</span></p>
-                  </div>
-                </div>
-              </div>
-              <a class="profile__to-call round-button" href="respond.html">Позвать!</a>
-            </li>
-          </ul>
-          <a class="profiles__to-all" href="travelmates.html">Показать еще</a>
-          <div class="profiles__pagination paginator">
-            <ul class="paginator__pages">
-              <li class="paginator__page paginator__page--active"><a class="paginator__link" href="#">1</a></li>
-              <li class="paginator__page"><a class="paginator__link" href="#">2</a></li>
-              <li class="paginator__page"><a class="paginator__link" href="#">3</a></li>
-              <li class="paginator__page"><a class="paginator__link" href="#">4</a></li>
-            </ul>
-            <ul class="paginator__buttons">
-              <li class="paginator__item">
-                <a class="paginator__button paginator__button--back" href="#" aria-label="Показать предыдущую страницу">
-                  <svg class="paginator__button-icon" width="10" height="20"><use xlink:href="#icon-triangle-arrow-left"></use></svg>
-                </a>
-              </li>
-              <li class="paginator__item">
-                <a class="paginator__button paginator__button--forward" href="#" aria-label="Показать следующую страницу">
-                  <svg class="paginator__button-icon" width="10" height="20"><use xlink:href="#icon-triangle-arrow-right"></use></svg>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </section>
+          </section>
+      </div>
     </div>
 
   </main>

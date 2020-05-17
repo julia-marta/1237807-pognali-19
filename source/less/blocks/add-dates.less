@@ -49,6 +49,10 @@
     appearance: none;
   }
 
+  &::-ms-clear {
+    display: none;
+  }
+
   &:hover {
     border-color: @hover-border-darkgrey;
   }
@@ -60,7 +64,10 @@
 }
 
 .add-dates__button {
+  .indents-none;
+  box-sizing: border-box;
   position: absolute;
+  bottom: 13px;
   width: 14px;
   height: 14px;
   background: none;
@@ -69,7 +76,6 @@
   outline: none;
 
   &--minus {
-    bottom: 13px;
     left: 14px;
 
     &:hover,
@@ -87,7 +93,6 @@
   }
 
   &--plus {
-    bottom: 13px;
     right: 14px;
 
     &:hover,
@@ -111,18 +116,10 @@
     content: "";
     position: absolute;
     top: 5px;
+    left: 0;
     width: 14px;
     height: 2px;
     background-color: @ctr-lightgrey;
-  }
-
-  &--minus::before {
-    left: 0;
-  }
-
-  &--plus::before,
-  &--plus::after {
-    right: 0;
   }
 
   &--plus::after {
@@ -256,14 +253,13 @@
   .add-dates__button {
     width: 20px;
     height: 20px;
+    bottom: 24px;
 
     &--minus {
-      bottom: 21px;
       left: 24px;
     }
 
     &--plus {
-      bottom: 21px;
       right: 20px;
     }
 
@@ -271,6 +267,7 @@
     &--plus::after {
       width: 20px;
       height: 2px;
+      top: 8px;
       background-color: @ctr-grey;
     }
   }
@@ -348,6 +345,12 @@
     order: 2;
     width: 181px;
     margin-left: 25px;
+  }
+
+  .add-dates__button {
+    &--minus {
+      left: 20px;
+    }
   }
 
   .add-dates__checkbox {
