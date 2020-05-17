@@ -20,6 +20,10 @@ let toggle = document.querySelector(".site-header__toggle");
 
 header.classList.remove("site-header--nojs");
 
+if (header.classList.contains("site-header--closed")) {
+    changeLogoColor("blue", "white");
+}
+
 toggle.addEventListener("click", function(evt) {
 
     if (header.classList.contains("site-header--closed")) {
