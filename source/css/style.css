@@ -5264,7 +5264,7 @@ label.visually-hidden {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   width: 270px;
-  min-height: 50px;
+  height: 50px;
   background-color: #ffffff;
   border-radius: 20px;
 }
@@ -5292,7 +5292,7 @@ label.visually-hidden {
 .paginator__buttons::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: -15px;
   left: 50%;
   width: 1px;
   height: 50px;
@@ -5326,7 +5326,7 @@ label.visually-hidden {
         -ms-flex-pack: justify;
             justify-content: space-between;
     width: 688px;
-    min-height: 100px;
+    height: 100px;
     padding-left: 28px;
     padding-right: 35px;
   }
